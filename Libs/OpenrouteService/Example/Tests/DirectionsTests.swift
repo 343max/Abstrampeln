@@ -11,10 +11,10 @@ class Tests: XCTestCase {
   }
 
   
-//  func testDirections() {
-//    let data = self.data(fileName: "Directions")
-//    let directions = try JSONDecoder().decode(Directions.self, from: data)
-//  }
+  func testDirections() {
+    let data = self.data(fileName: "Directions")
+    let _ = try! JSONDecoder().decode(Directions.self, from: data)
+  }
   
   func testCoordinates() {
     let array = [
@@ -130,5 +130,22 @@ class Tests: XCTestCase {
       XCTAssertEqual(cooridinate.longitude, 8.344268)
       XCTAssertEqual(cooridinate.latitude, 48.233826)
     }
+  }
+  
+  func testBoundingBox() {
+    let data = """
+[
+  8.327707,
+  48.231946,
+  8.345244,
+  48.263552
+]
+""".data(using: .utf8)!
+    let boundingBox = try! JSONDecoder().decode(Directions.BoundingBox.self, from: data)
+    
+    XCTAssertEqual(boundingBox.northEast.latitude, 48.231946)
+    XCTAssertEqual(boundingBox.northEast.longitude, 8.327707)
+    XCTAssertEqual(boundingBox.southWest.latitude, 48.263552)
+    XCTAssertEqual(boundingBox.southWest.longitude, 8.345244)
   }
 }
