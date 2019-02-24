@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'OpenrouteService_Example' do
+  pod 'OpenrouteService', :path => '../'
+
+  target 'OpenrouteService_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
