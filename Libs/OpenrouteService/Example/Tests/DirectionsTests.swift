@@ -55,7 +55,7 @@ class Tests: XCTestCase {
     let segment = try! JSONDecoder().decode(Directions.Route.Segment.Step.self, from: data)
     XCTAssertEqual(segment.distance, 492.6)
     XCTAssertEqual(segment.duration, 98.5)
-    XCTAssertEqual(segment.type, 4)
+    XCTAssertEqual(segment.type, .SlightLeft)
     XCTAssertEqual(segment.instruction, "Biegen Sie leicht links auf Sulzbacher Straße, K 5528 ab")
     XCTAssertEqual(segment.name, "Sulzbacher Straße, K 5528")
     XCTAssertEqual(segment.wayPoints, [48, 63])

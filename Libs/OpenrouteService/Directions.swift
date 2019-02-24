@@ -43,7 +43,7 @@ extension Directions.Route.Segment {
   public struct Step: Decodable {
     public let distance: Float
     public let duration: TimeInterval
-    public let type: Int
+    public let type: InstructionType
     public let instruction: String
     public let name: String
     public let wayPoints: [Int]
@@ -56,6 +56,27 @@ extension Directions.Route.Segment {
       case name = "name"
       case wayPoints = "way_points"
     }
+  }
+}
+
+extension Directions.Route.Segment.Step {
+  
+  // accroding to https://github.com/GIScience/openrouteservice-docs/blob/master/README.md#instruction-types
+  public enum InstructionType: Int, Decodable {
+    case Left = 0
+    case Right = 1
+    case SharpLeft = 2
+    case SharpRight = 3
+    case SlightLeft = 4
+    case SlightRight = 5
+    case Straight = 6
+    case EnterRoundabout = 7
+    case ExitRoundabout = 8
+    case UTurn = 9
+    case Goal = 10
+    case Depart = 11
+    case KeepLeft = 12
+    case KeepRight = 13
   }
 }
 
