@@ -141,7 +141,7 @@ class Tests: XCTestCase {
   48.263552
 ]
 """.data(using: .utf8)!
-    let boundingBox = try! JSONDecoder().decode(Directions.BoundingBox.self, from: data)
+    let boundingBox = try! JSONDecoder().decode(BoundingBox.self, from: data)
     
     XCTAssertEqual(boundingBox.northEast.latitude, 48.231946)
     XCTAssertEqual(boundingBox.northEast.longitude, 8.327707)

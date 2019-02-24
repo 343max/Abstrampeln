@@ -11,6 +11,7 @@
 		1EC53759137B0F89DD54C8D05E765D0C /* Pods-OpenrouteService_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 320FC7FF5C7130E3211C8A6B6320099C /* Pods-OpenrouteService_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4EBCDAD3CC40E76D6CA16260D723948F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		5011F4312222A4EE0033113F /* CoreLocationHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5011F4302222A4EE0033113F /* CoreLocationHelpers.swift */; };
+		50161DE422233023006EBDE9 /* MapKitHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50161DE322233023006EBDE9 /* MapKitHelpers.swift */; };
 		505084392221E792000662B8 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505084382221E792000662B8 /* Helpers.swift */; };
 		5050843B2221E8C2000662B8 /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050843A2221E8C2000662B8 /* Directions.swift */; };
 		55E5E329F04B07D396AA04FDD9B10957 /* Pods-OpenrouteService_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D10127929022A342FF25BB3D52975856 /* Pods-OpenrouteService_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,6 +48,7 @@
 		4A47590BABAF2E0B5F5ED195B6E49669 /* OpenrouteService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OpenrouteService-Info.plist"; sourceTree = "<group>"; };
 		4A59834D8241041E5313D264A69C658C /* Pods-OpenrouteService_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OpenrouteService_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5011F4302222A4EE0033113F /* CoreLocationHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationHelpers.swift; sourceTree = "<group>"; };
+		50161DE322233023006EBDE9 /* MapKitHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitHelpers.swift; sourceTree = "<group>"; };
 		505084382221E792000662B8 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		5050843A2221E8C2000662B8 /* Directions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directions.swift; sourceTree = "<group>"; };
 		561167FEA0A3C60BF177BFC647FDDD53 /* Pods-OpenrouteService_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OpenrouteService_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				505084382221E792000662B8 /* Helpers.swift */,
 				5050843A2221E8C2000662B8 /* Directions.swift */,
 				5011F4302222A4EE0033113F /* CoreLocationHelpers.swift */,
+				50161DE322233023006EBDE9 /* MapKitHelpers.swift */,
 			);
 			name = OpenrouteService;
 			path = ../..;
@@ -384,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5686C2F150490D6C0BDFF0239DB72541 /* OpenrouteService-dummy.m in Sources */,
+				50161DE422233023006EBDE9 /* MapKitHelpers.swift in Sources */,
 				5011F4312222A4EE0033113F /* CoreLocationHelpers.swift in Sources */,
 				5050843B2221E8C2000662B8 /* Directions.swift in Sources */,
 				505084392221E792000662B8 /* Helpers.swift in Sources */,

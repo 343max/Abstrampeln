@@ -1,24 +1,23 @@
-//
-//  ViewController.swift
-//  OpenrouteService
-//
-//  Created by Max von Webel on 02/23/2019.
-//  Copyright (c) 2019 Max von Webel. All rights reserved.
-//
+// Copyright Max von Webel. All Rights Reserved.
 
 import UIKit
+import MapKit
+import OpenrouteService
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+  @IBOutlet weak var mapView: MKMapView!
+  
+  func directions() -> Directions {
+    let url = Bundle.main.url(forResource: "Directions", withExtension: "json")!
+    let data = try! Data(contentsOf: url)
+    return try! JSONDecoder().decode(Directions.self, from: data)
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    let directions = self.directions()
+    mapView.setVisibleMapRect(directions.boundingBox.mapRect, animated: false)
+  }
 }
 

@@ -18,7 +18,7 @@ extension Directions {
     public let summary: Summary
     public let geometry: Geometry?
     public let segments: [Segment]
-    public let boundingBox: Directions.BoundingBox
+    public let boundingBox: BoundingBox
     
     public enum CodingKeys: String, CodingKey {
       case summary = "summary"
@@ -104,16 +104,14 @@ extension Directions.Route {
   }
 }
 
-extension Directions {
-  public struct BoundingBox: Decodable {
-    public let northEast: CLLocationCoordinate2D
-    public let southWest: CLLocationCoordinate2D
-    
-    public init(from decoder: Decoder) {
-      let array = try! decoder.singleValueContainer().decode([Double].self)
-      assert(array.count == 4)
-      self.northEast = CLLocationCoordinate2D(array: [ array[0], array[1] ])
-      self.southWest = CLLocationCoordinate2D(array: [ array[2], array[3] ])
-    }
+public struct BoundingBox: Decodable {
+  public let northEast: CLLocationCoordinate2D
+  public let southWest: CLLocationCoordinate2D
+  
+  public init(from decoder: Decoder) {
+    let array = try! decoder.singleValueContainer().decode([Double].self)
+    assert(array.count == 4)
+    self.northEast = CLLocationCoordinate2D(array: [ array[0], array[1] ])
+    self.southWest = CLLocationCoordinate2D(array: [ array[2], array[3] ])
   }
 }
