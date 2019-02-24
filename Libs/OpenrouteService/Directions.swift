@@ -16,14 +16,26 @@ extension Directions {
 }
 
 extension Directions.Route {
-  public struct Summary {
+  public struct Summary: Decodable {
     public let distance: Float
     public let duration: TimeInterval
+    
+    public enum CodingKeys: String, CodingKey {
+      case distance = "distance"
+      case duration = "duration"
+    }
   }
   
-  public struct Segment {
+  public struct Segment: Decodable {
     public let distance: Float
     public let duration: TimeInterval
+    public let steps: [Step]
+    
+    public enum CodingKeys: String, CodingKey {
+      case distance = "distance"
+      case duration = "duration"
+      case steps = "steps"
+    }
   }
 }
 
@@ -48,7 +60,11 @@ extension Directions.Route.Segment {
 }
 
 extension Directions.Route {
-  public struct Geometry {
+  public struct Geometry: Decodable {
     public let coordinates: [CLLocationCoordinate2D]
+    
+    public enum CodingKeys: String, CodingKey {
+      case coordinates = "coordinates"
+    }
   }
 }
