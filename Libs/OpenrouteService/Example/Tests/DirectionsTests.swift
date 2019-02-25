@@ -124,7 +124,7 @@ class Tests: XCTestCase {
   ]
 }
 """.data(using: .utf8)!
-    let geometry = try! JSONDecoder().decode(Directions.Route.Geometry.self, from: data)
+    let geometry = try! JSONDecoder().decode(Geometry.self, from: data)
     XCTAssertEqual(geometry.coordinates.count, 3)
     if let cooridinate = geometry.coordinates.first {
       XCTAssertEqual(cooridinate.longitude, 8.344268)

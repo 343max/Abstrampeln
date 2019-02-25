@@ -13,3 +13,11 @@ extension BoundingBox {
     }
   }
 }
+
+extension Geometry {
+  public var geodesicPolyline: MKGeodesicPolyline {
+    get {
+      return MKGeodesicPolyline(coordinates: coordinates, count: coordinates.count)
+    }
+  }
+}

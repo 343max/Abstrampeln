@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     let directions = self.directions()
     mapView.setVisibleMapRect(directions.boundingBox.mapRect, animated: false)
+    mapView.addOverlay(directions.routes.first!.geometry!.geodesicPolyline)
   }
 }
 
