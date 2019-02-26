@@ -12,9 +12,11 @@
 		5050842A2221DB07000662B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505084282221DB07000662B8 /* Main.storyboard */; };
 		5050842C2221DB09000662B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5050842B2221DB09000662B8 /* Assets.xcassets */; };
 		5050842F2221DB09000662B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5050842D2221DB09000662B8 /* LaunchScreen.storyboard */; };
+		F0410E06E9952E8A4CB433F9 /* Pods_Abstrampeln.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A89F82EE68F7067167B7F18 /* Pods_Abstrampeln.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A89F82EE68F7067167B7F18 /* Pods_Abstrampeln.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstrampeln.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		505084212221DB07000662B8 /* Abstrampeln.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Abstrampeln.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		505084242221DB07000662B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		505084262221DB07000662B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		5050842B2221DB09000662B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5050842E2221DB09000662B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		505084302221DB09000662B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57D7A809755AD63C28DAA67C /* Pods-Abstrampeln.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstrampeln.release.xcconfig"; path = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.release.xcconfig"; sourceTree = "<group>"; };
+		F89CA79EC11B1ED0E43F2990 /* Pods-Abstrampeln.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstrampeln.debug.xcconfig"; path = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0410E06E9952E8A4CB433F9 /* Pods_Abstrampeln.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		207ACFF84D649C5DDA8E1916 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A89F82EE68F7067167B7F18 /* Pods_Abstrampeln.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		505084182221DB07000662B8 = {
 			isa = PBXGroup;
 			children = (
 				505084232221DB07000662B8 /* Abstrampeln */,
 				505084222221DB07000662B8 /* Products */,
+				E707EC94AA0939515A8005DB /* Pods */,
+				207ACFF84D649C5DDA8E1916 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,16 @@
 			path = Abstrampeln;
 			sourceTree = "<group>";
 		};
+		E707EC94AA0939515A8005DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F89CA79EC11B1ED0E43F2990 /* Pods-Abstrampeln.debug.xcconfig */,
+				57D7A809755AD63C28DAA67C /* Pods-Abstrampeln.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 505084332221DB09000662B8 /* Build configuration list for PBXNativeTarget "Abstrampeln" */;
 			buildPhases = (
+				6A2EBEC4693A0D43B11C3F44 /* [CP] Check Pods Manifest.lock */,
 				5050841D2221DB07000662B8 /* Sources */,
 				5050841E2221DB07000662B8 /* Frameworks */,
 				5050841F2221DB07000662B8 /* Resources */,
@@ -129,6 +155,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A2EBEC4693A0D43B11C3F44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Abstrampeln-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5050841D2221DB07000662B8 /* Sources */ = {
@@ -280,6 +331,7 @@
 		};
 		505084342221DB09000662B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F89CA79EC11B1ED0E43F2990 /* Pods-Abstrampeln.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +350,7 @@
 		};
 		505084352221DB09000662B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D7A809755AD63C28DAA67C /* Pods-Abstrampeln.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

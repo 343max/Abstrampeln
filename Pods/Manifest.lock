@@ -1,0 +1,16 @@
+PODS:
+  - OpenrouteService (0.1.0)
+
+DEPENDENCIES:
+  - OpenrouteService (from `Libs/OpenrouteService`)
+
+EXTERNAL SOURCES:
+  OpenrouteService:
+    :path: Libs/OpenrouteService
+
+SPEC CHECKSUMS:
+  OpenrouteService: b97ac2f38bbbcc9d8e6f2b47f39f82e29072585c
+
+PODFILE CHECKSUM: 8998f379584fe0b084cf17c801b5181e00bd6cb4
+
+COCOAPODS: 1.6.0
