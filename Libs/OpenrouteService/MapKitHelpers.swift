@@ -15,9 +15,9 @@ extension BoundingBox {
 }
 
 extension Geometry {
-  public var geodesicPolyline: MKGeodesicPolyline {
+  public var polyline: MKPolyline {
     get {
-      return MKGeodesicPolyline(coordinates: coordinates, count: coordinates.count)
+      return MKPolyline(coordinates: coordinates, count: coordinates.count)
     }
   }
 }

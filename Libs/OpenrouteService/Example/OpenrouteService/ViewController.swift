@@ -16,9 +16,23 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    mapView.delegate = self
+    
     let directions = self.directions()
     mapView.setVisibleMapRect(directions.boundingBox.mapRect, animated: false)
-    mapView.addOverlay(directions.routes.first!.geometry!.geodesicPolyline)
+    mapView.addOverlay(directions.routes.first!.geometry!.polyline)
   }
 }
 
+extension ViewController: MKMapViewDelegate {
+  func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+    if let polyline = overlay as? MKPolyline {
+      let testlineRenderer = MKPolylineRenderer(polyline: polyline)
+      testlineRenderer.strokeColor = mapView.tintColor
+      testlineRenderer.lineWidth = 3.0
+      return testlineRenderer
+    }
+    
+    fatalError()
+  }
+}
