@@ -5,6 +5,8 @@ import MapKit
 import OpenrouteService
 
 class ViewController: UIViewController {
+  let client = OpenrouteClient(networkingClient: OpenrouteNetworkingClient(apiKey: "5b3ce3597851110001cf62486db6049f89cb407c8c6ea9d687fc917c"))
+  
   @IBOutlet weak var mapView: MKMapView!
   
   func directions() -> Directions {
@@ -15,6 +17,11 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let startingPoint = CLLocationCoordinate2D(latitude: 52.511180, longitude: 13.449880)
+    client.autocomplete(text: "13 Esmarch", focusPoint: startingPoint).then { (geocode) in
+      print("\(geocode)")
+    }
     
     mapView.delegate = self
     
