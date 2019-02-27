@@ -2,7 +2,7 @@ import CoreLocation
 import XCTest
 import OpenrouteService
 
-class Tests: XCTestCase {
+class DirectionsTests: XCTestCase {
   
   private func data(fileName: String) -> Data {
     let bundle = Bundle(for: type(of: self))
@@ -101,34 +101,6 @@ class Tests: XCTestCase {
     
     if let step = segment.steps.first {
       XCTAssertEqual(step.name, "Benatweg")
-    }
-  }
-  
-  func testGeometry() {
-    let data = """
-{
-  "type": "LineString",
-  "coordinates": [
-    [
-      8.344268,
-      48.233826
-    ],
-    [
-      8.344147,
-      48.233507
-    ],
-    [
-      8.344098,
-      48.233435
-    ]
-  ]
-}
-""".data(using: .utf8)!
-    let geometry = try! JSONDecoder().decode(Geometry.self, from: data)
-    XCTAssertEqual(geometry.coordinates.count, 3)
-    if let cooridinate = geometry.coordinates.first {
-      XCTAssertEqual(cooridinate.longitude, 8.344268)
-      XCTAssertEqual(cooridinate.latitude, 48.233826)
     }
   }
   

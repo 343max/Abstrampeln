@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1B60E11D3BC430E79AEB2DDD /* Pods_OpenrouteService_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E04EE4294083C79AC310C38 /* Pods_OpenrouteService_Example.framework */; };
 		50161DDF22231976006EBDE9 /* Directions.json in Resources */ = {isa = PBXBuildFile; fileRef = 505084362221E72C000662B8 /* Directions.json */; };
-		50161DE222232F47006EBDE9 /* Directions.json in Resources */ = {isa = PBXBuildFile; fileRef = 505084362221E72C000662B8 /* Directions.json */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -17,6 +16,11 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* DirectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* DirectionsTests.swift */; };
 		9BEA3070A7F860C0C401F22E /* Pods_OpenrouteService_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F89B2A883668110E34FCE44 /* Pods_OpenrouteService_Tests.framework */; };
+		CF47D0672226D1D900083728 /* GeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47D0662226D1D900083728 /* GeometryTests.swift */; };
+		CF5FA7F42226BE0B00953A85 /* Geocode_Autocomplete.json in Resources */ = {isa = PBXBuildFile; fileRef = CF5FA7F02226BD3900953A85 /* Geocode_Autocomplete.json */; };
+		CF5FA7F52226BE0B00953A85 /* Geocode_Search.json in Resources */ = {isa = PBXBuildFile; fileRef = CF5FA7F22226BE0200953A85 /* Geocode_Search.json */; };
+		CF5FA7F62226BE0F00953A85 /* Directions.json in Resources */ = {isa = PBXBuildFile; fileRef = 505084362221E72C000662B8 /* Directions.json */; };
+		CFE6CDEE2226C16A0065EA1D /* GeocodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6CDED2226C16A0065EA1D /* GeocodeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		607FACEB1AFB9204008FA782 /* DirectionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsTests.swift; sourceTree = "<group>"; };
 		7E04EE4294083C79AC310C38 /* Pods_OpenrouteService_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenrouteService_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C801AF28038FEE763E0856AA /* Pods-OpenrouteService_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenrouteService_Example.release.xcconfig"; path = "Target Support Files/Pods-OpenrouteService_Example/Pods-OpenrouteService_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CF47D0662226D1D900083728 /* GeometryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryTests.swift; sourceTree = "<group>"; };
+		CF5FA7F02226BD3900953A85 /* Geocode_Autocomplete.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Geocode_Autocomplete.json; sourceTree = "<group>"; };
+		CF5FA7F22226BE0200953A85 /* Geocode_Search.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Geocode_Search.json; sourceTree = "<group>"; };
+		CFE6CDED2226C16A0065EA1D /* GeocodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeTests.swift; sourceTree = "<group>"; };
 		D0E1DB427F78C78BCA53E853 /* Pods-OpenrouteService_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenrouteService_Tests.release.xcconfig"; path = "Target Support Files/Pods-OpenrouteService_Tests/Pods-OpenrouteService_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D23D79DC482CD98D864D7A0E /* Pods-OpenrouteService_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenrouteService_Example.debug.xcconfig"; path = "Target Support Files/Pods-OpenrouteService_Example/Pods-OpenrouteService_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EBF659C6646FAC815EF42DBD /* OpenrouteService.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OpenrouteService.podspec; path = ../OpenrouteService.podspec; sourceTree = "<group>"; };
@@ -141,7 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				607FACEB1AFB9204008FA782 /* DirectionsTests.swift */,
+				CFE6CDED2226C16A0065EA1D /* GeocodeTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				CF47D0662226D1D900083728 /* GeometryTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -151,6 +161,8 @@
 			children = (
 				607FACEA1AFB9204008FA782 /* Info.plist */,
 				505084362221E72C000662B8 /* Directions.json */,
+				CF5FA7F02226BD3900953A85 /* Geocode_Autocomplete.json */,
+				CF5FA7F22226BE0200953A85 /* Geocode_Search.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -254,7 +266,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				50161DE222232F47006EBDE9 /* Directions.json in Resources */,
+				CF5FA7F62226BE0F00953A85 /* Directions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +274,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5FA7F42226BE0B00953A85 /* Geocode_Autocomplete.json in Resources */,
+				CF5FA7F52226BE0B00953A85 /* Geocode_Search.json in Resources */,
 				50161DDF22231976006EBDE9 /* Directions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +361,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE6CDEE2226C16A0065EA1D /* GeocodeTests.swift in Sources */,
+				CF47D0672226D1D900083728 /* GeometryTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* DirectionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

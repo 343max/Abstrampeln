@@ -94,14 +94,6 @@ extension Directions.Route.Segment.Step {
   }
 }
 
-public struct Geometry: Decodable {
-  public let coordinates: [CLLocationCoordinate2D]
-  
-  public enum CodingKeys: String, CodingKey {
-    case coordinates = "coordinates"
-  }
-}
-
 public struct BoundingBox: Decodable {
   public let northEast: CLLocationCoordinate2D
   public let southWest: CLLocationCoordinate2D

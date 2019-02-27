@@ -1,12 +1,39 @@
 // Copyright Max von Webel. All Rights Reserved.
 
 import Foundation
+import CoreLocation
 
 enum Units: String {
   case meters = "m"
   case kilometers = "km"
   case miles = "mi"
 }
+
+public struct Geometry: Decodable {
+  public let type: GeometryType
+  public let coordinates: [CLLocationCoordinate2D]
+  
+  public enum CodingKeys: String, CodingKey {
+    case type = "type"
+    case coordinates = "coordinates"
+  }
+  
+  public enum GeometryType: String, Decodable {
+    case point = "Point"
+    case lineString = "LineString"
+  }
+  
+  public init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    self.type = try container.decode(GeometryType.self, forKey: CodingKeys.type)
+    if self.type == .point {
+      self.coordinates = try [container.decode(CLLocationCoordinate2D.self, forKey: CodingKeys.coordinates)]
+    } else {
+      self.coordinates = try container.decode([CLLocationCoordinate2D].self, forKey: CodingKeys.coordinates)
+    }
+  }
+}
+
 
 extension Directions {
   enum Profile: String {
