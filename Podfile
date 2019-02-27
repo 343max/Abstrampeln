@@ -6,6 +6,6 @@ target 'Abstrampeln' do
   use_frameworks!
 
   # Pods for Abstrampeln
-  pod 'OpenrouteService', :path => 'Libs/OpenrouteService'
+  pod 'OpenrouteService', :path => './Libs/OpenrouteService'
 
 end
