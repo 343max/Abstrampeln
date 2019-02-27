@@ -123,6 +123,16 @@ public class Promise<T> : UntypedPromise {
     })
   }
   
+  public func mapPromise<U>(_ mapping: @escaping (_ result: T) -> Promise<U>) -> Promise<U> {
+    return Promise<U>({ (completion) in
+      self.then { (result) in
+        mapping(result).then { (result2) in
+          completion(result2)
+        }
+      }
+    })
+  }
+  
   public func map<U>(_ mapping: @escaping (_ result: T, _ completion: @escaping (U) -> ()) -> ()) -> Promise<U> {
     return Promise<U>({ (completion) in
       self.then { (result) in

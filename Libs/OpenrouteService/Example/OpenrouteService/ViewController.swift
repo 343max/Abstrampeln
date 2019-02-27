@@ -18,20 +18,28 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let startingPoint = CLLocationCoordinate2D(latitude: 52.511180, longitude: 13.449880)
-    client.autocomplete(text: "13 Esmarch", focusPoint: startingPoint).then { (geocode) in
-      print("\(geocode)")
-    }
-    
     mapView.delegate = self
+  }
+  
+  func show(directions: Directions) {
+    mapView.setVisibleMapRect(directions.boundingBox.mapRect, animated: false)
+    mapView.addOverlay(directions.routes.first!.geometry!.polyline)
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    let directions = self.directions()
-    mapView.setVisibleMapRect(directions.boundingBox.mapRect, animated: false)
-    mapView.addOverlay(directions.routes.first!.geometry!.polyline)
+//    let directions = self.directions()
+//    show(directions: directions)
+    
+    let start = CLLocationCoordinate2D(latitude: 52.511180, longitude: 13.449880)
+    client.autocomplete(text: "13 Esmarch", focusPoint: start).map { (geocodeRespone) -> CLLocationCoordinate2D in
+      return geocodeRespone.features.first!.geometry.start
+      }.mapPromise { (finish) -> Promise<Directions> in
+        return self.client.directions(start: start, finish: finish)
+      }.mainQueue.then { (directions) in
+        self.show(directions: directions)
+    }
   }
 }
 

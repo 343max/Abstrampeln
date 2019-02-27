@@ -24,4 +24,24 @@ public class OpenrouteClient {
     
     return client.GET("geocode/autocomplete", parameters, type: Geocode.self)
   }
+  
+  // directions:
+  // https://api.openrouteservice.org/directions?api_key=&coordinates=8.34234,48.23424%7C8.34423,48.26424&profile=cycling-road&preference=recommended&format=json&units=km&language=de&geometry=true&geometry_format=geojson&instructions=true&instructions_format=text
+  
+  public func directions(start: CLLocationCoordinate2D, finish: CLLocationCoordinate2D, profile: Directions.Profile = .cyclingRegular, language: Directions.Language = .english) -> Promise<Directions> {
+    
+    let parameters: NetworkingClient.ParameterDict = [
+      "coordinates": [start, finish].map({ "\($0.longitude),\($0.latitude)" }).joined(separator: "|"),
+      "format": "json",
+      "units": "km",
+      "geometry": "true",
+      "geometry_format": "geojson",
+      "instructions": "true",
+      "instructions_format": "text",
+      "profile": profile.rawValue,
+      "language": language.rawValue
+    ]
+    
+    return client.GET("/directions", parameters, type: Directions.self)
+  }
 }

@@ -34,9 +34,16 @@ public struct Geometry: Decodable {
   }
 }
 
+extension Geometry {
+  public var start: CLLocationCoordinate2D {
+    get {
+      return coordinates.first!
+    }
+  }
+}
 
 extension Directions {
-  enum Profile: String {
+  public enum Profile: String {
     case drivingCar = "driving-car"
     case drivingHeavyGoodsVehicle = "driving-hvg"
     case cyclingRegular = "cycling-regular"
@@ -49,13 +56,13 @@ extension Directions {
     case wheelchair = "wheelchair"
   }
   
-  enum Preferences: String {
+  public enum Preferences: String {
     case recommended = "recommended"
     case fastest = "fastest"
     case shortest = "shortest"
   }
   
-  enum Language: String {
+  public enum Language: String {
     case simplifiedChinese = "zh-CN"
     case german = "de"
     case english = "en"
