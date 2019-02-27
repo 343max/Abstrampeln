@@ -11,6 +11,27 @@ class MapViewController: UIViewController {
   
   let locationManager = CLLocationManager()
   
+  let openrouteClient = OpenrouteClient(networkingClient: OpenrouteNetworkingClient(apiKey: "5b3ce3597851110001cf62486db6049f89cb407c8c6ea9d687fc917c"))
+  
+  var directions: Directions? {
+    didSet {
+      update(directions: directions)
+    }
+  }
+  var directionsOverlay: MKOverlay? {
+    willSet {
+      if let overlay = directionsOverlay {
+        mapView.removeOverlay(overlay)
+      }
+    }
+    
+    didSet {
+      if let overlay = directionsOverlay {
+        mapView.addOverlay(overlay)
+      }
+    }
+  }
+  
   var latestLocation: CLLocation? {
     didSet {
       if let latestLocation = latestLocation {
@@ -22,6 +43,20 @@ class MapViewController: UIViewController {
   var destination: CLLocationCoordinate2D? {
     didSet {
       update(destination: destination)
+    }
+  }
+  
+  var destinationPin: MKPointAnnotation? {
+    willSet {
+      if let pin = destinationPin {
+        mapView.removeAnnotation(pin)
+      }
+    }
+    
+    didSet {
+      if let pin = destinationPin {
+        mapView.addAnnotation(pin)
+      }
     }
   }
   
@@ -61,7 +96,31 @@ class MapViewController: UIViewController {
   }
   
   func update(destination: CLLocationCoordinate2D?) {
+    guard let destination = destination else {
+      destinationPin = nil
+      return
+    }
     
+    let pin = MKPointAnnotation()
+    pin.coordinate = destination
+    destinationPin = pin
+  }
+  
+  func update(directions: Directions?) {
+    guard let directions = directions else {
+      directionsOverlay = nil
+      return
+    }
+    
+    let overlay = directions.routes.first!.geometry!.polyline
+    directionsOverlay = overlay
+  }
+  
+  func getDirections(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) {
+    openrouteClient.directions(start: from, finish: to).mainQueue.then { [weak self] (directions) in
+      guard let self = self else { return }
+      self.directions = directions
+    }
   }
 }
 
@@ -80,6 +139,19 @@ extension MapViewController: CLLocationManagerDelegate {
 extension MapViewController: MKMapViewDelegate {
   func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
     userInteracted = true
+    
+    searchField.resignFirstResponder()
+  }
+  
+  func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+    if let polyline = overlay as? MKPolyline {
+      let testlineRenderer = MKPolylineRenderer(polyline: polyline)
+      testlineRenderer.strokeColor = mapView.tintColor
+      testlineRenderer.lineWidth = 3.0
+      return testlineRenderer
+    }
+
+    fatalError()
   }
 }
 
@@ -90,10 +162,12 @@ extension MapViewController {
     }
     
     let location = gr.location(in: mapView)
-    let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
+    let destination = mapView.convert(location, toCoordinateFrom: mapView)
     
-    let pin = MKPointAnnotation()
-    pin.coordinate = coordinate
-    mapView.addAnnotation(pin)
+    self.destination = destination
+    
+    if let from = latestLocation?.coordinate {
+      getDirections(from: from, to: destination)
+    }
   }
 }
