@@ -24,6 +24,10 @@ class ViewController: UIViewController {
     }
     
     mapView.delegate = self
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     
     let directions = self.directions()
     mapView.setVisibleMapRect(directions.boundingBox.mapRect, animated: false)
