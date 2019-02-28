@@ -4,11 +4,12 @@ import UIKit
 import Pulley
 
 class SearchViewController: UIViewController {
-  @IBOutlet weak var searchField: UITextField!
+  @IBOutlet weak var searchBar: UISearchBar!
+  
 }
 
 extension SearchViewController: PulleyDrawerViewControllerDelegate {
   func collapsedDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat {
-    return searchField.frame.maxY + bottomSafeArea
+    return searchBar.frame.maxY + bottomSafeArea
   }
 }

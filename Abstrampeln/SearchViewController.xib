@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Abstrampeln" customModuleProvider="target">
             <connections>
-                <outlet property="searchField" destination="ZcF-q2-p04" id="19e-Xc-4I3"/>
+                <outlet property="searchBar" destination="yaw-F9-YNz" id="58D-9r-yl2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,22 +31,16 @@
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="qOS-4s-geP"/>
                     </constraints>
                 </view>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where to go?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-q2-p04" customClass="SearchField" customModule="Abstrampeln" customModuleProvider="target">
-                    <rect key="frame" x="20" y="69" width="374" height="30"/>
-                    <accessibility key="accessibilityConfiguration">
-                        <accessibilityTraits key="traits" searchField="YES"/>
-                    </accessibility>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Where to?" translatesAutoresizingMaskIntoConstraints="NO" id="yaw-F9-YNz">
+                    <rect key="frame" x="0.0" y="69" width="414" height="56"/>
                     <textInputTraits key="textInputTraits"/>
-                </textField>
+                </searchBar>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="yaw-F9-YNz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AAw-0v-dLZ"/>
                 <constraint firstItem="h59-zt-J5R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PSf-HN-Iat"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZcF-q2-p04" secondAttribute="trailing" constant="20" id="c2M-oJ-W2K"/>
-                <constraint firstItem="ZcF-q2-p04" firstAttribute="top" secondItem="h59-zt-J5R" secondAttribute="bottom" constant="10" id="fVp-nt-mNt"/>
-                <constraint firstItem="ZcF-q2-p04" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="pgG-Ur-4Ks"/>
+                <constraint firstItem="yaw-F9-YNz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VJZ-qO-i5X"/>
+                <constraint firstItem="yaw-F9-YNz" firstAttribute="top" secondItem="h59-zt-J5R" secondAttribute="bottom" constant="10" id="qyZ-ck-KuI"/>
                 <constraint firstItem="h59-zt-J5R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="ybB-rV-2Qq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
