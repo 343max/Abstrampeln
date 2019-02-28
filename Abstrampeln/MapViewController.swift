@@ -7,9 +7,7 @@ import OpenrouteService
 
 class MapViewController: UIViewController {
   weak var mapView: MKMapView!
-  
-  let locationManager = CLLocationManager()
-  
+    
   var directions: Directions? {
     didSet {
       update(directions: directions)
@@ -69,20 +67,18 @@ class MapViewController: UIViewController {
     mapView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:))))
     self.mapView = mapView
     view.addSubview(mapView)
-
     
-    locationManager.delegate = self
+    AppController.shared.locationController.locationPromise.then { [weak self] (locations) in
+      guard let self = self else { return }
+      
+      self.latestLocation = locations.first!
+    }
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    let status = CLLocationManager.authorizationStatus()
-    if status == .notDetermined {
-      locationManager.requestAlwaysAuthorization()
-    } else if status == .authorizedWhenInUse || status == .authorizedAlways {
-      locationManager.startUpdatingLocation()
-    }
+    AppController.shared.locationController.startUpdatingLocation()
   }
   
   func update(location: CLLocation) {
@@ -119,18 +115,6 @@ class MapViewController: UIViewController {
       guard let self = self else { return }
       self.directions = directions
     }
-  }
-}
-
-extension MapViewController: CLLocationManagerDelegate {
-  func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-    if status == .authorizedAlways || status == .authorizedWhenInUse {
-      locationManager.startUpdatingLocation()
-    }
-  }
-  
-  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    latestLocation = locations.first
   }
 }
 
