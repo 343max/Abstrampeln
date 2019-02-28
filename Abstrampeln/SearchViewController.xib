@@ -32,15 +32,15 @@
                     </constraints>
                 </view>
                 <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Where to?" translatesAutoresizingMaskIntoConstraints="NO" id="yaw-F9-YNz">
-                    <rect key="frame" x="0.0" y="69" width="414" height="56"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <rect key="frame" x="0.0" y="59" width="414" height="56"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                 </searchBar>
             </subviews>
             <constraints>
                 <constraint firstItem="yaw-F9-YNz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AAw-0v-dLZ"/>
                 <constraint firstItem="h59-zt-J5R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PSf-HN-Iat"/>
                 <constraint firstItem="yaw-F9-YNz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VJZ-qO-i5X"/>
-                <constraint firstItem="yaw-F9-YNz" firstAttribute="top" secondItem="h59-zt-J5R" secondAttribute="bottom" constant="10" id="qyZ-ck-KuI"/>
+                <constraint firstItem="yaw-F9-YNz" firstAttribute="top" secondItem="h59-zt-J5R" secondAttribute="bottom" id="qyZ-ck-KuI"/>
                 <constraint firstItem="h59-zt-J5R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="ybB-rV-2Qq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

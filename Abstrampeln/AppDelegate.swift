@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     self.window = window
     window.makeKeyAndVisible()
-    
+
+    pulleyVC.setDrawerPosition(position: .partiallyRevealed, animated: false)
+
     return true
   }
 
