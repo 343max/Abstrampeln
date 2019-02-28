@@ -128,6 +128,7 @@ extension SearchController: UICollectionViewDataSource {
     
     override func prepareForReuse() {
       item = nil
+      isSelected = false
     }
     
     override func layoutSubviews() {
@@ -138,7 +139,7 @@ extension SearchController: UICollectionViewDataSource {
     
     override var isSelected: Bool {
       didSet {
-        backgroundView?.backgroundColor = isSelected ? tintColor : .clear
+        backgroundView?.backgroundColor = isSelected ? UIColor(white: 0.3, alpha: 0.1) : .clear
       }
     }
   }
