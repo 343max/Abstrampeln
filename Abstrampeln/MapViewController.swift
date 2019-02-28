@@ -6,7 +6,7 @@ import MapKit
 import OpenrouteService
 
 class MapViewController: UIViewController {
-  @IBOutlet weak var mapView: MKMapView!
+  weak var mapView: MKMapView!
   
   let locationManager = CLLocationManager()
   
@@ -64,8 +64,14 @@ class MapViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    let mapView = MKMapView(frame: view.bounds)
+    mapView.showsUserLocation = true
+    mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     mapView.delegate = self
     mapView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:))))
+    self.mapView = mapView
+    view.addSubview(mapView)
+
     
     locationManager.delegate = self
   }
