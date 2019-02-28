@@ -7,7 +7,6 @@ import OpenrouteService
 
 class MapViewController: UIViewController {
   @IBOutlet weak var mapView: MKMapView!
-  @IBOutlet weak var searchField: UITextField!
   
   let locationManager = CLLocationManager()
   
@@ -67,11 +66,6 @@ class MapViewController: UIViewController {
     
     mapView.delegate = self
     mapView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:))))
-    
-    searchField.layer.shadowColor = UIColor.black.cgColor
-    searchField.layer.shadowOpacity = 0.1
-    searchField.layer.shadowRadius = 5
-    searchField.layer.shadowOffset = CGSize(width: 0, height: 4)
     
     locationManager.delegate = self
   }
@@ -139,8 +133,6 @@ extension MapViewController: CLLocationManagerDelegate {
 extension MapViewController: MKMapViewDelegate {
   func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
     userInteracted = true
-    
-    searchField.resignFirstResponder()
   }
   
   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
