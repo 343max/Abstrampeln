@@ -1,8 +1,14 @@
 PODS:
   - OpenrouteService (0.1.0)
+  - Pulley (2.6.3)
 
 DEPENDENCIES:
   - OpenrouteService (from `./Libs/OpenrouteService`)
+  - Pulley
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Pulley
 
 EXTERNAL SOURCES:
   OpenrouteService:
@@ -10,7 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   OpenrouteService: b97ac2f38bbbcc9d8e6f2b47f39f82e29072585c
+  Pulley: af7d2347deadc38ef78406579995568f2d6ee158
 
-PODFILE CHECKSUM: a9ca6183fcf71285079f081587d41b82c2f3e8c0
+PODFILE CHECKSUM: c4f69bc6e479b8afcde2e022fbbc246647239e6f
 
 COCOAPODS: 1.6.0

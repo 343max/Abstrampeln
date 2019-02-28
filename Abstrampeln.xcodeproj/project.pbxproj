@@ -128,6 +128,7 @@
 				TargetAttributes = {
 					505084202221DB07000662B8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -200,12 +201,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/OpenrouteService/OpenrouteService.framework",
+				"${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenrouteService.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulley.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -376,7 +379,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.343max.Abstrampeln;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -395,7 +398,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.343max.Abstrampeln;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

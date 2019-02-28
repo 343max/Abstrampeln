@@ -3,30 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		116A6A48E63F7514734D8EA7051DB8DC /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466A283C9088B68516767B3F69E393C2 /* Promise.swift */; };
-		2EBF4BD270FC408014B517A2588EDA73 /* Pods-Abstrampeln-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35C37E70BC6924582A1F8F43FE0B0426 /* Pods-Abstrampeln-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2FCA01844CADF3D8BD05AB7B58D761A3 /* Pods-Abstrampeln-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FEDCBED74C53F16ABD553EA529EFF7 /* Pods-Abstrampeln-dummy.m */; };
-		3407A7D3FA1003782CFC2072B3771099 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		2535DFE4E63D9468FC457A03408CE12E /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041C3BAD1A830F2A9BB75B471D727BF /* UIView+constrainToParent.swift */; };
+		4EE145EB44A027F04B5CDD638589B27F /* Pulley-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5811B2A44EC8513F20D10AF2E2997135 /* Pulley-dummy.m */; };
+		5D76D126CD388FD80ED430362BF551A8 /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D071E9D18C1CC4CA1591ABB4975AD /* PulleyPassthroughScrollView.swift */; };
+		6D2F2ACED50957B47540EF8E3A653034 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
 		7471C5A63E114258D2A14602D9DECDF7 /* OpenrouteService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA3453B2037C6DA2F41606AD724FF3B /* OpenrouteService-dummy.m */; };
+		77EB1C4A9F9A78E8C599A71642A90DD1 /* Pulley-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 994BAF84223FF52FDF58C68B35E942BC /* Pulley-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80606AF3E082CFACCDEDE270FA7F7D27 /* UIViewController+PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D06EBA2345A6667DC182D41C44EEF4 /* UIViewController+PulleyViewController.swift */; };
+		897A9091A5C901890BF7B11C28B47E3A /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B7D55BBB3C91D11E17F5B9C22DA4A /* PulleyViewController.swift */; };
+		8AF8EB5416E732E60112AA2902D9E6E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
 		A12DC01DEB379C34712C57ABD3E30D81 /* OpenrouteNetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EC35132CECBE6EA5EAAD296521FDDC /* OpenrouteNetworkingClient.swift */; };
 		A52C5433DA309932FBA3A464E8E7524C /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BEE49C832D4783811905164B18DDD2 /* Geocode.swift */; };
+		AF602DFFFEFA3ECF8C061B6B4762F4F5 /* Pods-Abstrampeln-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FEDCBED74C53F16ABD553EA529EFF7 /* Pods-Abstrampeln-dummy.m */; };
+		B40ADB5CE8CB3216DE67A883286E7DC4 /* Pods-Abstrampeln-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35C37E70BC6924582A1F8F43FE0B0426 /* Pods-Abstrampeln-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B621136B6948EFF775655780E5A67032 /* CoreLocationHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB499E315C54F23E225F25CDC9C2FF2 /* CoreLocationHelpers.swift */; };
 		C77E0A1AA5BC544481AE9DD35784111C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02A0EAFDF16529758D46A059D8D4E0 /* Helpers.swift */; };
 		C8D6EE658337D9D5F1C6CBF0582B82FE /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC752CC0A52DDF10CAAD3AF85E4882C2 /* Directions.swift */; };
 		CAC793EDFEE7257636E5CF1804F18BC7 /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C9F311A67F011AAA3041F30C93398 /* NetworkingClient.swift */; };
 		DB35A24527AE0666F8F3D35F6E2A8D01 /* Promise+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74781EE89B0DC71AC1ED040BFC906A8 /* Promise+Helpers.swift */; };
 		DD433D3CA99F3AC59880C06816817268 /* OpenrouteService-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64E7155BFDADAEBEDF171F4F5D0EFCD7 /* OpenrouteService-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E797A0C0C6E5347DEF18F5663EC77385 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		E797A0C0C6E5347DEF18F5663EC77385 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
 		F3C37D80F23112CF880E93AC079BF444 /* OpenrouteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EAE12D548A592A394473E4C87AE499 /* OpenrouteClient.swift */; };
+		F4E95649B39FFE2EFC6E34C0BCAB7BEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
 		F8A3ACDAEFA1370A75EF4EFBB7EB9915 /* MapKitHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142CB29D8E2A9BA571BB7C5D0023C74 /* MapKitHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A2D88CE7504DA78477366F908120720A /* PBXContainerItemProxy */ = {
+		55C2C837DEE0DAE94A48C5ECD9ACAC05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDD108D630D673E38A0F88A17BE3BB7F;
+			remoteInfo = Pulley;
+		};
+		ED3959615880345EC2FE39C23C0FB3CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -36,46 +51,67 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03D06EBA2345A6667DC182D41C44EEF4 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+PulleyViewController.swift"; path = "PulleyLib/UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
 		0B0186757FAD0DD4EB901E3872A72644 /* Pods-Abstrampeln-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Abstrampeln-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1BB68CD3CEFC307044AFDB88FA0184C2 /* OpenrouteService.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenrouteService.xcconfig; sourceTree = "<group>"; };
 		1F487656186D79FAC369DFF7D3C6F30B /* OpenrouteService.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OpenrouteService.modulemap; sourceTree = "<group>"; };
+		236D071E9D18C1CC4CA1591ABB4975AD /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PulleyPassthroughScrollView.swift; path = PulleyLib/PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
 		2DFA3AAA993F631C79F76BB076D92BEA /* Pods-Abstrampeln.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Abstrampeln.release.xcconfig"; sourceTree = "<group>"; };
 		35C37E70BC6924582A1F8F43FE0B0426 /* Pods-Abstrampeln-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Abstrampeln-umbrella.h"; sourceTree = "<group>"; };
 		377C9F311A67F011AAA3041F30C93398 /* NetworkingClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkingClient.swift; path = OpenrouteService/Classes/NetworkingClient.swift; sourceTree = "<group>"; };
-		3989B34BD3765768591B8D0C7056F3AA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		3989B34BD3765768591B8D0C7056F3AA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		466A283C9088B68516767B3F69E393C2 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = OpenrouteService/Classes/Promise.swift; sourceTree = "<group>"; };
-		59085C7C8BB9B6D1F378E9A98B835BD3 /* OpenrouteService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = OpenrouteService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4A1AE5688EEC620521C4C52D49782EF1 /* OpenrouteService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenrouteService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5811B2A44EC8513F20D10AF2E2997135 /* Pulley-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pulley-dummy.m"; sourceTree = "<group>"; };
+		58C8B1B7CDEFB9175F83F1E22F4882E7 /* Pulley.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pulley.xcconfig; sourceTree = "<group>"; };
+		59085C7C8BB9B6D1F378E9A98B835BD3 /* OpenrouteService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = OpenrouteService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		64E7155BFDADAEBEDF171F4F5D0EFCD7 /* OpenrouteService-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenrouteService-umbrella.h"; sourceTree = "<group>"; };
-		77CF6B1B599329AA84F28179C94D5665 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		77CF6B1B599329AA84F28179C94D5665 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8BB499E315C54F23E225F25CDC9C2FF2 /* CoreLocationHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreLocationHelpers.swift; path = OpenrouteService/Classes/CoreLocationHelpers.swift; sourceTree = "<group>"; };
 		97EC35132CECBE6EA5EAAD296521FDDC /* OpenrouteNetworkingClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenrouteNetworkingClient.swift; path = OpenrouteService/Classes/OpenrouteNetworkingClient.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		994BAF84223FF52FDF58C68B35E942BC /* Pulley-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EECDE0EB2A528752AD601E4204ECDFE /* Pods-Abstrampeln-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Abstrampeln-Info.plist"; sourceTree = "<group>"; };
+		A041C3BAD1A830F2A9BB75B471D727BF /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+constrainToParent.swift"; path = "PulleyLib/UIView+constrainToParent.swift"; sourceTree = "<group>"; };
 		A4EAE12D548A592A394473E4C87AE499 /* OpenrouteClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenrouteClient.swift; path = OpenrouteService/Classes/OpenrouteClient.swift; sourceTree = "<group>"; };
 		A5B14F57E06F861F916290CF5BAC5643 /* OpenrouteService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenrouteService-prefix.pch"; sourceTree = "<group>"; };
 		A74781EE89B0DC71AC1ED040BFC906A8 /* Promise+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Helpers.swift"; path = "OpenrouteService/Classes/Promise+Helpers.swift"; sourceTree = "<group>"; };
 		A7D222C0DE6AEAEF20297EE208293C0D /* OpenrouteService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OpenrouteService-Info.plist"; sourceTree = "<group>"; };
+		A9D7CB326C3752D67E263129F9322D8E /* Pulley-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-prefix.pch"; sourceTree = "<group>"; };
+		ACEE3E281A242B882C6207F66ACF45A6 /* Pulley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pulley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31F0F6DE8122CCA3890989644D30277 /* Pulley.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Pulley.modulemap; sourceTree = "<group>"; };
 		B43B6328185D424696285AFAEE8115C1 /* Pods-Abstrampeln-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Abstrampeln-frameworks.sh"; sourceTree = "<group>"; };
-		B787191903E022755AB27026E49F1F1A /* OpenrouteService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OpenrouteService.framework; path = OpenrouteService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D1D75E261A4649F3D58982B6AADFB6 /* Pods-Abstrampeln-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Abstrampeln-acknowledgements.plist"; sourceTree = "<group>"; };
-		C4E33BEDB0BCC8A3259B9F9CEE7F7F5E /* Pods_Abstrampeln.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Abstrampeln.framework; path = "Pods-Abstrampeln.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CC752CC0A52DDF10CAAD3AF85E4882C2 /* Directions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Directions.swift; path = OpenrouteService/Classes/Directions.swift; sourceTree = "<group>"; };
+		CE9B7D55BBB3C91D11E17F5B9C22DA4A /* PulleyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PulleyViewController.swift; path = PulleyLib/PulleyViewController.swift; sourceTree = "<group>"; };
 		D4BEE49C832D4783811905164B18DDD2 /* Geocode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Geocode.swift; path = OpenrouteService/Classes/Geocode.swift; sourceTree = "<group>"; };
 		D9662912EF2396ED9E9002B9AE571C6E /* Pods-Abstrampeln.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Abstrampeln.debug.xcconfig"; sourceTree = "<group>"; };
 		DF02A0EAFDF16529758D46A059D8D4E0 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = OpenrouteService/Classes/Helpers.swift; sourceTree = "<group>"; };
+		ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		EDE5B0FFF739B7F4684A576AD1C444C4 /* Pods_Abstrampeln.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstrampeln.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA3453B2037C6DA2F41606AD724FF3B /* OpenrouteService-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OpenrouteService-dummy.m"; sourceTree = "<group>"; };
+		F0FA8F9F758CCEB6F6F0671B2B2F3D19 /* Pulley-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pulley-Info.plist"; sourceTree = "<group>"; };
 		F142CB29D8E2A9BA571BB7C5D0023C74 /* MapKitHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapKitHelpers.swift; path = OpenrouteService/Classes/MapKitHelpers.swift; sourceTree = "<group>"; };
 		F2FEDCBED74C53F16ABD553EA529EFF7 /* Pods-Abstrampeln-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Abstrampeln-dummy.m"; sourceTree = "<group>"; };
 		F5D7C40ADE75CB99725E96365FE60AD4 /* Pods-Abstrampeln.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Abstrampeln.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		13CCB50579BEB574E702E8B92E142C87 /* Frameworks */ = {
+		4CE55308FF49CFDD7488D63122C0AB67 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3407A7D3FA1003782CFC2072B3771099 /* Foundation.framework in Frameworks */,
+				8AF8EB5416E732E60112AA2902D9E6E0 /* Foundation.framework in Frameworks */,
+				F4E95649B39FFE2EFC6E34C0BCAB7BEA /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DDC6DEF68CA43310ADB385483B69A22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D2F2ACED50957B47540EF8E3A653034 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +146,14 @@
 			path = ../Libs/OpenrouteService;
 			sourceTree = "<group>";
 		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E169A450ED27AC725DF52953F66D11E0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		37DB0040B661E4C01DA69A1E84CDFCF2 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,21 +172,40 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		98858840024248265233C581AF257B18 /* Products */ = {
+		43A76C1B57022394B0BE10516A32279F /* Pulley */ = {
 			isa = PBXGroup;
 			children = (
-				B787191903E022755AB27026E49F1F1A /* OpenrouteService.framework */,
-				C4E33BEDB0BCC8A3259B9F9CEE7F7F5E /* Pods_Abstrampeln.framework */,
+				236D071E9D18C1CC4CA1591ABB4975AD /* PulleyPassthroughScrollView.swift */,
+				CE9B7D55BBB3C91D11E17F5B9C22DA4A /* PulleyViewController.swift */,
+				A041C3BAD1A830F2A9BB75B471D727BF /* UIView+constrainToParent.swift */,
+				03D06EBA2345A6667DC182D41C44EEF4 /* UIViewController+PulleyViewController.swift */,
+				90F77C2E3CE9042D66E9C7D7520CA32A /* Support Files */,
+			);
+			path = Pulley;
+			sourceTree = "<group>";
+		};
+		8CF3E1625CF4DAAA6A01063BC07EB4C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A1AE5688EEC620521C4C52D49782EF1 /* OpenrouteService.framework */,
+				EDE5B0FFF739B7F4684A576AD1C444C4 /* Pods_Abstrampeln.framework */,
+				ACEE3E281A242B882C6207F66ACF45A6 /* Pulley.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+		90F77C2E3CE9042D66E9C7D7520CA32A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+				B31F0F6DE8122CCA3890989644D30277 /* Pulley.modulemap */,
+				58C8B1B7CDEFB9175F83F1E22F4882E7 /* Pulley.xcconfig */,
+				5811B2A44EC8513F20D10AF2E2997135 /* Pulley-dummy.m */,
+				F0FA8F9F758CCEB6F6F0671B2B2F3D19 /* Pulley-Info.plist */,
+				A9D7CB326C3752D67E263129F9322D8E /* Pulley-prefix.pch */,
+				994BAF84223FF52FDF58C68B35E942BC /* Pulley-umbrella.h */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/Pulley";
 			sourceTree = "<group>";
 		};
 		B04C97410277C81A60BE6CC3BC1C1A34 /* Support Files */ = {
@@ -164,18 +227,19 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D913EAF183A5B62504E47734695C6EE9 /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				98858840024248265233C581AF257B18 /* Products */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				D0044BFBC53C18ED62741C52BCF3D3AE /* Pods */,
+				8CF3E1625CF4DAAA6A01063BC07EB4C9 /* Products */,
 				37DB0040B661E4C01DA69A1E84CDFCF2 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		D0044BFBC53C18ED62741C52BCF3D3AE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+				43A76C1B57022394B0BE10516A32279F /* Pulley */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D913EAF183A5B62504E47734695C6EE9 /* Development Pods */ = {
@@ -203,6 +267,15 @@
 			path = "Target Support Files/Pods-Abstrampeln";
 			sourceTree = "<group>";
 		};
+		E169A450ED27AC725DF52953F66D11E0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */,
+				ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -214,17 +287,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6CF736A305642C62BB752353AF70AC7 /* Headers */ = {
+		E869D0CC7C9DC287262E75F8DD4A837E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EBF4BD270FC408014B517A2588EDA73 /* Pods-Abstrampeln-umbrella.h in Headers */,
+				77EB1C4A9F9A78E8C599A71642A90DD1 /* Pulley-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E908DA342287F5651D80CB1D93E43A01 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40ADB5CE8CB3216DE67A883286E7DC4 /* Pods-Abstrampeln-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3E207A0B7F3035DAE72CE2C357D61824 /* Pods-Abstrampeln */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AD3C48E8D0847966D8856690DC1B5D1 /* Build configuration list for PBXNativeTarget "Pods-Abstrampeln" */;
+			buildPhases = (
+				E908DA342287F5651D80CB1D93E43A01 /* Headers */,
+				8B26E67C91CED2DFA1B31A2D66731906 /* Sources */,
+				6DDC6DEF68CA43310ADB385483B69A22 /* Frameworks */,
+				A4884B014FB55FC527B536205D7912D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B0805E47F4F7136A02F2393CBA2663A /* PBXTargetDependency */,
+				65C0924114B1D2797AA7EBE4C92AE985 /* PBXTargetDependency */,
+			);
+			name = "Pods-Abstrampeln";
+			productName = "Pods-Abstrampeln";
+			productReference = EDE5B0FFF739B7F4684A576AD1C444C4 /* Pods_Abstrampeln.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		A7FE35A447501DDD870C5AB1E0645507 /* OpenrouteService */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 057D728506D464702E3A40B289023B36 /* Build configuration list for PBXNativeTarget "OpenrouteService" */;
@@ -240,26 +341,25 @@
 			);
 			name = OpenrouteService;
 			productName = OpenrouteService;
-			productReference = B787191903E022755AB27026E49F1F1A /* OpenrouteService.framework */;
+			productReference = 4A1AE5688EEC620521C4C52D49782EF1 /* OpenrouteService.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D2621A3DB7E9AABA52DE50C03585A223 /* Pods-Abstrampeln */ = {
+		BDD108D630D673E38A0F88A17BE3BB7F /* Pulley */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DC7D4200E00399B625CF650E0F32ABA /* Build configuration list for PBXNativeTarget "Pods-Abstrampeln" */;
+			buildConfigurationList = EB6E66E320CDB56D79F06E96B8B120A3 /* Build configuration list for PBXNativeTarget "Pulley" */;
 			buildPhases = (
-				D6CF736A305642C62BB752353AF70AC7 /* Headers */,
-				788B1B521326E6A0AD616EA6D9A9D90B /* Sources */,
-				13CCB50579BEB574E702E8B92E142C87 /* Frameworks */,
-				B39222C3E0DD079489684B58B770E003 /* Resources */,
+				E869D0CC7C9DC287262E75F8DD4A837E /* Headers */,
+				9802D081EEC586F934378C7744A2B782 /* Sources */,
+				4CE55308FF49CFDD7488D63122C0AB67 /* Frameworks */,
+				E252520007CD84E5346A6816F4D5EE21 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0F0B4200841E2209AA32192B4263FE64 /* PBXTargetDependency */,
 			);
-			name = "Pods-Abstrampeln";
-			productName = "Pods-Abstrampeln";
-			productReference = C4E33BEDB0BCC8A3259B9F9CEE7F7F5E /* Pods_Abstrampeln.framework */;
+			name = Pulley;
+			productName = Pulley;
+			productReference = ACEE3E281A242B882C6207F66ACF45A6 /* Pulley.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -270,6 +370,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					A7FE35A447501DDD870C5AB1E0645507 = {
+						LastSwiftMigration = 1020;
+					};
+					BDD108D630D673E38A0F88A17BE3BB7F = {
+						LastSwiftMigration = 1020;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -279,12 +387,13 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 98858840024248265233C581AF257B18 /* Products */;
+			productRefGroup = 8CF3E1625CF4DAAA6A01063BC07EB4C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A7FE35A447501DDD870C5AB1E0645507 /* OpenrouteService */,
-				D2621A3DB7E9AABA52DE50C03585A223 /* Pods-Abstrampeln */,
+				3E207A0B7F3035DAE72CE2C357D61824 /* Pods-Abstrampeln */,
+				BDD108D630D673E38A0F88A17BE3BB7F /* Pulley */,
 			);
 		};
 /* End PBXProject section */
@@ -297,7 +406,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B39222C3E0DD079489684B58B770E003 /* Resources */ = {
+		A4884B014FB55FC527B536205D7912D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E252520007CD84E5346A6816F4D5EE21 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,11 +423,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		788B1B521326E6A0AD616EA6D9A9D90B /* Sources */ = {
+		8B26E67C91CED2DFA1B31A2D66731906 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FCA01844CADF3D8BD05AB7B58D761A3 /* Pods-Abstrampeln-dummy.m in Sources */,
+				AF602DFFFEFA3ECF8C061B6B4762F4F5 /* Pods-Abstrampeln-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9802D081EEC586F934378C7744A2B782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EE145EB44A027F04B5CDD638589B27F /* Pulley-dummy.m in Sources */,
+				5D76D126CD388FD80ED430362BF551A8 /* PulleyPassthroughScrollView.swift in Sources */,
+				897A9091A5C901890BF7B11C28B47E3A /* PulleyViewController.swift in Sources */,
+				2535DFE4E63D9468FC457A03408CE12E /* UIView+constrainToParent.swift in Sources */,
+				80606AF3E082CFACCDEDE270FA7F7D27 /* UIViewController+PulleyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,11 +464,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0F0B4200841E2209AA32192B4263FE64 /* PBXTargetDependency */ = {
+		65C0924114B1D2797AA7EBE4C92AE985 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Pulley;
+			target = BDD108D630D673E38A0F88A17BE3BB7F /* Pulley */;
+			targetProxy = 55C2C837DEE0DAE94A48C5ECD9ACAC05 /* PBXContainerItemProxy */;
+		};
+		9B0805E47F4F7136A02F2393CBA2663A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OpenrouteService;
 			target = A7FE35A447501DDD870C5AB1E0645507 /* OpenrouteService */;
-			targetProxy = A2D88CE7504DA78477366F908120720A /* PBXContainerItemProxy */;
+			targetProxy = ED3959615880345EC2FE39C23C0FB3CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -362,24 +496,51 @@
 				INFOPLIST_FILE = "Target Support Files/OpenrouteService/OpenrouteService-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/OpenrouteService/OpenrouteService.modulemap";
 				PRODUCT_MODULE_NAME = OpenrouteService;
 				PRODUCT_NAME = OpenrouteService;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		112839BCE062729409F3A4C12F1C03C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58C8B1B7CDEFB9175F83F1E22F4882E7 /* Pulley.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Pulley/Pulley-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pulley/Pulley-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pulley/Pulley.modulemap";
+				PRODUCT_MODULE_NAME = Pulley;
+				PRODUCT_NAME = Pulley;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		1CFEC114EB543231102FC791C3C72E82 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -398,18 +559,14 @@
 				INFOPLIST_FILE = "Target Support Files/OpenrouteService/OpenrouteService-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/OpenrouteService/OpenrouteService.modulemap";
 				PRODUCT_MODULE_NAME = OpenrouteService;
 				PRODUCT_NAME = OpenrouteService;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -480,6 +637,41 @@
 			};
 			name = Debug;
 		};
+		4ED9887F8E2419FE65C789F21DFA03F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DFA3AAA993F631C79F76BB076D92BEA /* Pods-Abstrampeln.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		924D56B1D59CD3049300EAEEA256114E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -533,14 +725,45 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		E60CF52EFD237D84C529278CD23256B4 /* Debug */ = {
+		BC645E6563B44238DDA95E5039F81C57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58C8B1B7CDEFB9175F83F1E22F4882E7 /* Pulley.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Pulley/Pulley-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pulley/Pulley-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pulley/Pulley.modulemap";
+				PRODUCT_MODULE_NAME = Pulley;
+				PRODUCT_NAME = Pulley;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FEF06BC39BE6E1CDCEB220775FE96E75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D9662912EF2396ED9E9002B9AE571C6E /* Pods-Abstrampeln.debug.xcconfig */;
 			buildSettings = {
@@ -558,11 +781,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.modulemap";
 				OTHER_LDFLAGS = "";
@@ -578,45 +797,6 @@
 			};
 			name = Debug;
 		};
-		FAF1B1E090040032067836CB513A86CC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DFA3AAA993F631C79F76BB076D92BEA /* Pods-Abstrampeln.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -629,11 +809,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DC7D4200E00399B625CF650E0F32ABA /* Build configuration list for PBXNativeTarget "Pods-Abstrampeln" */ = {
+		2AD3C48E8D0847966D8856690DC1B5D1 /* Build configuration list for PBXNativeTarget "Pods-Abstrampeln" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E60CF52EFD237D84C529278CD23256B4 /* Debug */,
-				FAF1B1E090040032067836CB513A86CC /* Release */,
+				FEF06BC39BE6E1CDCEB220775FE96E75 /* Debug */,
+				4ED9887F8E2419FE65C789F21DFA03F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -643,6 +823,15 @@
 			buildConfigurations = (
 				4093433A309EFE160336AC736594AB22 /* Debug */,
 				924D56B1D59CD3049300EAEEA256114E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB6E66E320CDB56D79F06E96B8B120A3 /* Build configuration list for PBXNativeTarget "Pulley" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				112839BCE062729409F3A4C12F1C03C4 /* Debug */,
+				BC645E6563B44238DDA95E5039F81C57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
