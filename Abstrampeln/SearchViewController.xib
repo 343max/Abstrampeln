@@ -26,10 +26,8 @@
                     <rect key="frame" x="189" y="54" width="36" height="5"/>
                     <color key="backgroundColor" red="0.72941176470000002" green="0.72549019609999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="5" id="Uah-G0-tkf"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="5" id="awE-3e-td8"/>
                         <constraint firstAttribute="width" constant="36" id="ojv-oS-gZX"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="qOS-4s-geP"/>
+                        <constraint firstAttribute="height" constant="5" id="vOc-tC-VSk"/>
                     </constraints>
                 </view>
                 <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Where to?" translatesAutoresizingMaskIntoConstraints="NO" id="yaw-F9-YNz">
@@ -37,7 +35,7 @@
                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                 </searchBar>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-Nx-hwL">
-                    <rect key="frame" x="0.0" y="115" width="414" height="747"/>
+                    <rect key="frame" x="0.0" y="115" width="414" height="781"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="upQ-1l-UJP">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -47,15 +45,16 @@
                 </collectionView>
             </subviews>
             <constraints>
-                <constraint firstItem="yaw-F9-YNz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AAw-0v-dLZ"/>
-                <constraint firstItem="dhu-Nx-hwL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jbp-Em-6Wv"/>
-                <constraint firstItem="h59-zt-J5R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PSf-HN-Iat"/>
-                <constraint firstItem="yaw-F9-YNz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VJZ-qO-i5X"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dhu-Nx-hwL" secondAttribute="trailing" id="XlB-JH-ZOD"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dhu-Nx-hwL" secondAttribute="bottom" id="eBm-L4-N2g"/>
-                <constraint firstItem="dhu-Nx-hwL" firstAttribute="top" secondItem="yaw-F9-YNz" secondAttribute="bottom" id="g7u-73-PyY"/>
-                <constraint firstItem="yaw-F9-YNz" firstAttribute="top" secondItem="h59-zt-J5R" secondAttribute="bottom" id="qyZ-ck-KuI"/>
-                <constraint firstItem="h59-zt-J5R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="ybB-rV-2Qq"/>
+                <constraint firstItem="yaw-F9-YNz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6uV-L9-fLa"/>
+                <constraint firstItem="dhu-Nx-hwL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7hN-OV-0u4"/>
+                <constraint firstItem="dhu-Nx-hwL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="DDT-Gj-0Es"/>
+                <constraint firstItem="yaw-F9-YNz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="QCG-IN-ekz"/>
+                <constraint firstItem="yaw-F9-YNz" firstAttribute="top" secondItem="h59-zt-J5R" secondAttribute="bottom" id="RaL-rD-Gwa"/>
+                <constraint firstItem="h59-zt-J5R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="b2X-jO-Y1W"/>
+                <constraint firstItem="h59-zt-J5R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lmV-ul-z6J"/>
+                <constraint firstItem="dhu-Nx-hwL" firstAttribute="top" secondItem="yaw-F9-YNz" secondAttribute="bottom" id="xV9-PW-n0N"/>
+                <constraint firstAttribute="bottom" secondItem="dhu-Nx-hwL" secondAttribute="bottom" id="xyo-Z3-W4G"/>
+                <constraint firstItem="dhu-Nx-hwL" firstAttribute="top" secondItem="yaw-F9-YNz" secondAttribute="bottom" id="yth-NR-gup"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
