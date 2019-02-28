@@ -2,12 +2,21 @@
 
 import UIKit
 import Pulley
+import OpenrouteService
+
+class AppController {
+  static let shared = AppController(openrouteClient: OpenrouteClient(networkingClient: OpenrouteNetworkingClient(apiKey: "5b3ce3597851110001cf62486db6049f89cb407c8c6ea9d687fc917c")))
+  let openrouteClient: OpenrouteClient
+  
+  init(openrouteClient: OpenrouteClient) {
+    self.openrouteClient = openrouteClient
+  }
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     let window = UIWindow(frame: UIScreen.main.bounds)

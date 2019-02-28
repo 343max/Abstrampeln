@@ -15,6 +15,9 @@
 		CFAAEBD22227DF77009926A2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBD02227DF77009926A2 /* SearchViewController.swift */; };
 		CFAAEBD32227DF77009926A2 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAAEBD12227DF77009926A2 /* SearchViewController.xib */; };
 		CFAAEBD52227E14D009926A2 /* PullPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBD42227E14D009926A2 /* PullPillView.swift */; };
+		CFAAEBD92227EF6A009926A2 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBD82227EF6A009926A2 /* SearchController.swift */; };
+		CFAAEBDC2227F71D009926A2 /* OpenRouteSuggestionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBDB2227F71D009926A2 /* OpenRouteSuggestionSource.swift */; };
+		CFAAEBDE22280868009926A2 /* DummySuggestionSource.swfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBDD22280868009926A2 /* DummySuggestionSource.swfit.swift */; };
 		F0410E06E9952E8A4CB433F9 /* Pods_Abstrampeln.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A89F82EE68F7067167B7F18 /* Pods_Abstrampeln.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		CFAAEBD02227DF77009926A2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CFAAEBD12227DF77009926A2 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		CFAAEBD42227E14D009926A2 /* PullPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullPillView.swift; sourceTree = "<group>"; };
+		CFAAEBD82227EF6A009926A2 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		CFAAEBDB2227F71D009926A2 /* OpenRouteSuggestionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRouteSuggestionSource.swift; sourceTree = "<group>"; };
+		CFAAEBDD22280868009926A2 /* DummySuggestionSource.swfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySuggestionSource.swfit.swift; sourceTree = "<group>"; };
 		F89CA79EC11B1ED0E43F2990 /* Pods-Abstrampeln.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstrampeln.debug.xcconfig"; path = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +85,7 @@
 		505084232221DB07000662B8 /* Abstrampeln */ = {
 			isa = PBXGroup;
 			children = (
+				CFAAEBDA2227F6F4009926A2 /* Search */,
 				505084242221DB07000662B8 /* AppDelegate.swift */,
 				505084262221DB07000662B8 /* MapViewController.swift */,
 				5050842B2221DB09000662B8 /* Assets.xcassets */,
@@ -89,6 +96,16 @@
 				CFAAEBD42227E14D009926A2 /* PullPillView.swift */,
 			);
 			path = Abstrampeln;
+			sourceTree = "<group>";
+		};
+		CFAAEBDA2227F6F4009926A2 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CFAAEBD82227EF6A009926A2 /* SearchController.swift */,
+				CFAAEBDB2227F71D009926A2 /* OpenRouteSuggestionSource.swift */,
+				CFAAEBDD22280868009926A2 /* DummySuggestionSource.swfit.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		E707EC94AA0939515A8005DB /* Pods */ = {
@@ -229,8 +246,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFAAEBD22227DF77009926A2 /* SearchViewController.swift in Sources */,
+				CFAAEBDE22280868009926A2 /* DummySuggestionSource.swfit.swift in Sources */,
 				505084272221DB07000662B8 /* MapViewController.swift in Sources */,
+				CFAAEBDC2227F71D009926A2 /* OpenRouteSuggestionSource.swift in Sources */,
 				CFAAEBD52227E14D009926A2 /* PullPillView.swift in Sources */,
+				CFAAEBD92227EF6A009926A2 /* SearchController.swift in Sources */,
 				505084252221DB07000662B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

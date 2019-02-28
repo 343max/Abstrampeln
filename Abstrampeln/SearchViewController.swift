@@ -1,27 +1,25 @@
 // Copyright Max von Webel. All Rights Reserved.
 
 import UIKit
-import CoreLocation
 import Pulley
-
-struct SearchResultItem {
-  let name: String
-  let coordinate: CLLocationCoordinate2D
-}
-
-protocol SearchResultsDataSource {
-  func searchFor(text: String, completion: @escaping (_ text: String, _ results: [SearchResultItem]) -> ())
-  func cancelSearchFor(text: String)
-}
 
 class SearchViewController: UIViewController {
   @IBOutlet weak var searchBar: UISearchBar!
-  @IBOutlet weak var searchResultsTableView: UITableView!
+  @IBOutlet weak var suggestionsCollectionView: UICollectionView!
+  
+  let searchController = SearchController(searchSources: [
+    DummySuggestionSource(),
+    OpenRouteSuggestionSearch(client: AppController.shared.openrouteClient)
+    ])
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     searchBar.delegate = self
+    
+    searchController.collectionView = suggestionsCollectionView
+    searchController.searchFor(text: "")
+    suggestionsCollectionView.backgroundColor = .clear
   }
 }
 
@@ -49,6 +47,6 @@ extension SearchViewController: UISearchBarDelegate {
   }
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    print("search for: \(searchText)")
+    searchController.searchFor(text: searchText)
   }
 }

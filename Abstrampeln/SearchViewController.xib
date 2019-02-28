@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Abstrampeln" customModuleProvider="target">
             <connections>
                 <outlet property="searchBar" destination="yaw-F9-YNz" id="58D-9r-yl2"/>
-                <outlet property="searchResultsTableView" destination="Ea3-d2-gmH" id="dNc-af-tWC"/>
+                <outlet property="suggestionsCollectionView" destination="dhu-Nx-hwL" id="KlP-TZ-sGH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -36,20 +36,25 @@
                     <rect key="frame" x="0.0" y="59" width="414" height="56"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                 </searchBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ea3-d2-gmH">
-                    <rect key="frame" x="0.0" y="125" width="414" height="737"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-Nx-hwL">
+                    <rect key="frame" x="0.0" y="115" width="414" height="747"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="upQ-1l-UJP">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <constraints>
                 <constraint firstItem="yaw-F9-YNz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AAw-0v-dLZ"/>
+                <constraint firstItem="dhu-Nx-hwL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jbp-Em-6Wv"/>
                 <constraint firstItem="h59-zt-J5R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PSf-HN-Iat"/>
                 <constraint firstItem="yaw-F9-YNz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VJZ-qO-i5X"/>
-                <constraint firstItem="Ea3-d2-gmH" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="cVk-aB-uTz"/>
-                <constraint firstItem="Ea3-d2-gmH" firstAttribute="top" secondItem="yaw-F9-YNz" secondAttribute="bottom" constant="10" id="jl3-pr-nwB"/>
-                <constraint firstItem="Ea3-d2-gmH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nRe-xU-58O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dhu-Nx-hwL" secondAttribute="trailing" id="XlB-JH-ZOD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dhu-Nx-hwL" secondAttribute="bottom" id="eBm-L4-N2g"/>
+                <constraint firstItem="dhu-Nx-hwL" firstAttribute="top" secondItem="yaw-F9-YNz" secondAttribute="bottom" id="g7u-73-PyY"/>
                 <constraint firstItem="yaw-F9-YNz" firstAttribute="top" secondItem="h59-zt-J5R" secondAttribute="bottom" id="qyZ-ck-KuI"/>
-                <constraint firstItem="Ea3-d2-gmH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vCL-76-WN1"/>
                 <constraint firstItem="h59-zt-J5R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="ybB-rV-2Qq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

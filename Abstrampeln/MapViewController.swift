@@ -10,8 +10,6 @@ class MapViewController: UIViewController {
   
   let locationManager = CLLocationManager()
   
-  let openrouteClient = OpenrouteClient(networkingClient: OpenrouteNetworkingClient(apiKey: "5b3ce3597851110001cf62486db6049f89cb407c8c6ea9d687fc917c"))
-  
   var directions: Directions? {
     didSet {
       update(directions: directions)
@@ -117,7 +115,7 @@ class MapViewController: UIViewController {
   }
   
   func getDirections(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) {
-    openrouteClient.directions(start: from, finish: to).mainQueue.then { [weak self] (directions) in
+    AppController.shared.openrouteClient.directions(start: from, finish: to).mainQueue.then { [weak self] (directions) in
       guard let self = self else { return }
       self.directions = directions
     }
