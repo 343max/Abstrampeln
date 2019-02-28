@@ -42,8 +42,8 @@ extension Geocode {
       public let borough_gid: String?
       public let neighbourhood: String?
       public let neighbourhood_gid: String?
-      public let continent: String
-      public let continent_gid: String
+      public let continent: String?
+      public let continent_gid: String?
       public let label: String
     }
   }

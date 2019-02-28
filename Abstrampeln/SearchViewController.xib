@@ -35,7 +35,7 @@
                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                 </searchBar>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-Nx-hwL">
-                    <rect key="frame" x="0.0" y="115" width="414" height="781"/>
+                    <rect key="frame" x="0.0" y="115" width="414" height="747"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="upQ-1l-UJP">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -53,7 +53,7 @@
                 <constraint firstItem="h59-zt-J5R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="b2X-jO-Y1W"/>
                 <constraint firstItem="h59-zt-J5R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lmV-ul-z6J"/>
                 <constraint firstItem="dhu-Nx-hwL" firstAttribute="top" secondItem="yaw-F9-YNz" secondAttribute="bottom" id="xV9-PW-n0N"/>
-                <constraint firstAttribute="bottom" secondItem="dhu-Nx-hwL" secondAttribute="bottom" id="xyo-Z3-W4G"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dhu-Nx-hwL" secondAttribute="bottom" id="xyo-Z3-W4G"/>
                 <constraint firstItem="dhu-Nx-hwL" firstAttribute="top" secondItem="yaw-F9-YNz" secondAttribute="bottom" id="yth-NR-gup"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
