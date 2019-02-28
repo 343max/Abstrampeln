@@ -9,7 +9,7 @@ class SearchViewController: UIViewController {
   
   let searchController = SearchController(searchSources: [
     DummySuggestionSource(),
-    OpenRouteSuggestionSearch(client: AppController.shared.openrouteClient)
+    OpenRouteSuggestionSearch(client: AppController.shared.openrouteClient, locationController: AppController.shared.locationController)
     ])
   
   override func viewDidLoad() {
