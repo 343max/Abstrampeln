@@ -17,8 +17,10 @@ class SearchViewController: UIViewController {
     
     searchBar.delegate = self
     
+    searchController.delegate = self
     searchController.collectionView = suggestionsCollectionView
     searchController.searchFor(text: "")
+    
     suggestionsCollectionView.backgroundColor = .clear
   }
 }
@@ -48,5 +50,11 @@ extension SearchViewController: UISearchBarDelegate {
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     searchController.searchFor(text: searchText)
+  }
+}
+
+extension SearchViewController: SearchControllerDelegate {
+  func didSelect(item: SearchResultItem) {
+    pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: true)
   }
 }

@@ -14,20 +14,15 @@ protocol SearchResultsDataSource {
   func cancelSearchFor(text: String)
 }
 
+protocol SearchControllerDelegate: AnyObject {
+  func didSelect(item: SearchResultItem)
+}
+
 class SearchController: NSObject {
-  class Section {
-    let dataSource: SearchResultsDataSource
-    var searching = false
-    var results: [SearchResultItem] = []
-    
-    init(dataSource: SearchResultsDataSource) {
-      self.dataSource = dataSource
-    }
-  }
-  
   let sections: [Section]
   
   var searchText: String?
+  weak var delegate: SearchControllerDelegate?
   
   var collectionView: UICollectionView? {
     didSet {
@@ -72,6 +67,18 @@ class SearchController: NSObject {
         section.results = []
         self.collectionView?.reloadSections(IndexSet(arrayLiteral: index))
       }
+    }
+  }
+}
+
+extension SearchController {
+  class Section {
+    let dataSource: SearchResultsDataSource
+    var searching = false
+    var results: [SearchResultItem] = []
+    
+    init(dataSource: SearchResultsDataSource) {
+      self.dataSource = dataSource
     }
   }
 }
@@ -156,7 +163,9 @@ extension SearchController: UICollectionViewDataSource {
 }
 
 extension SearchController: UICollectionViewDelegate {
-  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    delegate?.didSelect(item: sections[indexPath.section].results[indexPath.item])
+  }
 }
 
 extension SearchController: UICollectionViewDelegateFlowLayout {
