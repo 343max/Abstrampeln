@@ -99,15 +99,17 @@ extension SearchController: UICollectionViewDataSource {
     let detailLabel: UILabel
     
     static func sizeFor(width: CGFloat) -> CGSize {
-      return CGSize(width: width, height: 40)
+      return CGSize(width: width, height: 55)
     }
     
     override init(frame: CGRect) {
       label = UILabel(frame: .zero)
-      label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+      label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+      label.numberOfLines = 0
       
       detailLabel = UILabel(frame: .zero)
-      detailLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+      detailLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+      detailLabel.numberOfLines = 0
       
       stackView = UIStackView(arrangedSubviews: [label, detailLabel])
       stackView.axis = .vertical
@@ -139,7 +141,7 @@ extension SearchController: UICollectionViewDataSource {
     }
     
     override func layoutSubviews() {
-      var frame = bounds.insetBy(dx: 10, dy: 1)
+      var frame = bounds.insetBy(dx: 10, dy: 7)
       frame.size = stackView.systemLayoutSizeFitting(frame.size)
       stackView.frame = frame
     }
