@@ -18,7 +18,7 @@
 		CFAAEBD52227E14D009926A2 /* PullPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBD42227E14D009926A2 /* PullPillView.swift */; };
 		CFAAEBD92227EF6A009926A2 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBD82227EF6A009926A2 /* SearchController.swift */; };
 		CFAAEBDC2227F71D009926A2 /* OpenRouteSuggestionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBDB2227F71D009926A2 /* OpenRouteSuggestionSource.swift */; };
-		CFAAEBDE22280868009926A2 /* DummySuggestionSource.swfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBDD22280868009926A2 /* DummySuggestionSource.swfit.swift */; };
+		CFAAEBDE22280868009926A2 /* DummySuggestionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBDD22280868009926A2 /* DummySuggestionSource.swift */; };
 		CFAAEC2022284080009926A2 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEC1F22284080009926A2 /* LocationController.swift */; };
 		F0410E06E9952E8A4CB433F9 /* Pods_Abstrampeln.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A89F82EE68F7067167B7F18 /* Pods_Abstrampeln.framework */; };
 /* End PBXBuildFile section */
@@ -39,7 +39,7 @@
 		CFAAEBD42227E14D009926A2 /* PullPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullPillView.swift; sourceTree = "<group>"; };
 		CFAAEBD82227EF6A009926A2 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		CFAAEBDB2227F71D009926A2 /* OpenRouteSuggestionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRouteSuggestionSource.swift; sourceTree = "<group>"; };
-		CFAAEBDD22280868009926A2 /* DummySuggestionSource.swfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySuggestionSource.swfit.swift; sourceTree = "<group>"; };
+		CFAAEBDD22280868009926A2 /* DummySuggestionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySuggestionSource.swift; sourceTree = "<group>"; };
 		CFAAEC1F22284080009926A2 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		F89CA79EC11B1ED0E43F2990 /* Pods-Abstrampeln.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstrampeln.debug.xcconfig"; path = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,7 +109,7 @@
 			children = (
 				CFAAEBD82227EF6A009926A2 /* SearchController.swift */,
 				CFAAEBDB2227F71D009926A2 /* OpenRouteSuggestionSource.swift */,
-				CFAAEBDD22280868009926A2 /* DummySuggestionSource.swfit.swift */,
+				CFAAEBDD22280868009926A2 /* DummySuggestionSource.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -254,7 +254,7 @@
 				50779BE9222C6E3000891EA7 /* SignalDispatcher.swift in Sources */,
 				CFAAEC2022284080009926A2 /* LocationController.swift in Sources */,
 				CFAAEBD22227DF77009926A2 /* SearchViewController.swift in Sources */,
-				CFAAEBDE22280868009926A2 /* DummySuggestionSource.swfit.swift in Sources */,
+				CFAAEBDE22280868009926A2 /* DummySuggestionSource.swift in Sources */,
 				505084272221DB07000662B8 /* MapViewController.swift in Sources */,
 				CFAAEBDC2227F71D009926A2 /* OpenRouteSuggestionSource.swift in Sources */,
 				CFAAEBD52227E14D009926A2 /* PullPillView.swift in Sources */,
