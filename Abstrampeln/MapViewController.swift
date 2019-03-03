@@ -10,6 +10,9 @@ class MapViewController: UIViewController {
     
   var directions: Directions? {
     didSet {
+      if let directions = directions {
+        mapView.setVisibleMapRect(directions.boundingBox.mapRect, animated: false)
+      }
       update(directions: directions)
     }
   }
@@ -73,6 +76,8 @@ class MapViewController: UIViewController {
       
       self.latestLocation = locations.first!
     }
+    
+    AppController.shared.dispatcher.register(listener: self)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -148,6 +153,14 @@ extension MapViewController {
     
     if let from = latestLocation?.coordinate {
       getDirections(from: from, to: destination)
+    }
+  }
+}
+
+extension MapViewController: SelectedSuggestionListener {
+  func didSelect(suggestion: SearchResultItem) {
+    if let from = latestLocation?.coordinate {
+      getDirections(from: from, to: suggestion.coordinate)
     }
   }
 }

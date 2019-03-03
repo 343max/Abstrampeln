@@ -17,11 +17,12 @@ class SearchViewController: UIViewController {
     
     searchBar.delegate = self
     
-    searchController.delegate = self
     searchController.collectionView = suggestionsCollectionView
     searchController.searchFor(text: "")
     
     suggestionsCollectionView.backgroundColor = .clear
+    
+    AppController.shared.dispatcher.register(listener: self)
   }
 }
 
@@ -53,8 +54,8 @@ extension SearchViewController: UISearchBarDelegate {
   }
 }
 
-extension SearchViewController: SearchControllerDelegate {
-  func didSelect(item: SearchResultItem) {
+extension SearchViewController: SelectedSuggestionListener {
+  func didSelect(suggestion: SearchResultItem) {
     pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: true)
   }
 }

@@ -8,6 +8,7 @@ class AppController {
   static let shared = AppController(openrouteClient: OpenrouteClient(networkingClient: OpenrouteNetworkingClient(apiKey: "5b3ce3597851110001cf62486db6049f89cb407c8c6ea9d687fc917c")))
   let openrouteClient: OpenrouteClient
   let locationController = LocationController()
+  let dispatcher = SignalDispatcher()
   
   init(openrouteClient: OpenrouteClient) {
     self.openrouteClient = openrouteClient
