@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window.makeKeyAndVisible()
 
     pulleyVC.setDrawerPosition(position: .partiallyRevealed, animated: false)
+    
+    RecentSuggestionsSource.collector.register(dispatcher: AppController.shared.dispatcher)
 
     return true
   }

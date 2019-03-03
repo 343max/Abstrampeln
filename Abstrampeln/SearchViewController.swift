@@ -8,6 +8,7 @@ class SearchViewController: UIViewController {
   @IBOutlet weak var suggestionsCollectionView: UICollectionView!
   
   let searchController = SearchController(searchSources: [
+    RecentSuggestionsSource(),
     DummySuggestionSource(),
     OpenRouteSuggestionSearch(client: AppController.shared.openrouteClient, locationController: AppController.shared.locationController)
     ])

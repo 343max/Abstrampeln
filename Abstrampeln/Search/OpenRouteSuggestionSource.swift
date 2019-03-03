@@ -28,7 +28,7 @@ class OpenRouteSuggestionSearch: SearchResultsDataSource {
         guard let self = self, self.currentText == text else { return }
         
         let items = suggestions.features.map({ (feature) -> SearchResultItem in
-          return SearchResultItem(label: feature.properties.label, detail: feature.properties.name, coordinate: feature.geometry.start)
+          return SearchResultItem(label: feature.properties.label, detail: feature.properties.name, coordinate: feature.geometry.start, gid: feature.properties.gid)
         })
         
         completion(text, items)

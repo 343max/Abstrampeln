@@ -12,6 +12,7 @@
 		5050842C2221DB09000662B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5050842B2221DB09000662B8 /* Assets.xcassets */; };
 		5050842F2221DB09000662B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5050842D2221DB09000662B8 /* LaunchScreen.storyboard */; };
 		50779BE9222C6E3000891EA7 /* SignalDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */; };
+		50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */; };
 		CF47D07522271BF100083728 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF47D07422271BF100083728 /* MapKit.framework */; };
 		CFAAEBD22227DF77009926A2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBD02227DF77009926A2 /* SearchViewController.swift */; };
 		CFAAEBD32227DF77009926A2 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAAEBD12227DF77009926A2 /* SearchViewController.xib */; };
@@ -32,6 +33,7 @@
 		5050842E2221DB09000662B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		505084302221DB09000662B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalDispatcher.swift; sourceTree = "<group>"; };
+		50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSuggestionsSource.swift; sourceTree = "<group>"; };
 		57D7A809755AD63C28DAA67C /* Pods-Abstrampeln.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstrampeln.release.xcconfig"; path = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.release.xcconfig"; sourceTree = "<group>"; };
 		CF47D07422271BF100083728 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CFAAEBD02227DF77009926A2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				CFAAEBD82227EF6A009926A2 /* SearchController.swift */,
 				CFAAEBDB2227F71D009926A2 /* OpenRouteSuggestionSource.swift */,
 				CFAAEBDD22280868009926A2 /* DummySuggestionSource.swift */,
+				50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50779BE9222C6E3000891EA7 /* SignalDispatcher.swift in Sources */,
+				50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */,
 				CFAAEC2022284080009926A2 /* LocationController.swift in Sources */,
 				CFAAEBD22227DF77009926A2 /* SearchViewController.swift in Sources */,
 				CFAAEBDE22280868009926A2 /* DummySuggestionSource.swift in Sources */,

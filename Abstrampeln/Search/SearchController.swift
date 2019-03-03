@@ -11,6 +11,7 @@ struct SearchResultItem {
   let label: String
   let detail: String?
   let coordinate: CLLocationCoordinate2D
+  let gid: String
 }
 
 protocol SearchResultsDataSource {
