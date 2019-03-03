@@ -24,6 +24,14 @@ class SearchViewController: UIViewController {
     
     AppController.shared.dispatcher.register(listener: self)
   }
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    
+    if let scrollView = view.superview?.superview as? UIScrollView {
+      scrollView.keyboardDismissMode = .onDrag
+    }
+  }
 }
 
 extension SearchViewController: PulleyDrawerViewControllerDelegate {
