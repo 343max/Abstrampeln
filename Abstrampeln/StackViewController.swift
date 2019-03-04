@@ -2,6 +2,14 @@
 
 import UIKit
 
+extension UIViewController {
+  var stackViewController: StackViewController? {
+    get {
+      return self as? StackViewController ?? parent?.stackViewController
+    }
+  }
+}
+
 class StackViewController: UIViewController {
   var viewControllers: [UIViewController]
   var topViewController: UIViewController {
@@ -27,14 +35,45 @@ class StackViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let vc = topViewController
-    addChild(vc)
-    vc.view.frame = view.bounds
-    view.addSubview(vc.view)
+    add(viewController: topViewController)
   }
   
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     topViewController.view.frame = view.bounds
+  }
+  
+  private func add(viewController: UIViewController) {
+    addChild(viewController)
+    viewController.view.frame = view.bounds
+    view.addSubview(viewController.view)
+  }
+  
+  private func remove(viewController: UIViewController) {
+    viewController.view.removeFromSuperview()
+    viewController.removeFromParent()
+  }
+  
+  func push(viewController: UIViewController, animated: Bool) {
+    if animated {
+      add(viewController: viewController)
+      let bottom: CGFloat
+      if let window = view.window {
+        bottom = view.convert(CGPoint(x: 0, y: window.bounds.height), from: window).y
+      } else {
+        bottom = view.bounds.height
+      }
+      viewController.view.frame = CGRect(x: 0, y: bottom, width: view.bounds.width, height: view.bounds.height)
+      UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+        viewController.view.frame = self.view.bounds
+      }) { (complete) in
+        self.remove(viewController: self.topViewController)
+        self.viewControllers.append(viewController)
+      }
+    } else {
+      remove(viewController: topViewController)
+      viewControllers.append(viewController)
+      add(viewController: viewController)
+    }
   }
 }

@@ -66,5 +66,9 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: SelectedSuggestionListener {
   func didSelect(suggestion: SearchResultItem) {
     pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: true)
+    
+    let vc = UIViewController()
+    vc.view.backgroundColor = .orange
+    stackViewController?.push(viewController: vc, animated: true)
   }
 }
