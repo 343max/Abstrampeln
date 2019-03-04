@@ -27,7 +27,6 @@ class SearchController: NSObject {
   var collectionView: UICollectionView? {
     didSet {
       if let collectionView = collectionView {
-        collectionView.collectionViewLayout = Layout()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(SuggestionCell.self, forCellWithReuseIdentifier: SuggestionCell.identifier)
@@ -179,64 +178,5 @@ extension SearchController: UICollectionViewDelegate {
 extension SearchController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return SuggestionCell.sizeFor(width: collectionView.bounds.width)
-  }
-}
-
-extension SearchController {
-  class Layout: UICollectionViewLayout {
-    var cellSize: CGSize {
-      get {
-        return SuggestionCell.sizeFor(width: collectionView!.bounds.width)
-      }
-    }
-    
-    var itemCount: Int {
-      get {
-        return collectionView!.numberOfItems(inSection: 0)
-      }
-    }
-
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-      return true
-    }
-    
-    override var collectionViewContentSize: CGSize {
-      get {
-        let cellSize = self.cellSize
-        return CGSize(width: cellSize.width, height: cellSize.height * CGFloat(itemCount))
-      }
-    }
-    
-    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-      let cellSize = self.cellSize
-      let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
-      
-      attributes.frame = CGRect(origin: CGPoint(x: 0, y: cellSize.height * CGFloat(indexPath.item)), size: cellSize)
-      
-      return attributes
-    }
-    
-    func layoutAttributesForItem(atIndex: Int) -> UICollectionViewLayoutAttributes? {
-      return layoutAttributesForItem(at: IndexPath(item: atIndex, section: 0))
-    }
-    
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-      guard itemCount > 0 else {
-        return nil
-      }
-      
-      func item(forY y: CGFloat, sideLength: CGFloat) -> Int {
-        let unboundIndex = Int(floor(y / sideLength))
-        return max(min(unboundIndex, itemCount - 1), 0)
-      }
-      
-      let cellHeight = cellSize.height
-      let range: ClosedRange<Int>
-      range = item(forY: rect.minY, sideLength: cellHeight)...item(forY: rect.maxY, sideLength: cellHeight)
-      
-      return range.map({ (index) -> UICollectionViewLayoutAttributes in
-        return layoutAttributesForItem(atIndex: index)!
-      })
-    }
   }
 }
