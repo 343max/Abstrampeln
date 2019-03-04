@@ -1,6 +1,7 @@
 // Copyright Max von Webel. All Rights Reserved.
 
 import Foundation
+import CoreLocation
 
 class RecentSuggestionsSource {
   var history: [SearchResultItem] {
@@ -34,7 +35,10 @@ extension RecentSuggestionsSource {
   }
   
   static func load() -> [SearchResultItem] {
-    return UserDefaults.standard.object(forKey: UserDefaultsKeys.RecentSuggestion.rawValue) as? [SearchResultItem] ?? []
+    let dicts = UserDefaults.standard.object(forKey: UserDefaultsKeys.RecentSuggestion.rawValue) as? [[String: Any?]] ?? []
+    return dicts.map({ (dict) -> SearchResultItem in
+      return SearchResultItem(dict: dict)
+    })
   }
   
   func save() {
@@ -84,5 +88,13 @@ extension SearchResultItem {
         DictKeys.Gid.rawValue: gid
       ]
     }
+  }
+  
+  init(dict: [String: Any?]) {
+    self.label = dict[DictKeys.Label.rawValue] as! String
+    self.detail = dict[DictKeys.Detail.rawValue] as? String
+    self.gid = dict[DictKeys.Detail.rawValue] as! String
+    self.coordinate = CLLocationCoordinate2D(latitude: dict[DictKeys.Latitude.rawValue] as! Double,
+                                             longitude: dict[DictKeys.Longitude.rawValue] as! Double)
   }
 }

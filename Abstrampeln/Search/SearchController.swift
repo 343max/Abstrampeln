@@ -52,8 +52,11 @@ class SearchController: NSObject {
       }
       
       section.searching = true
+      var completionWasCalled = false
       let shouldWaitForResults = section.dataSource.searchFor(text: text, completion: { [weak self] (searchText, searchResults) in
         guard let self = self, searchText == text else { return }
+        
+        completionWasCalled = true
         
         DispatchQueue.main.async {
           section.searching = false
@@ -64,8 +67,10 @@ class SearchController: NSObject {
       
       if !shouldWaitForResults {
         section.searching = false
-        section.results = []
-        self.collectionView?.reloadSections(IndexSet(arrayLiteral: index))
+        if !completionWasCalled {
+          section.results = []
+          self.collectionView?.reloadSections(IndexSet(arrayLiteral: index))
+        }
       }
     }
   }
