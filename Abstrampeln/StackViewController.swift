@@ -64,9 +64,11 @@ class StackViewController: UIViewController {
         bottom = view.bounds.height
       }
       viewController.view.frame = CGRect(x: 0, y: bottom, width: view.bounds.width, height: view.bounds.height)
+      viewController.view.backgroundColor = .white
       UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
         viewController.view.frame = self.view.bounds
       }) { (complete) in
+        viewController.view.backgroundColor = .clear
         self.remove(viewController: self.topViewController)
         self.viewControllers.append(viewController)
       }
@@ -74,6 +76,34 @@ class StackViewController: UIViewController {
       remove(viewController: topViewController)
       viewControllers.append(viewController)
       add(viewController: viewController)
+    }
+  }
+  
+  func popTopViewController(animated: Bool) {
+    assert(viewControllers.count > 0, "Can't pop the last view controller on the stack")
+    if animated {
+      let popingViewController = topViewController
+      viewControllers.removeLast()
+      add(viewController: topViewController)
+      view.addSubview(popingViewController.view)
+      popingViewController.view.backgroundColor = .white
+      
+      UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
+        let bottom: CGFloat
+        if let window = self.view.window {
+          bottom = self.view.convert(CGPoint(x: 0, y: window.bounds.height), from: window).y
+        } else {
+          bottom = self.view.bounds.height
+        }
+        popingViewController.view.frame = CGRect(x: 0, y: bottom, width: self.view.bounds.width, height: self.view.bounds.height)
+      }) { (complete) in
+        self.remove(viewController: popingViewController)
+      }
+      
+    } else {
+      remove(viewController: topViewController)
+      viewControllers.removeLast()
+      add(viewController: topViewController)
     }
   }
 }
