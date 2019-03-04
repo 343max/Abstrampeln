@@ -11,7 +11,8 @@ class MapViewController: UIViewController {
   var directions: Directions? {
     didSet {
       if let directions = directions {
-        mapView.setVisibleMapRect(directions.boundingBox.mapRect, animated: false)
+        let mapRect = directions.boundingBox.mapRect.insetBy(dx: -4000, dy: -4000).offsetBy(dx: 0, dy: 4000)
+        mapView.setVisibleMapRect(mapRect, animated: true)
       }
       update(directions: directions)
     }
@@ -111,8 +112,7 @@ class MapViewController: UIViewController {
       return
     }
     
-    let overlay = directions.routes.first!.geometry!.polyline
-    directionsOverlay = overlay
+    directionsOverlay = directions.routes.first!.geometry!.polyline
   }
   
   func getDirections(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) {
