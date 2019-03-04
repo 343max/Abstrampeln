@@ -3,7 +3,7 @@
 import UIKit
 import Pulley
 
-class SearchViewController: UIViewController {
+class SearchViewController: DrawerViewController {
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var suggestionsCollectionView: UICollectionView!
   

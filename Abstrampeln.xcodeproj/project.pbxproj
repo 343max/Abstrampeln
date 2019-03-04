@@ -15,9 +15,10 @@
 		50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */; };
 		CF47D07522271BF100083728 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF47D07422271BF100083728 /* MapKit.framework */; };
 		CF90836F222DB051002CC71F /* DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90836E222DB051002CC71F /* DarkMode.swift */; };
+		CF908371222DBBBB002CC71F /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF908370222DBBBB002CC71F /* DrawerViewController.swift */; };
+		CF908373222DC1CC002CC71F /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF908372222DC1CC002CC71F /* StackViewController.swift */; };
 		CFAAEBD22227DF77009926A2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBD02227DF77009926A2 /* SearchViewController.swift */; };
 		CFAAEBD32227DF77009926A2 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAAEBD12227DF77009926A2 /* SearchViewController.xib */; };
-		CFAAEBD52227E14D009926A2 /* PullPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBD42227E14D009926A2 /* PullPillView.swift */; };
 		CFAAEBD92227EF6A009926A2 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBD82227EF6A009926A2 /* SearchController.swift */; };
 		CFAAEBDC2227F71D009926A2 /* OpenRouteSuggestionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBDB2227F71D009926A2 /* OpenRouteSuggestionSource.swift */; };
 		CFAAEBDE22280868009926A2 /* DummySuggestionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBDD22280868009926A2 /* DummySuggestionSource.swift */; };
@@ -40,9 +41,10 @@
 		CF90836C222DAE91002CC71F /* MKMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKMapView.h; sourceTree = "<group>"; };
 		CF90836D222DAEB8002CC71F /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		CF90836E222DB051002CC71F /* DarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkMode.swift; sourceTree = "<group>"; };
+		CF908370222DBBBB002CC71F /* DrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		CF908372222DC1CC002CC71F /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		CFAAEBD02227DF77009926A2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CFAAEBD12227DF77009926A2 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		CFAAEBD42227E14D009926A2 /* PullPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullPillView.swift; sourceTree = "<group>"; };
 		CFAAEBD82227EF6A009926A2 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		CFAAEBDB2227F71D009926A2 /* OpenRouteSuggestionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRouteSuggestionSource.swift; sourceTree = "<group>"; };
 		CFAAEBDD22280868009926A2 /* DummySuggestionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySuggestionSource.swift; sourceTree = "<group>"; };
@@ -103,12 +105,13 @@
 				505084302221DB09000662B8 /* Info.plist */,
 				CFAAEBD02227DF77009926A2 /* SearchViewController.swift */,
 				CFAAEBD12227DF77009926A2 /* SearchViewController.xib */,
-				CFAAEBD42227E14D009926A2 /* PullPillView.swift */,
 				CFAAEC1F22284080009926A2 /* LocationController.swift */,
 				50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */,
 				CF90836C222DAE91002CC71F /* MKMapView.h */,
 				CF90836D222DAEB8002CC71F /* BridgingHeader.h */,
 				CF90836E222DB051002CC71F /* DarkMode.swift */,
+				CF908370222DBBBB002CC71F /* DrawerViewController.swift */,
+				CF908372222DC1CC002CC71F /* StackViewController.swift */,
 			);
 			path = Abstrampeln;
 			sourceTree = "<group>";
@@ -266,10 +269,11 @@
 				50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */,
 				CFAAEC2022284080009926A2 /* LocationController.swift in Sources */,
 				CFAAEBD22227DF77009926A2 /* SearchViewController.swift in Sources */,
+				CF908371222DBBBB002CC71F /* DrawerViewController.swift in Sources */,
 				CFAAEBDE22280868009926A2 /* DummySuggestionSource.swift in Sources */,
 				505084272221DB07000662B8 /* MapViewController.swift in Sources */,
 				CFAAEBDC2227F71D009926A2 /* OpenRouteSuggestionSource.swift in Sources */,
-				CFAAEBD52227E14D009926A2 /* PullPillView.swift in Sources */,
+				CF908373222DC1CC002CC71F /* StackViewController.swift in Sources */,
 				CFAAEBD92227EF6A009926A2 /* SearchController.swift in Sources */,
 				505084252221DB07000662B8 /* AppDelegate.swift in Sources */,
 			);

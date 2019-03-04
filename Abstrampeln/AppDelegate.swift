@@ -25,8 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let mapVC = MapViewController(nibName: nil, bundle: nil)
     let searchVC = SearchViewController(nibName: nil, bundle: nil)
+    let stackVC = StackViewController(viewController: searchVC)
 
-    let pulleyVC = PulleyViewController(contentViewController: mapVC, drawerViewController: searchVC)
+    let pulleyVC = PulleyViewController(contentViewController: mapVC, drawerViewController: stackVC)
     
     window.rootViewController = pulleyVC
 

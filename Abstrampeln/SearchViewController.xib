@@ -22,20 +22,12 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h59-zt-J5R" customClass="PullPillView" customModule="Abstrampeln" customModuleProvider="target">
-                    <rect key="frame" x="189" y="54" width="36" height="5"/>
-                    <color key="backgroundColor" red="0.72941176470000002" green="0.72549019609999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="36" id="ojv-oS-gZX"/>
-                        <constraint firstAttribute="height" constant="5" id="vOc-tC-VSk"/>
-                    </constraints>
-                </view>
                 <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Where to?" translatesAutoresizingMaskIntoConstraints="NO" id="yaw-F9-YNz">
-                    <rect key="frame" x="0.0" y="59" width="414" height="56"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                 </searchBar>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-Nx-hwL">
-                    <rect key="frame" x="0.0" y="115" width="414" height="747"/>
+                    <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="upQ-1l-UJP">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -49,9 +41,8 @@
                 <constraint firstItem="dhu-Nx-hwL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7hN-OV-0u4"/>
                 <constraint firstItem="dhu-Nx-hwL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="DDT-Gj-0Es"/>
                 <constraint firstItem="yaw-F9-YNz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="QCG-IN-ekz"/>
-                <constraint firstItem="yaw-F9-YNz" firstAttribute="top" secondItem="h59-zt-J5R" secondAttribute="bottom" id="RaL-rD-Gwa"/>
-                <constraint firstItem="h59-zt-J5R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="b2X-jO-Y1W"/>
-                <constraint firstItem="h59-zt-J5R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lmV-ul-z6J"/>
+                <constraint firstItem="yaw-F9-YNz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RaL-rD-Gwa"/>
+                <constraint firstItem="yaw-F9-YNz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uHh-LM-Z5L"/>
                 <constraint firstItem="dhu-Nx-hwL" firstAttribute="top" secondItem="yaw-F9-YNz" secondAttribute="bottom" id="xV9-PW-n0N"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dhu-Nx-hwL" secondAttribute="bottom" id="xyo-Z3-W4G"/>
                 <constraint firstItem="dhu-Nx-hwL" firstAttribute="top" secondItem="yaw-F9-YNz" secondAttribute="bottom" id="yth-NR-gup"/>
