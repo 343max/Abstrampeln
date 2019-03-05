@@ -10,6 +10,8 @@ class RouteViewController: DrawerViewController {
   let destination: SearchResultItem
   let signalDispatcher = AppController.shared.dispatcher
   
+  @IBOutlet weak var destinationLabel: UILabel!
+  
   init(destination: SearchResultItem) {
     self.destination = destination
     super.init(nibName: nil, bundle: nil)
@@ -17,6 +19,11 @@ class RouteViewController: DrawerViewController {
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    destinationLabel.text = "→ \(destination.label)"
   }
   
   override func viewDidAppear(_ animated: Bool) {
