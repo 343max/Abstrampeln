@@ -39,7 +39,7 @@ class SearchViewController: DrawerViewController {
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     
-    if let scrollView = view.superview?.superview as? UIScrollView {
+    if let scrollView = view.superview?.superview?.superview as? UIScrollView {
       scrollView.keyboardDismissMode = .onDrag
     }
   }
