@@ -77,7 +77,7 @@ extension SearchViewController: SelectedSuggestionListener {
   func didSelect(suggestion: SearchResultItem) {
     pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: true)
     
-    let vc = DrawerViewController()
+    let vc = RouteViewController(destination: suggestion)
     vc.showsCloseButton = true
     stackViewController?.push(viewController: vc, animated: true)
   }

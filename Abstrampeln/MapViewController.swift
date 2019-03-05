@@ -157,10 +157,14 @@ extension MapViewController {
   }
 }
 
-extension MapViewController: SelectedSuggestionListener {
-  func didSelect(suggestion: SearchResultItem) {
-    if let from = latestLocation?.coordinate {
-      getDirections(from: from, to: suggestion.coordinate)
+extension MapViewController: SelectedDestinationListener {
+  func didSelect(destination: SearchResultItem?) {
+    if let destination = destination {
+      if let from = latestLocation?.coordinate {
+        getDirections(from: from, to: destination.coordinate)
+      }
+    } else {
+      directions = nil
     }
   }
 }

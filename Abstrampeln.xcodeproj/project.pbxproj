@@ -23,6 +23,8 @@
 		CFAAEBDC2227F71D009926A2 /* OpenRouteSuggestionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBDB2227F71D009926A2 /* OpenRouteSuggestionSource.swift */; };
 		CFAAEBDE22280868009926A2 /* DummySuggestionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBDD22280868009926A2 /* DummySuggestionSource.swift */; };
 		CFAAEC2022284080009926A2 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEC1F22284080009926A2 /* LocationController.swift */; };
+		CFBEF11D222EC2DB0015DFAC /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBEF11B222EC2DB0015DFAC /* RouteViewController.swift */; };
+		CFBEF11E222EC2DB0015DFAC /* RouteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFBEF11C222EC2DB0015DFAC /* RouteViewController.xib */; };
 		F0410E06E9952E8A4CB433F9 /* Pods_Abstrampeln.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A89F82EE68F7067167B7F18 /* Pods_Abstrampeln.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		CFAAEBDB2227F71D009926A2 /* OpenRouteSuggestionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRouteSuggestionSource.swift; sourceTree = "<group>"; };
 		CFAAEBDD22280868009926A2 /* DummySuggestionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySuggestionSource.swift; sourceTree = "<group>"; };
 		CFAAEC1F22284080009926A2 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		CFBEF11B222EC2DB0015DFAC /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		CFBEF11C222EC2DB0015DFAC /* RouteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteViewController.xib; sourceTree = "<group>"; };
 		F89CA79EC11B1ED0E43F2990 /* Pods-Abstrampeln.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstrampeln.debug.xcconfig"; path = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +116,8 @@
 				CF90836E222DB051002CC71F /* DarkMode.swift */,
 				CF908370222DBBBB002CC71F /* DrawerViewController.swift */,
 				CF908372222DC1CC002CC71F /* StackViewController.swift */,
+				CFBEF11B222EC2DB0015DFAC /* RouteViewController.swift */,
+				CFBEF11C222EC2DB0015DFAC /* RouteViewController.xib */,
 			);
 			path = Abstrampeln;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			files = (
 				5050842F2221DB09000662B8 /* LaunchScreen.storyboard in Resources */,
 				5050842C2221DB09000662B8 /* Assets.xcassets in Resources */,
+				CFBEF11E222EC2DB0015DFAC /* RouteViewController.xib in Resources */,
 				CFAAEBD32227DF77009926A2 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +283,7 @@
 				CF908373222DC1CC002CC71F /* StackViewController.swift in Sources */,
 				CFAAEBD92227EF6A009926A2 /* SearchController.swift in Sources */,
 				505084252221DB07000662B8 /* AppDelegate.swift in Sources */,
+				CFBEF11D222EC2DB0015DFAC /* RouteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
