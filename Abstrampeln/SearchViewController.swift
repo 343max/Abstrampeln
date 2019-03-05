@@ -26,6 +26,16 @@ class SearchViewController: DrawerViewController {
     AppController.shared.dispatcher.register(listener: self)
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    guard let collectionView = searchController.collectionView else {
+      return
+    }
+    
+    collectionView.indexPathsForSelectedItems?.forEach({ collectionView.deselectItem(at: $0, animated: false) })
+  }
+  
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     
