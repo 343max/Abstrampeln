@@ -27,6 +27,8 @@ class DrawerViewController: UIViewController {
       widthAnchor.constraint(equalToConstant: 24).isActive = true
       heightAnchor.constraint(equalToConstant: 24).isActive = true
       
+      imageView?.image = UIImage(named: "CloseX")
+
       backgroundColor = CloseButton.normalColor
     }
     
@@ -42,6 +44,8 @@ class DrawerViewController: UIViewController {
     
     override func layoutSubviews() {
       layer.cornerRadius = min(bounds.width, bounds.height) / 2
+      imageView?.sizeToFit()
+      imageView?.center = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
     }
   }
   
