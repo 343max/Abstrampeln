@@ -136,6 +136,7 @@ extension SearchController: UICollectionViewDataSource {
         
         label.text = item.label
         detailLabel.text = item.detail
+        setNeedsLayout()
       }
     }
     
