@@ -23,7 +23,6 @@ class OpenRouteSuggestionSearch: SearchResultsDataSource {
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
       guard let self = self, self.currentText == text else { return }
       
-      //WARNING: insert focusPoint here
       self.client.autocomplete(text: text, focusPoint: self.locationController.latestLocations.first?.coordinate).then { [weak self] (suggestions) in
         guard let self = self, self.currentText == text else { return }
         
