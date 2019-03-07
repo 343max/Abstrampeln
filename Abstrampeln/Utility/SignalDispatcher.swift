@@ -2,6 +2,10 @@
 
 import Foundation
 
+enum SignalDispatcherError: Error {
+  case invalidListenerCount
+}
+
 class SignalDispatcher {
   typealias Listener = AnyObject
   var listeners: [WeakContainer] = []
@@ -28,5 +32,13 @@ class SignalDispatcher {
     self.all(T.self).forEach { (listener) in
       handler(listener)
     }
+  }
+  
+  func one<T>(_ protocol: T.Type) throws -> T {
+    let listeners = all(T.self)
+    if listeners.count != 1 {
+      throw SignalDispatcherError.invalidListenerCount
+    }
+    return listeners.first!
   }
 }
