@@ -111,6 +111,7 @@
 				505084302221DB09000662B8 /* Info.plist */,
 				CFAAEBD02227DF77009926A2 /* SearchViewController.swift */,
 				CFAAEBD12227DF77009926A2 /* SearchViewController.xib */,
+				CF90836D222DAEB8002CC71F /* BridgingHeader.h */,
 				508636AC22314A4200D977A7 /* DarkMode */,
 				508636AB22314A2700D977A7 /* Utility */,
 				508636AA22314A1500D977A7 /* RouteView */,
@@ -152,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				CF90836C222DAE91002CC71F /* MKMapView.h */,
-				CF90836D222DAEB8002CC71F /* BridgingHeader.h */,
 				CF90836E222DB051002CC71F /* DarkMode.swift */,
 			);
 			path = DarkMode;
