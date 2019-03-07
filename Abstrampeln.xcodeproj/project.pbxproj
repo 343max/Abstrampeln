@@ -111,18 +111,51 @@
 				505084302221DB09000662B8 /* Info.plist */,
 				CFAAEBD02227DF77009926A2 /* SearchViewController.swift */,
 				CFAAEBD12227DF77009926A2 /* SearchViewController.xib */,
-				CFAAEC1F22284080009926A2 /* LocationController.swift */,
-				50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */,
-				CF90836C222DAE91002CC71F /* MKMapView.h */,
-				CF90836D222DAEB8002CC71F /* BridgingHeader.h */,
-				CF90836E222DB051002CC71F /* DarkMode.swift */,
-				CF908370222DBBBB002CC71F /* DrawerViewController.swift */,
-				CF908372222DC1CC002CC71F /* StackViewController.swift */,
+				508636AC22314A4200D977A7 /* DarkMode */,
+				508636AB22314A2700D977A7 /* Utility */,
+				508636AA22314A1500D977A7 /* RouteView */,
+				508636A9223149C600D977A7 /* Navigation */,
+			);
+			path = Abstrampeln;
+			sourceTree = "<group>";
+		};
+		508636A9223149C600D977A7 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				508636A7223149BF00D977A7 /* InstructionViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		508636AA22314A1500D977A7 /* RouteView */ = {
+			isa = PBXGroup;
+			children = (
 				CFBEF11B222EC2DB0015DFAC /* RouteViewController.swift */,
 				CFBEF11C222EC2DB0015DFAC /* RouteViewController.xib */,
 				CFBEF11F222EC9E40015DFAC /* RoundedButton.swift */,
 			);
-			path = Abstrampeln;
+			path = RouteView;
+			sourceTree = "<group>";
+		};
+		508636AB22314A2700D977A7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CF908370222DBBBB002CC71F /* DrawerViewController.swift */,
+				CF908372222DC1CC002CC71F /* StackViewController.swift */,
+				CFAAEC1F22284080009926A2 /* LocationController.swift */,
+				50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		508636AC22314A4200D977A7 /* DarkMode */ = {
+			isa = PBXGroup;
+			children = (
+				CF90836C222DAE91002CC71F /* MKMapView.h */,
+				CF90836D222DAEB8002CC71F /* BridgingHeader.h */,
+				CF90836E222DB051002CC71F /* DarkMode.swift */,
+			);
+			path = DarkMode;
 			sourceTree = "<group>";
 		};
 		CFAAEBDA2227F6F4009926A2 /* Search */ = {
