@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		502EB86B223533B500A22129 /* DirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502EB86A223533B500A22129 /* DirectionsController.swift */; };
 		505084252221DB07000662B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505084242221DB07000662B8 /* AppDelegate.swift */; };
 		505084272221DB07000662B8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505084262221DB07000662B8 /* MapViewController.swift */; };
 		5050842C2221DB09000662B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5050842B2221DB09000662B8 /* Assets.xcassets */; };
 		5050842F2221DB09000662B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5050842D2221DB09000662B8 /* LaunchScreen.storyboard */; };
 		50779BE9222C6E3000891EA7 /* SignalDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */; };
 		50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */; };
+		508636B52231AC5100D977A7 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508636B32231AC5100D977A7 /* InstructionsViewController.swift */; };
+		508636B62231AC5100D977A7 /* InstructionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508636B42231AC5100D977A7 /* InstructionsViewController.xib */; };
 		CF47D07522271BF100083728 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF47D07422271BF100083728 /* MapKit.framework */; };
 		CF90836F222DB051002CC71F /* DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90836E222DB051002CC71F /* DarkMode.swift */; };
 		CF908371222DBBBB002CC71F /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF908370222DBBBB002CC71F /* DrawerViewController.swift */; };
@@ -31,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		3A89F82EE68F7067167B7F18 /* Pods_Abstrampeln.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstrampeln.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		502EB86A223533B500A22129 /* DirectionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsController.swift; sourceTree = "<group>"; };
 		505084212221DB07000662B8 /* Abstrampeln.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Abstrampeln.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		505084242221DB07000662B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		505084262221DB07000662B8 /* MapViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -39,6 +43,8 @@
 		505084302221DB09000662B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalDispatcher.swift; sourceTree = "<group>"; };
 		50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSuggestionsSource.swift; sourceTree = "<group>"; };
+		508636B32231AC5100D977A7 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		508636B42231AC5100D977A7 /* InstructionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionsViewController.xib; sourceTree = "<group>"; };
 		57D7A809755AD63C28DAA67C /* Pods-Abstrampeln.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstrampeln.release.xcconfig"; path = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.release.xcconfig"; sourceTree = "<group>"; };
 		CF47D07422271BF100083728 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CF90836C222DAE91002CC71F /* MKMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKMapView.h; sourceTree = "<group>"; };
@@ -123,7 +129,8 @@
 		508636A9223149C600D977A7 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				508636A7223149BF00D977A7 /* InstructionViewController.swift */,
+				508636B32231AC5100D977A7 /* InstructionsViewController.swift */,
+				508636B42231AC5100D977A7 /* InstructionsViewController.xib */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -145,6 +152,7 @@
 				CF908372222DC1CC002CC71F /* StackViewController.swift */,
 				CFAAEC1F22284080009926A2 /* LocationController.swift */,
 				50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */,
+				502EB86A223533B500A22129 /* DirectionsController.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				508636B62231AC5100D977A7 /* InstructionsViewController.xib in Resources */,
 				5050842F2221DB09000662B8 /* LaunchScreen.storyboard in Resources */,
 				5050842C2221DB09000662B8 /* Assets.xcassets in Resources */,
 				CFBEF11E222EC2DB0015DFAC /* RouteViewController.xib in Resources */,
@@ -316,9 +325,11 @@
 				CFAAEBDE22280868009926A2 /* DummySuggestionSource.swift in Sources */,
 				505084272221DB07000662B8 /* MapViewController.swift in Sources */,
 				CFAAEBDC2227F71D009926A2 /* OpenRouteSuggestionSource.swift in Sources */,
+				508636B52231AC5100D977A7 /* InstructionsViewController.swift in Sources */,
 				CF908373222DC1CC002CC71F /* StackViewController.swift in Sources */,
 				CFAAEBD92227EF6A009926A2 /* SearchController.swift in Sources */,
 				CFBEF120222EC9E40015DFAC /* RoundedButton.swift in Sources */,
+				502EB86B223533B500A22129 /* DirectionsController.swift in Sources */,
 				505084252221DB07000662B8 /* AppDelegate.swift in Sources */,
 				CFBEF11D222EC2DB0015DFAC /* RouteViewController.swift in Sources */,
 			);

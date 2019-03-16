@@ -72,6 +72,12 @@ class MapViewController: UIViewController {
     self.mapView = mapView
     view.addSubview(mapView)
     
+    let instructionsViewController = InstructionsViewController(nibName: nil, bundle: nil)
+    instructionsViewController.view.frame = view.bounds
+    instructionsViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    addChild(instructionsViewController)
+    view.addSubview(instructionsViewController.view)
+    
     AppController.shared.locationController.locationPromise.then { [weak self] (locations) in
       guard let self = self else { return }
       
@@ -114,13 +120,6 @@ class MapViewController: UIViewController {
     
     directionsOverlay = directions.routes.first!.geometry!.polyline
   }
-  
-  func getDirections(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) {
-    AppController.shared.openrouteClient.directions(start: from, finish: to).mainQueue.then { [weak self] (directions) in
-      guard let self = self else { return }
-      self.directions = directions
-    }
-  }
 }
 
 extension MapViewController: MKMapViewDelegate {
@@ -150,21 +149,19 @@ extension MapViewController {
     let destination = mapView.convert(location, toCoordinateFrom: mapView)
     
     self.destination = destination
-    
-    if let from = latestLocation?.coordinate {
-      getDirections(from: from, to: destination)
-    }
+    // warning: fix me!
+//    if let from = latestLocation?.coordinate {
+//      getDirections(from: from, to: destination)
+//    }
   }
 }
 
-extension MapViewController: SelectedDestinationListener {
-  func didSelect(destination: SearchResultItem?) {
-    if let destination = destination {
-      if let from = latestLocation?.coordinate {
-        getDirections(from: from, to: destination.coordinate)
-      }
-    } else {
-      directions = nil
-    }
+extension MapViewController: DirectionsControllerListener {
+  func destinationDidChange(_ destination: SearchResultItem) {
+    //
+  }
+  
+  func directionsDidChange(_ directions: Directions?, mode: MappingMode) {
+    self.directions = directions
   }
 }

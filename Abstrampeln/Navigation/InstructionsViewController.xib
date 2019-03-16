@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstructionsViewController" customModule="Abstrampeln" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="IWR-fk-FLO" id="9sA-IE-NvW"/>
+                <outlet property="heightConstraint" destination="8TQ-A0-qhT" id="GOm-w5-oO2"/>
+                <outlet property="invisibleConstraint" destination="f7a-bt-nWM" id="IFG-yg-Nj3"/>
+                <outlet property="pageControl" destination="mSo-x6-Ymg" id="RDH-ef-o4z"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="visibleConstraint" destination="bEy-3Q-hDv" id="hwc-fA-hBx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="InvisibleView" customModule="Abstrampeln" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dut-F2-ZHK">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="myQ-Hc-J8i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="8" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="mSo-x6-Ymg">
+                                <rect key="frame" x="147.5" y="163" width="119" height="37"/>
+                            </pageControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IWR-fk-FLO">
+                                <rect key="frame" x="20" y="42" width="374" height="121"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Uop-fM-FXD">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IWR-fk-FLO" secondAttribute="trailing" constant="20" id="DmG-LR-TLD"/>
+                            <constraint firstItem="mSo-x6-Ymg" firstAttribute="centerX" secondItem="myQ-Hc-J8i" secondAttribute="centerX" id="Sbq-Fo-cjv"/>
+                            <constraint firstItem="IWR-fk-FLO" firstAttribute="leading" secondItem="myQ-Hc-J8i" secondAttribute="leading" constant="20" id="hfZ-6o-LH5"/>
+                            <constraint firstItem="IWR-fk-FLO" firstAttribute="top" secondItem="myQ-Hc-J8i" secondAttribute="top" constant="42" id="nvm-24-WRs"/>
+                            <constraint firstAttribute="bottom" secondItem="mSo-x6-Ymg" secondAttribute="bottom" id="uro-Gd-MDz"/>
+                            <constraint firstItem="mSo-x6-Ymg" firstAttribute="top" secondItem="IWR-fk-FLO" secondAttribute="bottom" id="zqJ-7B-eUN"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="8TQ-A0-qhT"/>
+                    </constraints>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dut-F2-ZHK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FDV-pS-sup"/>
+                <constraint firstItem="dut-F2-ZHK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aHq-Uw-ajY"/>
+                <constraint firstItem="dut-F2-ZHK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bEy-3Q-hDv"/>
+                <constraint firstAttribute="top" secondItem="dut-F2-ZHK" secondAttribute="bottom" id="f7a-bt-nWM"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="f7a-bt-nWM"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="47.826086956521742" y="-30.803571428571427"/>
+        </view>
+    </objects>
+</document>
