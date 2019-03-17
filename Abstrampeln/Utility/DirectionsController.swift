@@ -36,7 +36,7 @@ class DirectionsController {
 extension DirectionsController {
   func updateDirections(destination: Location) {
     if let currentLocation = locationController.latestLocations.first?.coordinate {
-      openrouteClient.directions(start: currentLocation, finish: destination.coordinate).then { (directions) in
+      openrouteClient.directions(start: currentLocation, finish: destination.coordinate).mainQueue.then { (directions) in
         self.directions = directions
         
         self.dispatcher.each(DirectionsControllerDirectionsListener.self, {
