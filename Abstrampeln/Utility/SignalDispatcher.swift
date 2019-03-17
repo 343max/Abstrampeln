@@ -18,10 +18,12 @@ class SignalDispatcher {
     listeners += [WeakContainer(listener: listener)]
   }
   
+  func deregister(listener: Listener) {
+    listeners.removeAll { $0.listener === listener }
+  }
+  
   func cleanUp() {
-    listeners.removeAll { (container) -> Bool in
-      container.listener == nil
-    }
+    listeners.removeAll { $0.listener == nil }
   }
   
   func all<T>(_ protocol: T.Type) -> () -> ([T]) {
