@@ -147,9 +147,14 @@ extension MapViewController {
     
     let location = gr.location(in: mapView)
     let destinationLocation = mapView.convert(location, toCoordinateFrom: mapView)
-    let destination = Location.droppedPin(location: destinationLocation)
     
-    AppController.shared.directionsController.set(destination: destination, mode: .None)
+    Location.reverseLookup(coordinate: destinationLocation).mainQueue.then { (location) in
+      AppController.shared.directionsController.set(destination: location, mode: .None)
+    }
+    
+//    let destination = Location.droppedPin(location: destinationLocation)
+//    
+//    AppController.shared.directionsController.set(destination: destination, mode: .None)
   }
 }
 

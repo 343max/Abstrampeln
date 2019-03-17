@@ -18,6 +18,7 @@
 		508636B62231AC5100D977A7 /* InstructionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508636B42231AC5100D977A7 /* InstructionsViewController.xib */; };
 		50920CA0223E37E9008D812F /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50920C9F223E37E9008D812F /* Localization.swift */; };
 		50AF081C223EC6060093858C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF081B223EC6060093858C /* Location.swift */; };
+		50C4F196223ED8990017E431 /* Location+Geocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C4F195223ED8990017E431 /* Location+Geocoding.swift */; };
 		CF47D07522271BF100083728 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF47D07422271BF100083728 /* MapKit.framework */; };
 		CF90836F222DB051002CC71F /* DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90836E222DB051002CC71F /* DarkMode.swift */; };
 		CF908371222DBBBB002CC71F /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF908370222DBBBB002CC71F /* DrawerViewController.swift */; };
@@ -49,6 +50,7 @@
 		508636B42231AC5100D977A7 /* InstructionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionsViewController.xib; sourceTree = "<group>"; };
 		50920C9F223E37E9008D812F /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		50AF081B223EC6060093858C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		50C4F195223ED8990017E431 /* Location+Geocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+Geocoding.swift"; sourceTree = "<group>"; };
 		57D7A809755AD63C28DAA67C /* Pods-Abstrampeln.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstrampeln.release.xcconfig"; path = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.release.xcconfig"; sourceTree = "<group>"; };
 		CF47D07422271BF100083728 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CF90836C222DAE91002CC71F /* MKMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKMapView.h; sourceTree = "<group>"; };
@@ -116,7 +118,7 @@
 				CF90836D222DAEB8002CC71F /* BridgingHeader.h */,
 				505084302221DB09000662B8 /* Info.plist */,
 				505084242221DB07000662B8 /* AppDelegate.swift */,
-				50AF081B223EC6060093858C /* Location.swift */,
+				50C4F194223ED8890017E431 /* Location */,
 				505084262221DB07000662B8 /* MapViewController.swift */,
 				CFAAEBD02227DF77009926A2 /* SearchViewController.swift */,
 				5050842B2221DB09000662B8 /* Assets.xcassets */,
@@ -170,6 +172,15 @@
 				CF90836E222DB051002CC71F /* DarkMode.swift */,
 			);
 			path = DarkMode;
+			sourceTree = "<group>";
+		};
+		50C4F194223ED8890017E431 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				50AF081B223EC6060093858C /* Location.swift */,
+				50C4F195223ED8990017E431 /* Location+Geocoding.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		CFAAEBDA2227F6F4009926A2 /* Search */ = {
@@ -328,6 +339,7 @@
 				50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */,
 				50AF081C223EC6060093858C /* Location.swift in Sources */,
 				CFAAEC2022284080009926A2 /* LocationController.swift in Sources */,
+				50C4F196223ED8990017E431 /* Location+Geocoding.swift in Sources */,
 				CFAAEBD22227DF77009926A2 /* SearchViewController.swift in Sources */,
 				CF908371222DBBBB002CC71F /* DrawerViewController.swift in Sources */,
 				CFAAEBDE22280868009926A2 /* DummySuggestionSource.swift in Sources */,
