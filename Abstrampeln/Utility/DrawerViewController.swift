@@ -24,11 +24,11 @@ class DrawerViewController: UIViewController {
     override init(frame: CGRect) {
       super.init(frame: frame)
       
+      imageView?.image = UIImage(named: "CloseX")
+
       widthAnchor.constraint(equalToConstant: 24).isActive = true
       heightAnchor.constraint(equalToConstant: 24).isActive = true
       
-      imageView?.image = UIImage(named: "CloseX")
-
       backgroundColor = CloseButton.normalColor
     }
     

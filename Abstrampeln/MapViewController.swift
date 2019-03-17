@@ -39,12 +39,6 @@ class MapViewController: UIViewController {
     }
   }
   
-  var destination: CLLocationCoordinate2D? {
-    didSet {
-      update(destination: destination)
-    }
-  }
-  
   var destinationPin: MKPointAnnotation? {
     willSet {
       if let pin = destinationPin {
@@ -56,6 +50,12 @@ class MapViewController: UIViewController {
       if let pin = destinationPin {
         mapView.addAnnotation(pin)
       }
+    }
+  }
+  
+  var destination: SearchResultItem? {
+    didSet {
+      self.update(destination: destination?.coordinate)
     }
   }
   
@@ -146,21 +146,26 @@ extension MapViewController {
     }
     
     let location = gr.location(in: mapView)
-    let destination = mapView.convert(location, toCoordinateFrom: mapView)
+    let destinationLocation = mapView.convert(location, toCoordinateFrom: mapView)
+    let destination = SearchResultItem.droppedPin(location: destinationLocation)
     
-    self.destination = destination
-    // warning: fix me!
-//    if let from = latestLocation?.coordinate {
-//      getDirections(from: from, to: destination)
-//    }
+    AppController.shared.directionsController.set(destination: destination, mode: .None)
   }
 }
 
-extension MapViewController: DirectionsControllerListener {
-  func destinationDidChange(_ destination: SearchResultItem) {
-    //
+extension SearchResultItem {
+  static func droppedPin(location: CLLocationCoordinate2D) -> SearchResultItem {
+    return SearchResultItem(label: "Dropped Pin".localized, detail: nil, coordinate: location, gid: "droppedPin:\(location.latitude),\(location.longitude)")
   }
-  
+}
+
+extension MapViewController: DirectionsControllerDestinationListener {
+  func destinationDidChange(_ destination: SearchResultItem?) {
+    self.destination = destination
+  }
+}
+
+extension MapViewController: DirectionsControllerDirectionsListener {
   func directionsDidChange(_ directions: Directions?, mode: MappingMode) {
     self.directions = directions
   }

@@ -3,10 +3,6 @@
 import UIKit
 import CoreLocation
 
-protocol SelectedSuggestionListener {
-  func didSelect(suggestion: SearchResultItem)
-}
-
 struct SearchResultItem {
   let label: String
   let detail: String?
@@ -172,7 +168,7 @@ extension SearchController: UICollectionViewDataSource {
 extension SearchController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let suggestion = sections[indexPath.section].results[indexPath.item]
-    AppController.shared.dispatcher.each(SelectedSuggestionListener.self) { $0.didSelect(suggestion: suggestion) }
+    AppController.shared.directionsController.set(destination: suggestion, mode: .None)
   }
 }
 

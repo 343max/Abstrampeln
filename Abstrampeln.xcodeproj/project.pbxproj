@@ -16,6 +16,7 @@
 		50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */; };
 		508636B52231AC5100D977A7 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508636B32231AC5100D977A7 /* InstructionsViewController.swift */; };
 		508636B62231AC5100D977A7 /* InstructionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508636B42231AC5100D977A7 /* InstructionsViewController.xib */; };
+		50920CA0223E37E9008D812F /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50920C9F223E37E9008D812F /* Localization.swift */; };
 		CF47D07522271BF100083728 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF47D07422271BF100083728 /* MapKit.framework */; };
 		CF90836F222DB051002CC71F /* DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90836E222DB051002CC71F /* DarkMode.swift */; };
 		CF908371222DBBBB002CC71F /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF908370222DBBBB002CC71F /* DrawerViewController.swift */; };
@@ -45,6 +46,7 @@
 		50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSuggestionsSource.swift; sourceTree = "<group>"; };
 		508636B32231AC5100D977A7 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		508636B42231AC5100D977A7 /* InstructionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionsViewController.xib; sourceTree = "<group>"; };
+		50920C9F223E37E9008D812F /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		57D7A809755AD63C28DAA67C /* Pods-Abstrampeln.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstrampeln.release.xcconfig"; path = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.release.xcconfig"; sourceTree = "<group>"; };
 		CF47D07422271BF100083728 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CF90836C222DAE91002CC71F /* MKMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKMapView.h; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				CFAAEC1F22284080009926A2 /* LocationController.swift */,
 				50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */,
 				502EB86A223533B500A22129 /* DirectionsController.swift */,
+				50920C9F223E37E9008D812F /* Localization.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF90836F222DB051002CC71F /* DarkMode.swift in Sources */,
+				50920CA0223E37E9008D812F /* Localization.swift in Sources */,
 				50779BE9222C6E3000891EA7 /* SignalDispatcher.swift in Sources */,
 				50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */,
 				CFAAEC2022284080009926A2 /* LocationController.swift in Sources */,

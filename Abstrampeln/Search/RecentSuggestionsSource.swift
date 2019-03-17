@@ -48,17 +48,19 @@ extension RecentSuggestionsSource {
   }
 }
 
-extension RecentSuggestionsSource: SelectedSuggestionListener {
+extension RecentSuggestionsSource: DirectionsControllerDestinationListener {
   static let collector = RecentSuggestionsSource()
   
   func register(dispatcher: SignalDispatcher) {
     dispatcher.register(listener: self)
   }
   
-  func didSelect(suggestion: SearchResultItem) {
+  func destinationDidChange(_ destination: SearchResultItem?) {
+    guard let destination = destination else { return }
+
     var history = self.history
-    history.removeAll { $0 == suggestion }
-    history.insert(suggestion, at: 0)
+    history.removeAll { $0 == destination }
+    history.insert(destination, at: 0)
     self.history = Array(history.prefix(100))
   }
 }
@@ -78,22 +80,27 @@ extension SearchResultItem {
     case Gid = "Gid"
   }
   
-  var dict: [String: Any?] {
+  var dict: [String: Any] {
     get {
-      return [
+      var dict: [String: Any] = [
         DictKeys.Label.rawValue: label,
-        DictKeys.Detail.rawValue: detail,
         DictKeys.Latitude.rawValue: coordinate.latitude,
         DictKeys.Longitude.rawValue: coordinate.longitude,
         DictKeys.Gid.rawValue: gid
       ]
+      
+      if let detail = detail {
+        dict[DictKeys.Detail.rawValue] = detail
+      }
+      
+      return dict
     }
   }
   
   init(dict: [String: Any?]) {
     self.label = dict[DictKeys.Label.rawValue] as! String
     self.detail = dict[DictKeys.Detail.rawValue] as? String
-    self.gid = dict[DictKeys.Detail.rawValue] as! String
+    self.gid = dict[DictKeys.Gid.rawValue] as! String
     self.coordinate = CLLocationCoordinate2D(latitude: dict[DictKeys.Latitude.rawValue] as! Double,
                                              longitude: dict[DictKeys.Longitude.rawValue] as! Double)
   }

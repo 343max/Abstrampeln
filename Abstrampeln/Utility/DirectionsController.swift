@@ -9,18 +9,21 @@ enum MappingMode {
   case StepByStep
 }
 
-protocol DirectionsControllerListener {
-  func destinationDidChange(_ destination: SearchResultItem)
+protocol DirectionsControllerDestinationListener {
+  func destinationDidChange(_ destination: SearchResultItem?)
+}
+
+protocol DirectionsControllerDirectionsListener {
   func directionsDidChange(_ directions: Directions?, mode: MappingMode)
 }
 
 class DirectionsController {
-  let listeners: () -> ([DirectionsControllerListener])
+  let dispatcher: SignalDispatcher
   let locationController: LocationController
   let openrouteClient: OpenrouteClient
   
   init(dispatcher: SignalDispatcher, locationController: LocationController, openrouteClient: OpenrouteClient) {
-    self.listeners = dispatcher.all(DirectionsControllerListener.self)
+    self.dispatcher = dispatcher
     self.locationController = locationController
     self.openrouteClient = openrouteClient
   }
@@ -35,18 +38,17 @@ extension DirectionsController {
     if let currentLocation = locationController.latestLocations.first?.coordinate {
       openrouteClient.directions(start: currentLocation, finish: destination.coordinate).then { (directions) in
         self.directions = directions
-        self.listeners().forEach { $0.directionsDidChange(directions, mode: self.mappingMode) }
+        
+        self.dispatcher.each(DirectionsControllerDirectionsListener.self, {
+          $0.directionsDidChange(directions, mode: self.mappingMode)
+        })
       }
     }
   }
   
-  private func dispatchDirectionChange() {
-    listeners().forEach { $0.directionsDidChange(directions, mode: mappingMode) }
-  }
-  
-  func update(destination: SearchResultItem, mode: MappingMode) {
-    let destinationChanged = destination == self.destination
-    let modeChanged = mode == self.mappingMode
+  func set(destination: SearchResultItem, mode: MappingMode) {
+    let destinationChanged = destination != self.destination
+    let modeChanged = mode != self.mappingMode
     
     guard modeChanged || destinationChanged else {
       return
@@ -55,7 +57,9 @@ extension DirectionsController {
     if destinationChanged {
       self.destination = destination
       updateDirections(destination: destination)
-      listeners().forEach { $0.destinationDidChange(destination) }
+      dispatcher.each(DirectionsControllerDestinationListener.self) {
+        $0.destinationDidChange(destination)
+      }
     }
     
     if modeChanged {

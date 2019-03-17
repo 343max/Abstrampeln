@@ -15,7 +15,7 @@ class OpenRouteSuggestionSearch: SearchResultsDataSource {
   }
   
   func searchFor(text: String, completion: @escaping (String, [SearchResultItem]) -> ()) -> Bool {
-    guard text.count > 0 else {
+    guard !text.isEmpty else {
       return false
     }
     

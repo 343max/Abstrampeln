@@ -22,8 +22,6 @@ class SearchViewController: DrawerViewController {
     searchController.searchFor(text: "")
     
     suggestionsCollectionView.backgroundColor = .clear
-    
-    AppController.shared.dispatcher.register(listener: self)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -70,15 +68,5 @@ extension SearchViewController: UISearchBarDelegate {
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     searchController.searchFor(text: searchText)
-  }
-}
-
-extension SearchViewController: SelectedSuggestionListener {
-  func didSelect(suggestion: SearchResultItem) {
-    pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: true)
-    
-    let vc = RouteViewController(destination: suggestion)
-    vc.showsCloseButton = true
-    stackViewController?.push(viewController: vc, animated: true)
   }
 }
