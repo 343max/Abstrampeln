@@ -155,7 +155,7 @@ extension MapViewController {
 
 extension Location {
   static func droppedPin(location: CLLocationCoordinate2D) -> Location {
-    return Location(label: "Dropped Pin".localized, detail: nil, coordinate: location, gid: "droppedPin:\(location.latitude),\(location.longitude)")
+    return Location(label: "Dropped Pin".localized, detail: nil, coordinate: location, gid: "droppedPin:\(location.latitude),\(location.longitude)", isTemporary: true)
   }
 }
 

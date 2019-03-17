@@ -56,7 +56,7 @@ extension RecentSuggestionsSource: DirectionsControllerDestinationListener {
   }
   
   func destinationDidChange(_ destination: Location?) {
-    guard let destination = destination else { return }
+    guard let destination = destination, destination.isTemporary == false else { return }
 
     var history = self.history
     history.removeAll { $0 == destination }
@@ -103,5 +103,6 @@ extension Location {
     self.gid = dict[DictKeys.Gid.rawValue] as! String
     self.coordinate = CLLocationCoordinate2D(latitude: dict[DictKeys.Latitude.rawValue] as! Double,
                                              longitude: dict[DictKeys.Longitude.rawValue] as! Double)
+    self.isTemporary = false
   }
 }
