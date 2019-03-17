@@ -4,7 +4,7 @@ import UIKit
 import CoreLocation
 
 protocol SearchResultsDataSource {
-  func searchFor(text: String, completion: @escaping (_ text: String, _ results: [SearchResultItem]) -> ()) -> Bool
+  func searchFor(text: String, completion: @escaping (_ text: String, _ results: [Location]) -> ()) -> Bool
   func cancelSearchFor(text: String)
 }
 
@@ -68,7 +68,7 @@ extension SearchController {
   class Section {
     let dataSource: SearchResultsDataSource
     var searching = false
-    var results: [SearchResultItem] = []
+    var results: [Location] = []
     
     init(dataSource: SearchResultsDataSource) {
       self.dataSource = dataSource
@@ -119,7 +119,7 @@ extension SearchController: UICollectionViewDataSource {
       fatalError("init(coder:) has not been implemented")
     }
     
-    var item: SearchResultItem? {
+    var item: Location? {
       didSet {
         guard let item = item else { return }
         

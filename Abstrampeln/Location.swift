@@ -3,7 +3,7 @@
 import CoreLocation
 import Foundation
 
-struct SearchResultItem {
+struct Location {
   let label: String
   let detail: String?
   let coordinate: CLLocationCoordinate2D

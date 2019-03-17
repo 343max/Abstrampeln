@@ -14,7 +14,7 @@ class OpenRouteSuggestionSearch: SearchResultsDataSource {
     self.locationController = locationController
   }
   
-  func searchFor(text: String, completion: @escaping (String, [SearchResultItem]) -> ()) -> Bool {
+  func searchFor(text: String, completion: @escaping (String, [Location]) -> ()) -> Bool {
     guard !text.isEmpty else {
       return false
     }
@@ -26,8 +26,8 @@ class OpenRouteSuggestionSearch: SearchResultsDataSource {
       self.client.autocomplete(text: text, focusPoint: self.locationController.latestLocations.first?.coordinate).then { [weak self] (suggestions) in
         guard let self = self, self.currentText == text else { return }
         
-        let items = suggestions.features.map({ (feature) -> SearchResultItem in
-          return SearchResultItem(label: feature.properties.name, detail: feature.properties.label, coordinate: feature.geometry.start, gid: feature.properties.gid)
+        let items = suggestions.features.map({ (feature) -> Location in
+          return Location(label: feature.properties.name, detail: feature.properties.label, coordinate: feature.geometry.start, gid: feature.properties.gid)
         })
         
         completion(text, items)

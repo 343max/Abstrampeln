@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate: DirectionsControllerDestinationListener {
-  func destinationDidChange(_ destination: SearchResultItem?) {
+  func destinationDidChange(_ destination: Location?) {
     guard let destination = destination else { return }
     
     pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: true)

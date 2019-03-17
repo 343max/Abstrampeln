@@ -53,7 +53,7 @@ class MapViewController: UIViewController {
     }
   }
   
-  var destination: SearchResultItem? {
+  var destination: Location? {
     didSet {
       self.update(destination: destination?.coordinate)
     }
@@ -147,20 +147,20 @@ extension MapViewController {
     
     let location = gr.location(in: mapView)
     let destinationLocation = mapView.convert(location, toCoordinateFrom: mapView)
-    let destination = SearchResultItem.droppedPin(location: destinationLocation)
+    let destination = Location.droppedPin(location: destinationLocation)
     
     AppController.shared.directionsController.set(destination: destination, mode: .None)
   }
 }
 
-extension SearchResultItem {
-  static func droppedPin(location: CLLocationCoordinate2D) -> SearchResultItem {
-    return SearchResultItem(label: "Dropped Pin".localized, detail: nil, coordinate: location, gid: "droppedPin:\(location.latitude),\(location.longitude)")
+extension Location {
+  static func droppedPin(location: CLLocationCoordinate2D) -> Location {
+    return Location(label: "Dropped Pin".localized, detail: nil, coordinate: location, gid: "droppedPin:\(location.latitude),\(location.longitude)")
   }
 }
 
 extension MapViewController: DirectionsControllerDestinationListener {
-  func destinationDidChange(_ destination: SearchResultItem?) {
+  func destinationDidChange(_ destination: Location?) {
     self.destination = destination
   }
 }

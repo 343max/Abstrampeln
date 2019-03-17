@@ -10,7 +10,7 @@ enum MappingMode {
 }
 
 protocol DirectionsControllerDestinationListener {
-  func destinationDidChange(_ destination: SearchResultItem?)
+  func destinationDidChange(_ destination: Location?)
 }
 
 protocol DirectionsControllerDirectionsListener {
@@ -28,13 +28,13 @@ class DirectionsController {
     self.openrouteClient = openrouteClient
   }
   
-  private(set) var destination: SearchResultItem?
+  private(set) var destination: Location?
   private(set) var directions: Directions?
   private(set) var mappingMode = MappingMode.None
 }
 
 extension DirectionsController {
-  func updateDirections(destination: SearchResultItem) {
+  func updateDirections(destination: Location) {
     if let currentLocation = locationController.latestLocations.first?.coordinate {
       openrouteClient.directions(start: currentLocation, finish: destination.coordinate).then { (directions) in
         self.directions = directions
@@ -46,7 +46,7 @@ extension DirectionsController {
     }
   }
   
-  func set(destination: SearchResultItem, mode: MappingMode) {
+  func set(destination: Location, mode: MappingMode) {
     let destinationChanged = destination != self.destination
     let modeChanged = mode != self.mappingMode
     

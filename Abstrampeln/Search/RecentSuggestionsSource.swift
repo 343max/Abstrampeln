@@ -4,7 +4,7 @@ import Foundation
 import CoreLocation
 
 class RecentSuggestionsSource {
-  var history: [SearchResultItem] {
+  var history: [Location] {
     didSet {
       save()
     }
@@ -16,7 +16,7 @@ class RecentSuggestionsSource {
 }
 
 extension RecentSuggestionsSource: SearchResultsDataSource {
-  func searchFor(text: String, completion: @escaping (String, [SearchResultItem]) -> ()) -> Bool {
+  func searchFor(text: String, completion: @escaping (String, [Location]) -> ()) -> Bool {
     if text.count == 0 {
       completion(text, history)
     }
@@ -34,10 +34,10 @@ extension RecentSuggestionsSource {
     case RecentSuggestion = "RecentSuggestions"
   }
   
-  static func load() -> [SearchResultItem] {
+  static func load() -> [Location] {
     let dicts = UserDefaults.standard.object(forKey: UserDefaultsKeys.RecentSuggestion.rawValue) as? [[String: Any?]] ?? []
-    return dicts.map({ (dict) -> SearchResultItem in
-      return SearchResultItem(dict: dict)
+    return dicts.map({ (dict) -> Location in
+      return Location(dict: dict)
     })
   }
   
@@ -55,7 +55,7 @@ extension RecentSuggestionsSource: DirectionsControllerDestinationListener {
     dispatcher.register(listener: self)
   }
   
-  func destinationDidChange(_ destination: SearchResultItem?) {
+  func destinationDidChange(_ destination: Location?) {
     guard let destination = destination else { return }
 
     var history = self.history
@@ -65,13 +65,13 @@ extension RecentSuggestionsSource: DirectionsControllerDestinationListener {
   }
 }
 
-extension SearchResultItem: Equatable {
-  static func == (lhs: SearchResultItem, rhs: SearchResultItem) -> Bool {
+extension Location: Equatable {
+  static func == (lhs: Location, rhs: Location) -> Bool {
     return lhs.gid == rhs.gid
   }
 }
 
-extension SearchResultItem {
+extension Location {
   enum DictKeys: String {
     case Label = "Label"
     case Detail = "Detail"

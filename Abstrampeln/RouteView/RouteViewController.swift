@@ -9,17 +9,17 @@ enum DestinationSelectionPurpose {
 }
 
 protocol SelectedDestinationListener {
-  func didSelect(destination: SearchResultItem, for: DestinationSelectionPurpose)
+  func didSelect(destination: Location, for: DestinationSelectionPurpose)
   func didDeselectDestination()
 }
 
 class RouteViewController: DrawerViewController {
-  let destination: SearchResultItem
+  let destination: Location
   let signalDispatcher = AppController.shared.dispatcher
   
   @IBOutlet weak var destinationLabel: UILabel!
   
-  init(destination: SearchResultItem) {
+  init(destination: Location) {
     self.destination = destination
     super.init(nibName: nil, bundle: nil)
   }
