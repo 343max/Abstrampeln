@@ -3,13 +3,6 @@
 import UIKit
 import CoreLocation
 
-struct SearchResultItem {
-  let label: String
-  let detail: String?
-  let coordinate: CLLocationCoordinate2D
-  let gid: String
-}
-
 protocol SearchResultsDataSource {
   func searchFor(text: String, completion: @escaping (_ text: String, _ results: [SearchResultItem]) -> ()) -> Bool
   func cancelSearchFor(text: String)
