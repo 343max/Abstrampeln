@@ -33,23 +33,12 @@ extension Directions.Route {
   public struct Summary: Decodable {
     public let distance: Float
     public let duration: TimeInterval
-    
-    public enum CodingKeys: String, CodingKey {
-      case distance = "distance"
-      case duration = "duration"
-    }
   }
   
   public struct Segment: Decodable {
     public let distance: Float
     public let duration: TimeInterval
     public let steps: [Step]
-    
-    public enum CodingKeys: String, CodingKey {
-      case distance = "distance"
-      case duration = "duration"
-      case steps = "steps"
-    }
   }
 }
 
