@@ -11,7 +11,7 @@ extension UIViewController {
 }
 
 class StackViewController: UIViewController {
-  var viewControllers: [UIViewController]
+  private(set) var viewControllers: [UIViewController]
   var topViewController: UIViewController {
     get {
       return viewControllers.last!
@@ -28,7 +28,7 @@ class StackViewController: UIViewController {
   }
   
   override func loadView() {
-    // this prevents the child VCs safeAreaInset to be something a bit more sane
+    // this forces the child VCs safeAreaInset to be something a bit more sane
     view = UIView()
   }
 
@@ -54,56 +54,69 @@ class StackViewController: UIViewController {
     viewController.removeFromParent()
   }
   
-  func push(viewController: UIViewController, animated: Bool) {
-    if animated {
-      add(viewController: viewController)
-      let bottom: CGFloat
-      if let window = view.window {
-        bottom = view.convert(CGPoint(x: 0, y: window.bounds.height), from: window).y
-      } else {
-        bottom = view.bounds.height
-      }
-      viewController.view.frame = CGRect(x: 0, y: bottom, width: view.bounds.width, height: view.bounds.height)
-      viewController.view.backgroundColor = .white
-      UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
-        viewController.view.frame = self.view.bounds
-      }) { (complete) in
-        viewController.view.backgroundColor = .clear
-        self.remove(viewController: self.topViewController)
-        self.viewControllers.append(viewController)
-      }
+  func set(viewControllers: [UIViewController], animated: Bool) {
+    let oldViewControllers = self.viewControllers
+    
+    let oldTop = oldViewControllers.last!
+    let newTop = viewControllers.last!
+    
+    if oldTop == newTop {
+      self.viewControllers = viewControllers
+    } else if !animated {
+      remove(viewController: oldTop)
+      add(viewController: newTop)
+      self.viewControllers = viewControllers
     } else {
-      remove(viewController: topViewController)
-      viewControllers.append(viewController)
-      add(viewController: viewController)
+      // animated
+      self.viewControllers = viewControllers
+      
+      if oldViewControllers.contains(newTop) && !viewControllers.contains(oldTop) {
+        // pop animation
+        
+        add(viewController: newTop)
+        view.addSubview(oldTop.view)
+        oldTop.view.backgroundColor = .white
+        
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
+          let bottom: CGFloat
+          if let window = self.view.window {
+            bottom = self.view.convert(CGPoint(x: 0, y: window.bounds.height), from: window).y
+          } else {
+            bottom = self.view.bounds.height
+          }
+          oldTop.view.frame = CGRect(x: 0, y: bottom, width: self.view.bounds.width, height: self.view.bounds.height)
+        }) { (complete) in
+          self.remove(viewController: oldTop)
+        }
+      } else {
+        // push animation
+        
+        add(viewController: newTop)
+        let bottom: CGFloat
+        if let window = view.window {
+          bottom = view.convert(CGPoint(x: 0, y: window.bounds.height), from: window).y
+        } else {
+          bottom = view.bounds.height
+        }
+        newTop.view.frame = CGRect(x: 0, y: bottom, width: view.bounds.width, height: view.bounds.height)
+        newTop.view.backgroundColor = .white
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+          newTop.view.frame = self.view.bounds
+        }) { (complete) in
+          newTop.view.backgroundColor = .clear
+          self.remove(viewController: oldTop)
+        }
+      }
     }
   }
   
+  func push(viewController: UIViewController, animated: Bool) {
+    set(viewControllers: self.viewControllers + [viewController], animated: animated)
+  }
+  
   func popTopViewController(animated: Bool) {
-    assert(viewControllers.count > 0, "Can't pop the last view controller on the stack")
-    if animated {
-      let popingViewController = topViewController
-      viewControllers.removeLast()
-      add(viewController: topViewController)
-      view.addSubview(popingViewController.view)
-      popingViewController.view.backgroundColor = .white
-      
-      UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
-        let bottom: CGFloat
-        if let window = self.view.window {
-          bottom = self.view.convert(CGPoint(x: 0, y: window.bounds.height), from: window).y
-        } else {
-          bottom = self.view.bounds.height
-        }
-        popingViewController.view.frame = CGRect(x: 0, y: bottom, width: self.view.bounds.width, height: self.view.bounds.height)
-      }) { (complete) in
-        self.remove(viewController: popingViewController)
-      }
-      
-    } else {
-      remove(viewController: topViewController)
-      viewControllers.removeLast()
-      add(viewController: topViewController)
-    }
+    var viewControllers = self.viewControllers
+    viewControllers.removeLast()
+    set(viewControllers: viewControllers, animated: animated)
   }
 }
