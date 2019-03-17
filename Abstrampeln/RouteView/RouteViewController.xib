@@ -36,8 +36,8 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="PW7-AI-gS4"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                            <state key="normal" title="Favorite"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                            <state key="normal" title="♡"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmR-WA-hSc" customClass="RoundedButton" customModule="Abstrampeln" customModuleProvider="target">
                             <rect key="frame" x="128" y="0.0" width="118" height="50"/>
