@@ -5,7 +5,7 @@ import CoreLocation
 
 extension CLLocationCoordinate2D {
   public init(array: [Double]) {
-    assert(array.count == 2)
+    precondition(array.count == 2)
     self.init()
     self.longitude = array[0]
     self.latitude = array[1]

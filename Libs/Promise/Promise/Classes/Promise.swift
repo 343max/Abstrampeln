@@ -90,7 +90,7 @@ public class Promise<T> : UntypedPromise {
   }
   
   public func fulfill(_ result: T) {
-    assert(!fulfilled || multiCall, "promise already fulfilled")
+    precondition(!fulfilled || multiCall, "promise already fulfilled")
     self.result = result
     handle(thens: thenCalls)
   }
