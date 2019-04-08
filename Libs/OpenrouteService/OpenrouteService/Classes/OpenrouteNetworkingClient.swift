@@ -3,6 +3,10 @@
 import Foundation
 
 public class OpenrouteNetworkingClient: NetworkingClient {
+  enum ClientError: Error {
+    case NoErrorOrData
+  }
+  
   private let apiKey: String
   
   private static let endpoint = URL(string: "https://api.openrouteservice.org/")!
@@ -13,7 +17,7 @@ public class OpenrouteNetworkingClient: NetworkingClient {
     self.session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
   }
   
-  public func sendRequest(_ method: HTTPMethod, _ path: String, _ parameter: ParameterDict, callback: @escaping (Data?, HTTPURLResponse?, Error?) -> Void) {
+  public func sendRequest(_ method: HTTPMethod, _ path: String, _ parameter: ParameterDict, callback: @escaping (HTTPURLResponse, Result<Data, Error>) -> Void) {
     var components = URLComponents(url: OpenrouteNetworkingClient.endpoint, resolvingAgainstBaseURL: false)!
     components.path += path
     var parameter = parameter
@@ -23,8 +27,14 @@ public class OpenrouteNetworkingClient: NetworkingClient {
     request.httpMethod = method.rawValue
     
     let task = session.dataTask(with: request) { (data, response, error) in
-      let httpResponse = response as! HTTPURLResponse?
-      callback(data, httpResponse, error)
+      let httpResponse = response as! HTTPURLResponse
+      if let error = error {
+        callback(httpResponse, .failure(error))
+      } else if let data = data {
+        callback(httpResponse, .success(data))
+      } else {
+        callback(httpResponse, .failure(ClientError.NoErrorOrData))
+      }
     }
     
     task.resume()

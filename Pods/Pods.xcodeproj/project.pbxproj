@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		116A6A48E63F7514734D8EA7051DB8DC /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466A283C9088B68516767B3F69E393C2 /* Promise.swift */; };
 		2535DFE4E63D9468FC457A03408CE12E /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041C3BAD1A830F2A9BB75B471D727BF /* UIView+constrainToParent.swift */; };
 		4EE145EB44A027F04B5CDD638589B27F /* Pulley-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5811B2A44EC8513F20D10AF2E2997135 /* Pulley-dummy.m */; };
 		5D76D126CD388FD80ED430362BF551A8 /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D071E9D18C1CC4CA1591ABB4975AD /* PulleyPassthroughScrollView.swift */; };
@@ -25,7 +24,6 @@
 		C77E0A1AA5BC544481AE9DD35784111C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02A0EAFDF16529758D46A059D8D4E0 /* Helpers.swift */; };
 		C8D6EE658337D9D5F1C6CBF0582B82FE /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC752CC0A52DDF10CAAD3AF85E4882C2 /* Directions.swift */; };
 		CAC793EDFEE7257636E5CF1804F18BC7 /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C9F311A67F011AAA3041F30C93398 /* NetworkingClient.swift */; };
-		DB35A24527AE0666F8F3D35F6E2A8D01 /* Promise+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74781EE89B0DC71AC1ED040BFC906A8 /* Promise+Helpers.swift */; };
 		DD433D3CA99F3AC59880C06816817268 /* OpenrouteService-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64E7155BFDADAEBEDF171F4F5D0EFCD7 /* OpenrouteService-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E797A0C0C6E5347DEF18F5663EC77385 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
 		F3C37D80F23112CF880E93AC079BF444 /* OpenrouteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EAE12D548A592A394473E4C87AE499 /* OpenrouteClient.swift */; };
@@ -61,7 +59,6 @@
 		377C9F311A67F011AAA3041F30C93398 /* NetworkingClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkingClient.swift; path = OpenrouteService/Classes/NetworkingClient.swift; sourceTree = "<group>"; };
 		3989B34BD3765768591B8D0C7056F3AA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		466A283C9088B68516767B3F69E393C2 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = OpenrouteService/Classes/Promise.swift; sourceTree = "<group>"; };
 		4A1AE5688EEC620521C4C52D49782EF1 /* OpenrouteService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenrouteService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5811B2A44EC8513F20D10AF2E2997135 /* Pulley-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pulley-dummy.m"; sourceTree = "<group>"; };
 		58C8B1B7CDEFB9175F83F1E22F4882E7 /* Pulley.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pulley.xcconfig; sourceTree = "<group>"; };
@@ -76,7 +73,6 @@
 		A041C3BAD1A830F2A9BB75B471D727BF /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+constrainToParent.swift"; path = "PulleyLib/UIView+constrainToParent.swift"; sourceTree = "<group>"; };
 		A4EAE12D548A592A394473E4C87AE499 /* OpenrouteClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenrouteClient.swift; path = OpenrouteService/Classes/OpenrouteClient.swift; sourceTree = "<group>"; };
 		A5B14F57E06F861F916290CF5BAC5643 /* OpenrouteService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenrouteService-prefix.pch"; sourceTree = "<group>"; };
-		A74781EE89B0DC71AC1ED040BFC906A8 /* Promise+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Helpers.swift"; path = "OpenrouteService/Classes/Promise+Helpers.swift"; sourceTree = "<group>"; };
 		A7D222C0DE6AEAEF20297EE208293C0D /* OpenrouteService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OpenrouteService-Info.plist"; sourceTree = "<group>"; };
 		A9D7CB326C3752D67E263129F9322D8E /* Pulley-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-prefix.pch"; sourceTree = "<group>"; };
 		ACEE3E281A242B882C6207F66ACF45A6 /* Pulley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pulley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,8 +133,6 @@
 				377C9F311A67F011AAA3041F30C93398 /* NetworkingClient.swift */,
 				A4EAE12D548A592A394473E4C87AE499 /* OpenrouteClient.swift */,
 				97EC35132CECBE6EA5EAAD296521FDDC /* OpenrouteNetworkingClient.swift */,
-				466A283C9088B68516767B3F69E393C2 /* Promise.swift */,
-				A74781EE89B0DC71AC1ED040BFC906A8 /* Promise+Helpers.swift */,
 				3A41A4DBFB45699E26F5DDE9984568A6 /* Pod */,
 				B04C97410277C81A60BE6CC3BC1C1A34 /* Support Files */,
 			);
@@ -384,6 +378,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -456,8 +451,6 @@
 				F3C37D80F23112CF880E93AC079BF444 /* OpenrouteClient.swift in Sources */,
 				A12DC01DEB379C34712C57ABD3E30D81 /* OpenrouteNetworkingClient.swift in Sources */,
 				7471C5A63E114258D2A14602D9DECDF7 /* OpenrouteService-dummy.m in Sources */,
-				DB35A24527AE0666F8F3D35F6E2A8D01 /* Promise+Helpers.swift in Sources */,
-				116A6A48E63F7514734D8EA7051DB8DC /* Promise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

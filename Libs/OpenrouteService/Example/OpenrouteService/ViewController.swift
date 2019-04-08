@@ -33,12 +33,25 @@ class ViewController: UIViewController {
 //    show(directions: directions)
     
     let start = CLLocationCoordinate2D(latitude: 52.511180, longitude: 13.449880)
-    client.autocomplete(text: "13 Esmarch", focusPoint: start).map { (geocodeRespone) -> CLLocationCoordinate2D in
-      return geocodeRespone.features.first!.geometry.start
-      }.mapPromise { (finish) -> Promise<Directions> in
-        return self.client.directions(start: start, finish: finish)
-      }.mainQueue.then { (directions) in
-        self.show(directions: directions)
+    client.autocomplete(text: "13 Esmarch", focusPoint: start) { (result) in
+      switch result {
+      case .failure(let error):
+        print(error)
+        assert(false)
+      case .success(let response):
+        let finish = response.features.first!.geometry.start
+        self.client.directions(start: start, finish: finish) { (result) in
+          DispatchQueue.main.async {
+            switch result {
+            case .failure(let error):
+              print(error)
+              assert(false)
+            case .success(let directions):
+              self.show(directions: directions)
+            }
+          }
+        }
+      }
     }
   }
 }
