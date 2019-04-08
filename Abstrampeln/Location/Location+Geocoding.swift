@@ -2,7 +2,7 @@
 
 import CoreLocation
 import Foundation
-import OpenrouteService
+import Promise
 
 extension CLLocation {
   convenience init(coordinate: CLLocationCoordinate2D) {

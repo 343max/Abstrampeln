@@ -2,7 +2,7 @@
 
 import Foundation
 import CoreLocation
-import OpenrouteService
+import Promise
 
 class LocationController: NSObject {
   private let locationManager = CLLocationManager()
