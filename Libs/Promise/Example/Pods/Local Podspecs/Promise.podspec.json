@@ -1,0 +1,23 @@
+{
+  "name": "Promise",
+  "version": "0.1.0",
+  "summary": "A short description of Promise.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Max von Webel/Promise",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Max von Webel": "max@343max.de"
+  },
+  "source": {
+    "git": "https://github.com/Max von Webel/Promise.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "swift_versions": "5.0",
+  "source_files": "Promise/Classes/**/*"
+}

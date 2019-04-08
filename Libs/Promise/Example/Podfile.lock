@@ -1,0 +1,16 @@
+PODS:
+  - Promise (0.1.0)
+
+DEPENDENCIES:
+  - Promise (from `../`)
+
+EXTERNAL SOURCES:
+  Promise:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Promise: da060f1dea87703330de4f4474dd83ae11e3d5dd
+
+PODFILE CHECKSUM: dd4e228192003cfadd4960b219ffc5fec836c7f7
+
+COCOAPODS: 1.7.0.beta.1
