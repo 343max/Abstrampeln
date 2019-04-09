@@ -7,12 +7,18 @@ import OpenrouteService
 
 class MapViewController: UIViewController {
   weak var mapView: MKMapView!
+  
+  #if targetEnvironment(simulator)
+  let shouldAnimate = false
+  #else
+  let shouldAnimate = true
+  #endif
     
   var directions: Directions? {
     didSet {
       if let directions = directions {
         let mapRect = directions.boundingBox.mapRect.insetBy(dx: -4000, dy: -4000).offsetBy(dx: 0, dy: 4000)
-        mapView.setVisibleMapRect(mapRect, animated: true)
+        mapView.setVisibleMapRect(mapRect, animated: shouldAnimate)
       }
       update(directions: directions)
     }
@@ -97,7 +103,7 @@ class MapViewController: UIViewController {
     if userInteracted == false {
       let span = CLLocationDistance(1000)
       let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: span, longitudinalMeters: span)
-      mapView.setRegion(region, animated: true)
+      mapView.setRegion(region, animated: shouldAnimate)
     }
   }
   
