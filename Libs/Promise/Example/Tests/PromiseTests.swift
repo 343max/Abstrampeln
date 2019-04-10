@@ -3,6 +3,8 @@
 import XCTest
 @testable import Promise
 
+// swiftlint:disable force_cast
+
 class PromiseTests: XCTestCase {
 
   func testPromise() {
@@ -62,7 +64,7 @@ class PromiseTests: XCTestCase {
       let message: String
     }
 
-    let promise = Promise<String>({ (completion) in
+    let promise = Promise<String>({ (_) in
       setupCalled = true
       throw SomeError(message: "message")
     }).then { (_) in
@@ -98,7 +100,7 @@ class PromiseTests: XCTestCase {
       Promise<String>({ (completion) in
         promise2setup = true
         completion("world")
-      }).then{ promise2complete = true }
+      }).then { promise2complete = true }
       ]).then { completionCalled = true }
 
     XCTAssertTrue(promise1setup)

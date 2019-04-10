@@ -4,8 +4,6 @@ import Foundation
 
 extension String {
   var localized: String {
-    get {
-      return self
-    }
+    return self
   }
 }

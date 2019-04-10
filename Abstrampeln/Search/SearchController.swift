@@ -4,7 +4,7 @@ import UIKit
 import CoreLocation
 
 protocol SearchResultsDataSource {
-  func searchFor(text: String, completion: @escaping (_ text: String, _ results: [Location]) -> ()) -> Bool
+  func searchFor(text: String, completion: @escaping (_ text: String, _ results: [Location]) -> Void) -> Bool
   func cancelSearchFor(text: String)
 }
 

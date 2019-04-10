@@ -21,6 +21,7 @@
 		50AF081C223EC6060093858C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF081B223EC6060093858C /* Location.swift */; };
 		50C4F196223ED8990017E431 /* Location+Geocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C4F195223ED8990017E431 /* Location+Geocoding.swift */; };
 		CF47D07522271BF100083728 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF47D07422271BF100083728 /* MapKit.framework */; };
+		CF7F4CBB225E347100074094 /* OptionalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7F4CBA225E347100074094 /* OptionalError.swift */; };
 		CF90836F222DB051002CC71F /* DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90836E222DB051002CC71F /* DarkMode.swift */; };
 		CF908371222DBBBB002CC71F /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF908370222DBBBB002CC71F /* DrawerViewController.swift */; };
 		CF908373222DC1CC002CC71F /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF908372222DC1CC002CC71F /* StackViewController.swift */; };
@@ -55,6 +56,7 @@
 		50C4F195223ED8990017E431 /* Location+Geocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+Geocoding.swift"; sourceTree = "<group>"; };
 		57D7A809755AD63C28DAA67C /* Pods-Abstrampeln.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstrampeln.release.xcconfig"; path = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.release.xcconfig"; sourceTree = "<group>"; };
 		CF47D07422271BF100083728 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CF7F4CBA225E347100074094 /* OptionalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalError.swift; sourceTree = "<group>"; };
 		CF90836C222DAE91002CC71F /* MKMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKMapView.h; sourceTree = "<group>"; };
 		CF90836D222DAEB8002CC71F /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		CF90836E222DB051002CC71F /* DarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkMode.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				502EB86A223533B500A22129 /* DirectionsController.swift */,
 				50920C9F223E37E9008D812F /* Localization.swift */,
 				505E99A5225B58A5006C37E6 /* OpenrouteClient+Promise.swift */,
+				CF7F4CBA225E347100074094 /* OptionalError.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF90836F222DB051002CC71F /* DarkMode.swift in Sources */,
+				CF7F4CBB225E347100074094 /* OptionalError.swift in Sources */,
 				50920CA0223E37E9008D812F /* Localization.swift in Sources */,
 				50779BE9222C6E3000891EA7 /* SignalDispatcher.swift in Sources */,
 				50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */,

@@ -15,7 +15,7 @@ extension Location {
     return Promise({ (completion) in
       let geocoder = CLGeocoder()
       let location = CLLocation(coordinate: coordinate)
-      geocoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
+      geocoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, _) in
         if let placemark = placemarks?.first {
           if let name = placemark.name,
              let addressLines = placemark.addressDictionary?["FormattedAddressLines"] as? [String],

@@ -4,18 +4,14 @@ import UIKit
 
 extension UIViewController {
   var stackViewController: StackViewController? {
-    get {
-      return self as? StackViewController ?? parent?.stackViewController
-    }
+    return self as? StackViewController ?? parent?.stackViewController
   }
 }
 
 class StackViewController: UIViewController {
   private(set) var viewControllers: [UIViewController]
   var topViewController: UIViewController {
-    get {
-      return viewControllers.last!
-    }
+    return viewControllers.last!
   }
 
   init(viewController: UIViewController) {
@@ -85,9 +81,9 @@ class StackViewController: UIViewController {
             bottom = self.view.bounds.height
           }
           oldTop.view.frame = CGRect(x: 0, y: bottom, width: self.view.bounds.width, height: self.view.bounds.height)
-        }) { (complete) in
+        }, completion: { (_) in
           self.remove(viewController: oldTop)
-        }
+        })
       } else {
         // push animation
 
@@ -102,10 +98,10 @@ class StackViewController: UIViewController {
         newTop.view.backgroundColor = .white
         UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
           newTop.view.frame = self.view.bounds
-        }) { (complete) in
+        }, completion: { (_) in
           newTop.view.backgroundColor = .clear
           self.remove(viewController: oldTop)
-        }
+        })
       }
     }
   }

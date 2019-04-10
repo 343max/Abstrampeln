@@ -14,8 +14,8 @@ public struct Geometry: Decodable {
   public let coordinates: [CLLocationCoordinate2D]
 
   public enum CodingKeys: String, CodingKey {
-    case type = "type"
-    case coordinates = "coordinates"
+    case type
+    case coordinates
   }
 
   public enum GeometryType: String, Decodable {
@@ -36,9 +36,7 @@ public struct Geometry: Decodable {
 
 extension Geometry {
   public var start: CLLocationCoordinate2D {
-    get {
-      return coordinates.first!
-    }
+    return coordinates.first!
   }
 }
 
@@ -57,9 +55,9 @@ extension Directions {
   }
 
   public enum Preferences: String {
-    case recommended = "recommended"
-    case fastest = "fastest"
-    case shortest = "shortest"
+    case recommended
+    case fastest
+    case shortest
   }
 
   public enum Language: String {

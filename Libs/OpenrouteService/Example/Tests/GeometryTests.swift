@@ -25,7 +25,7 @@ class GeometryTests: XCTestCase {
   ]
 }
 """.data(using: .utf8)!
-    let geometry = try! JSONDecoder.openroute.decode(Geometry.self, from: data)
+    let geometry = try! JSONDecoder.openroute.decode(Geometry.self, from: data) // swiftlint:disable:this force_try
     XCTAssertEqual(geometry.type, .lineString)
     XCTAssertEqual(geometry.coordinates.count, 3)
     if let cooridinate = geometry.coordinates.first {
@@ -44,7 +44,7 @@ class GeometryTests: XCTestCase {
   ]
 }
 """.data(using: .utf8)!
-    let geometry = try! JSONDecoder.openroute.decode(Geometry.self, from: data)
+    let geometry = try! JSONDecoder.openroute.decode(Geometry.self, from: data) // swiftlint:disable:this force_try
     XCTAssertEqual(geometry.type, .point)
     XCTAssertEqual(geometry.coordinates.count, 1)
     if let cooridinate = geometry.coordinates.first {

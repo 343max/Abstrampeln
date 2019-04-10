@@ -3,11 +3,8 @@ excluded:
 
 disabled_rules:
   - line_length
+  - function_body_length
+  - nesting
 
-force_try: warning
-force_cast: warning
 identifier_name:
-  excluded:
-    - i
-    - j
-    - x
+  min_length: 1

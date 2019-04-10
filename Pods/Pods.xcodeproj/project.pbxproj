@@ -68,35 +68,35 @@
 		284B099ECF5C278FDE87C6C997F50203 /* Directions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Directions.swift; path = OpenrouteService/Classes/Directions.swift; sourceTree = "<group>"; };
 		2DFA3AAA993F631C79F76BB076D92BEA /* Pods-Abstrampeln.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Abstrampeln.release.xcconfig"; sourceTree = "<group>"; };
 		35C37E70BC6924582A1F8F43FE0B0426 /* Pods-Abstrampeln-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Abstrampeln-umbrella.h"; sourceTree = "<group>"; };
-		39174082CB86F479C86235151B768750 /* Promise.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Promise.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		39174082CB86F479C86235151B768750 /* Promise.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Promise.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3B8C6AAC849A5F6E1460B77555DCFE24 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Promise/Classes/Promise.swift; sourceTree = "<group>"; };
-		3ED8ABC486E4B785E553A6C7105981DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		3ED8ABC486E4B785E553A6C7105981DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		41A8C0AA0492BFF6AF22EB52C6253A32 /* Promise-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Promise-dummy.m"; sourceTree = "<group>"; };
-		41C8F52F81DE5BD0332A63E97CDC481D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		4213BCA9998C6558BF4CDE23C82319FC /* Promise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Promise.framework; path = Promise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C8F52F81DE5BD0332A63E97CDC481D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4213BCA9998C6558BF4CDE23C82319FC /* Promise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Promise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		428EACC75A083E75CF99612F6FEC6BAA /* OpenrouteService.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenrouteService.xcconfig; sourceTree = "<group>"; };
 		46E5F7123D28022DD2BE459A57ECF4CA /* OpenrouteService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenrouteService-prefix.pch"; sourceTree = "<group>"; };
 		4C91818D11A6CA9DA5E129038C6A9C6A /* Promise.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Promise.modulemap; sourceTree = "<group>"; };
 		54A48142B7C8AF83A3F1F19D21C56D8E /* Promise-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Promise-Info.plist"; sourceTree = "<group>"; };
 		5811B2A44EC8513F20D10AF2E2997135 /* Pulley-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pulley-dummy.m"; sourceTree = "<group>"; };
 		58C8B1B7CDEFB9175F83F1E22F4882E7 /* Pulley.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pulley.xcconfig; sourceTree = "<group>"; };
-		5FF204929CC1334AD27B9C36C477D378 /* Promise+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Helpers.swift"; path = "Promise/Classes/Promise+Helpers.swift"; sourceTree = "<group>"; };
-		60F541C0C3A5F3D58083057E27982E4F /* OpenrouteService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = OpenrouteService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		63773DC6139E414032BE0BB8C1CF04B0 /* Pulley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pulley.framework; path = Pulley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FF204929CC1334AD27B9C36C477D378 /* Promise+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = sourcecode.swift; name = "Promise+Helpers.swift"; path = "Promise/Classes/Promise+Helpers.swift"; sourceTree = "<group>"; tabWidth = 2; };
+		60F541C0C3A5F3D58083057E27982E4F /* OpenrouteService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = OpenrouteService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		63773DC6139E414032BE0BB8C1CF04B0 /* Pulley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pulley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D1272049A5A68B9754C3CDE52114A4 /* OpenrouteService.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OpenrouteService.modulemap; sourceTree = "<group>"; };
 		8605491842DE51BA30F56EB364A19F89 /* Geocode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Geocode.swift; path = OpenrouteService/Classes/Geocode.swift; sourceTree = "<group>"; };
-		89CE33F30F9CE73D1C20F21705D21F6F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		89CE33F30F9CE73D1C20F21705D21F6F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8A74D796BAAB43DCF774766B6A5AE548 /* OpenrouteService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OpenrouteService-Info.plist"; sourceTree = "<group>"; };
 		8ABC1B8AD6D6ABBB8A0129B910B3DD6E /* Promise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Promise.xcconfig; sourceTree = "<group>"; };
 		91CB0E36564837A7E65930F17DEAC1B0 /* CoreLocationHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreLocationHelpers.swift; path = OpenrouteService/Classes/CoreLocationHelpers.swift; sourceTree = "<group>"; };
 		994BAF84223FF52FDF58C68B35E942BC /* Pulley-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EECDE0EB2A528752AD601E4204ECDFE /* Pods-Abstrampeln-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Abstrampeln-Info.plist"; sourceTree = "<group>"; };
 		A041C3BAD1A830F2A9BB75B471D727BF /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+constrainToParent.swift"; path = "PulleyLib/UIView+constrainToParent.swift"; sourceTree = "<group>"; };
 		A1CB3CA9BF7B16D64CDC048A31897733 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = OpenrouteService/Classes/Helpers.swift; sourceTree = "<group>"; };
 		A9D7CB326C3752D67E263129F9322D8E /* Pulley-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-prefix.pch"; sourceTree = "<group>"; };
-		ADB88CFB04A5917AC08000ABBE811C54 /* OpenrouteService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OpenrouteService.framework; path = OpenrouteService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB88CFB04A5917AC08000ABBE811C54 /* OpenrouteService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenrouteService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA2A7FCC90C8390117FF400FEBD26C1 /* NetworkingClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkingClient.swift; path = OpenrouteService/Classes/NetworkingClient.swift; sourceTree = "<group>"; };
 		B1AFB953FB45E3B42AE3EEF2272D2A00 /* Promise-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Promise-umbrella.h"; sourceTree = "<group>"; };
 		B31F0F6DE8122CCA3890989644D30277 /* Pulley.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Pulley.modulemap; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		B9D1D75E261A4649F3D58982B6AADFB6 /* Pods-Abstrampeln-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Abstrampeln-acknowledgements.plist"; sourceTree = "<group>"; };
 		BADAD9371163D1CA7807D413D19E38F6 /* OpenrouteService-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OpenrouteService-dummy.m"; sourceTree = "<group>"; };
 		C1848A05049BBF82AA694F9A91783D5D /* OpenrouteService-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenrouteService-umbrella.h"; sourceTree = "<group>"; };
-		C9DF22E935C2084EBC78B3C7FD00C19A /* Pods_Abstrampeln.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Abstrampeln.framework; path = "Pods-Abstrampeln.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9DF22E935C2084EBC78B3C7FD00C19A /* Pods_Abstrampeln.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstrampeln.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9B7D55BBB3C91D11E17F5B9C22DA4A /* PulleyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PulleyViewController.swift; path = PulleyLib/PulleyViewController.swift; sourceTree = "<group>"; };
 		D9662912EF2396ED9E9002B9AE571C6E /* Pods-Abstrampeln.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Abstrampeln.debug.xcconfig"; sourceTree = "<group>"; };
 		DB6BE3DA280E0EE135DD664CBE9CC83D /* MapKitHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapKitHelpers.swift; path = OpenrouteService/Classes/MapKitHelpers.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		F2FEDCBED74C53F16ABD553EA529EFF7 /* Pods-Abstrampeln-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Abstrampeln-dummy.m"; sourceTree = "<group>"; };
 		F5D7C40ADE75CB99725E96365FE60AD4 /* Pods-Abstrampeln.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Abstrampeln.modulemap"; sourceTree = "<group>"; };
 		FD2BD728100BE3BC7DF4D8725962BE4C /* OpenrouteNetworkingClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenrouteNetworkingClient.swift; path = OpenrouteService/Classes/OpenrouteNetworkingClient.swift; sourceTree = "<group>"; };
-		FF51547BE58BE52DD15C136E6A3D02F6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		FF51547BE58BE52DD15C136E6A3D02F6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +211,6 @@
 				03D06EBA2345A6667DC182D41C44EEF4 /* UIViewController+PulleyViewController.swift */,
 				90F77C2E3CE9042D66E9C7D7520CA32A /* Support Files */,
 			);
-			name = Pulley;
 			path = Pulley;
 			sourceTree = "<group>";
 		};
@@ -468,6 +467,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;

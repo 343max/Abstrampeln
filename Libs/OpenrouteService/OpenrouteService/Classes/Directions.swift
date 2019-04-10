@@ -78,8 +78,8 @@ public struct BoundingBox: Decodable {
   public let northEast: CLLocationCoordinate2D
   public let southWest: CLLocationCoordinate2D
 
-  public init(from decoder: Decoder) {
-    let array = try! decoder.singleValueContainer().decode([Double].self)
+  public init(from decoder: Decoder) throws {
+    let array = try decoder.singleValueContainer().decode([Double].self)
     precondition(array.count == 4)
     self.northEast = CLLocationCoordinate2D(array: [ array[0], array[1] ])
     self.southWest = CLLocationCoordinate2D(array: [ array[2], array[3] ])

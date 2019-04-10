@@ -2,6 +2,8 @@ import CoreLocation
 import XCTest
 import OpenrouteService
 
+// swiftlint:disable force_try
+
 class DirectionsTests: XCTestCase {
 
   private func data(fileName: String) -> Data {
@@ -10,10 +12,9 @@ class DirectionsTests: XCTestCase {
     return try! Data(contentsOf: url)
   }
 
-
   func testDirections() {
     let data = self.data(fileName: "Directions")
-    let _ = try! JSONDecoder.openroute.decode(Directions.self, from: data)
+    _ = try! JSONDecoder.openroute.decode(Directions.self, from: data)
   }
 
   func testCoordinates() {

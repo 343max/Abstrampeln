@@ -27,7 +27,7 @@ public class OpenrouteNetworkingClient: NetworkingClient {
     request.httpMethod = method.rawValue
 
     let task = session.dataTask(with: request) { (data, response, error) in
-      let httpResponse = response as! HTTPURLResponse
+      let httpResponse = response as! HTTPURLResponse // swiftlint:disable:this force_cast
       if let error = error {
         callback(httpResponse, .failure(error))
       } else if let data = data {

@@ -20,15 +20,11 @@ public class Promise<T> : UntypedPromise {
   public private(set) var result: T?
 
   public var fulfilled: Bool {
-    get {
-      return result != nil
-    }
+    return result != nil
   }
 
   public var failed: Bool {
-    get {
-      return error != nil
-    }
+    return error != nil
   }
 
   public var thenCalls: [ThenCall] = []
@@ -133,7 +129,7 @@ public class Promise<T> : UntypedPromise {
     })
   }
 
-  public func map<U>(_ mapping: @escaping (_ result: T, _ completion: @escaping (U) -> ()) -> ()) -> Promise<U> {
+  public func map<U>(_ mapping: @escaping (_ result: T, _ completion: @escaping (U) -> Void) -> Void) -> Promise<U> {
     return Promise<U>({ (completion) in
       self.then { (result) in
         mapping(result, completion)
@@ -158,7 +154,6 @@ extension Promise {
     })
   }
 }
-
 
 func allDone<T>(_ promiseContainer: T) -> Promise<T> {
   return Promise<T>({ (completion, allDonePromise) in

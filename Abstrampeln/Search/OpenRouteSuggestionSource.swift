@@ -14,7 +14,7 @@ class OpenRouteSuggestionSearch: SearchResultsDataSource {
     self.locationController = locationController
   }
 
-  func searchFor(text: String, completion: @escaping (String, [Location]) -> ()) -> Bool {
+  func searchFor(text: String, completion: @escaping (String, [Location]) -> Void) -> Bool {
     guard !text.isEmpty else {
       return false
     }

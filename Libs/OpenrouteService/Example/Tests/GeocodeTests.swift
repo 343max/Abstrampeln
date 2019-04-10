@@ -3,6 +3,8 @@
 import XCTest
 import OpenrouteService
 
+ // swiftlint:disable force_try
+
 class GeocodeTests: XCTestCase {
   private func data(fileName: String) -> Data {
     let bundle = Bundle(for: type(of: self))

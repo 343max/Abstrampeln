@@ -27,9 +27,7 @@ class InstructionsViewController: UIViewController {
   }
 
   var isVisible: Bool {
-    get {
-      return directions != nil
-    }
+    return directions != nil
   }
 
   @IBOutlet weak var collectionView: UICollectionView!

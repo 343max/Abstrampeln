@@ -11,12 +11,16 @@ class RecentSuggestionsSource {
   }
 
   init() {
-    history = RecentSuggestionsSource.load()
+    do {
+      history = try RecentSuggestionsSource.load()
+    } catch {
+      history = []
+    }
   }
 }
 
 extension RecentSuggestionsSource: SearchResultsDataSource {
-  func searchFor(text: String, completion: @escaping (String, [Location]) -> ()) -> Bool {
+  func searchFor(text: String, completion: @escaping (String, [Location]) -> Void) -> Bool {
     if text.count == 0 {
       completion(text, history)
     }
@@ -34,10 +38,10 @@ extension RecentSuggestionsSource {
     case recentSuggestion = "RecentSuggestions"
   }
 
-  static func load() -> [Location] {
+  static func load() throws -> [Location] {
     let dicts = UserDefaults.standard.object(forKey: UserDefaultsKeys.recentSuggestion.rawValue) as? [[String: Any?]] ?? []
-    return dicts.map({ (dict) -> Location in
-      return Location(dict: dict)
+    return try dicts.map({ (dict) throws -> Location in
+      return try Location(dict: dict)
     })
   }
 
@@ -95,14 +99,16 @@ extension Location {
     return dict
   }
 
-  init(dict: [String: Any?]) {
-    // swiftlint:disable force_cast
-    self.label = dict[DictKeys.label.rawValue] as! String
+  enum ParsingError: Error {
+    case invalidType(_ property: String)
+  }
+
+  init(dict: [String: Any?]) throws {
+    self.label = try dict[DictKeys.label.rawValue] as? String ?! ParsingError.invalidType(DictKeys.label.rawValue)
     self.detail = dict[DictKeys.detail.rawValue] as? String
-    self.gid = dict[DictKeys.gid.rawValue] as! String
-    self.coordinate = CLLocationCoordinate2D(latitude: dict[DictKeys.latitude.rawValue] as! Double,
-                                             longitude: dict[DictKeys.longitude.rawValue] as! Double)
+    self.gid = try dict[DictKeys.gid.rawValue] as? String ?! ParsingError.invalidType(DictKeys.gid.rawValue)
+    self.coordinate = CLLocationCoordinate2D(latitude: try dict[DictKeys.latitude.rawValue] as? Double ?! ParsingError.invalidType(DictKeys.latitude.rawValue),
+                                             longitude: try dict[DictKeys.longitude.rawValue] as? Double ?! ParsingError.invalidType(DictKeys.longitude.rawValue))
     self.isTemporary = false
-    // swiftlint:enable force_cast
   }
 }

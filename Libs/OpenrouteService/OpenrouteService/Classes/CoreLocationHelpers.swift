@@ -14,7 +14,7 @@ extension CLLocationCoordinate2D {
 
 extension CLLocationCoordinate2D: Decodable {
   public init(from decoder: Decoder) throws {
-    let array = try! decoder.singleValueContainer().decode([Double].self)
+    let array = try decoder.singleValueContainer().decode([Double].self)
     self.init(array: array)
   }
 }

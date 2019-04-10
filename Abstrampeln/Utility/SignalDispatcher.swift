@@ -26,9 +26,9 @@ class SignalDispatcher {
     listeners.removeAll { $0.listener == nil }
   }
 
-  func all<T>(_ protocol: T.Type) -> () -> ([T]) {
+  func all<T>(_ protocol: T.Type) -> (() -> ([T])) {
     return {
-      return self.listeners.filter({ $0.listener as? T != nil }).map({ $0.listener }) as! [T]
+      return self.listeners.filter({ $0.listener as? T != nil }).map({ $0.listener }) as! [T] // swiftlint:disable:this force_cast
     }
   }
 

@@ -16,9 +16,7 @@ class DrawerViewController: UIViewController {
     static let highlightedColor = UIColor(white: 0.3, alpha: 1.0 / 3.0 * 2.0)
 
     override var buttonType: UIButton.ButtonType {
-      get {
-        return .custom
-      }
+      return .custom
     }
 
     override init(frame: CGRect) {

@@ -4,7 +4,7 @@ import Foundation
 import CoreLocation
 
 struct DummySuggestionSource: SearchResultsDataSource {
-  func searchFor(text: String, completion: @escaping (String, [Location]) -> ()) -> Bool {
+  func searchFor(text: String, completion: @escaping (String, [Location]) -> Void) -> Bool {
     guard text.count == 0 else {
       return false
     }
