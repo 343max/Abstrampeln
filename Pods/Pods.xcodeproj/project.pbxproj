@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -71,25 +71,25 @@
 		284B099ECF5C278FDE87C6C997F50203 /* Directions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Directions.swift; path = OpenrouteService/Classes/Directions.swift; sourceTree = "<group>"; };
 		2FD37AF16372505E2E7F145CB484FD4B /* Pods-Abstrampeln-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Abstrampeln-umbrella.h"; sourceTree = "<group>"; };
 		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		41C8F52F81DE5BD0332A63E97CDC481D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		41C8F52F81DE5BD0332A63E97CDC481D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		4279A96122C6379EAC6E16835E8991B5 /* OpenrouteService-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenrouteService-umbrella.h"; sourceTree = "<group>"; };
 		437D388C941314EF6710AE7F48488410 /* Pods-Abstrampeln-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Abstrampeln-acknowledgements.plist"; sourceTree = "<group>"; };
 		569DE41754A9AD644A593808C3BDC4C8 /* Pulley-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-prefix.pch"; sourceTree = "<group>"; };
 		56FE8B8F093465A8925D0514158AFCCC /* Pulley-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pulley-umbrella.h"; sourceTree = "<group>"; };
 		57EE3ADC7B6A8F74AED7A8A66F4FBF47 /* Promise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Promise.xcconfig; sourceTree = "<group>"; };
 		5C6EB8B44808C8A1E3FF6E056F0C0EBA /* OpenrouteService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OpenrouteService-Info.plist"; sourceTree = "<group>"; };
-		60F541C0C3A5F3D58083057E27982E4F /* OpenrouteService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = OpenrouteService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		67F702585E0B2CB98920FDF559FCAF4F /* Promise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Promise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6916B42A0701377D95804BC458B7BA54 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		60F541C0C3A5F3D58083057E27982E4F /* OpenrouteService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = OpenrouteService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		67F702585E0B2CB98920FDF559FCAF4F /* Promise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Promise.framework; path = Promise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6916B42A0701377D95804BC458B7BA54 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		740725DBD74DC883453F6138A6CBBA04 /* Pulley-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pulley-dummy.m"; sourceTree = "<group>"; };
 		7584F9CAFC07D806EEC1D3464D972D06 /* Promise-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Promise-Info.plist"; sourceTree = "<group>"; };
 		774C73D4741E5FCF9C56010CD84C1D44 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Promise/Classes/Promise.swift; sourceTree = "<group>"; };
 		8605491842DE51BA30F56EB364A19F89 /* Geocode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Geocode.swift; path = OpenrouteService/Classes/Geocode.swift; sourceTree = "<group>"; };
 		8B23D869F6BD3A34FFED7288CCEB600E /* Promise-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Promise-dummy.m"; sourceTree = "<group>"; };
 		91CB0E36564837A7E65930F17DEAC1B0 /* CoreLocationHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreLocationHelpers.swift; path = OpenrouteService/Classes/CoreLocationHelpers.swift; sourceTree = "<group>"; };
-		93580C4309B81404071293ED7D1BD939 /* Pods_Abstrampeln.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstrampeln.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A06DC70DC587D70B79FD68EE174B8E3 /* Pulley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pulley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93580C4309B81404071293ED7D1BD939 /* Pods_Abstrampeln.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Abstrampeln.framework; path = "Pods-Abstrampeln.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A06DC70DC587D70B79FD68EE174B8E3 /* Pulley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pulley.framework; path = Pulley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A041C3BAD1A830F2A9BB75B471D727BF /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+constrainToParent.swift"; path = "PulleyLib/UIView+constrainToParent.swift"; sourceTree = "<group>"; };
 		A1CB3CA9BF7B16D64CDC048A31897733 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = OpenrouteService/Classes/Helpers.swift; sourceTree = "<group>"; };
 		A5CA7C3A1B97F81F91EF21248082112F /* Pods-Abstrampeln-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Abstrampeln-dummy.m"; sourceTree = "<group>"; };
@@ -105,16 +105,16 @@
 		D16A694BCF7FC332A295302F7366EA92 /* OpenrouteService.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenrouteService.xcconfig; sourceTree = "<group>"; };
 		DB6BE3DA280E0EE135DD664CBE9CC83D /* MapKitHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapKitHelpers.swift; path = OpenrouteService/Classes/MapKitHelpers.swift; sourceTree = "<group>"; };
 		E783FA0A5ECD75F4CCB409742843EE83 /* Pulley.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pulley.xcconfig; sourceTree = "<group>"; };
-		E8B9B89407A4B90448195E57111A8170 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E8B9B89407A4B90448195E57111A8170 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		EABC5A513726595301BE5D799B8B34EC /* Pods-Abstrampeln-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Abstrampeln-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		FC5657B8841BBDD5B007CC86F141D11B /* OpenrouteService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenrouteService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC5657B8841BBDD5B007CC86F141D11B /* OpenrouteService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OpenrouteService.framework; path = OpenrouteService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2BD728100BE3BC7DF4D8725962BE4C /* OpenrouteNetworkingClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenrouteNetworkingClient.swift; path = OpenrouteService/Classes/OpenrouteNetworkingClient.swift; sourceTree = "<group>"; };
-		FD5CC6DC898FD51EEBBA0766A69D8EB1 /* Promise.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Promise.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FD5CC6DC898FD51EEBBA0766A69D8EB1 /* Promise.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Promise.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FE33A4E7FB49CC052D015A27AE1F04DE /* OpenrouteService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenrouteService-prefix.pch"; sourceTree = "<group>"; };
 		FEE94742714C595421B54A954BEB093D /* Pulley.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Pulley.modulemap; sourceTree = "<group>"; };
 		FEF2A61FDEE1DF5FFCE21ABECE79DA88 /* Pods-Abstrampeln-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Abstrampeln-Info.plist"; sourceTree = "<group>"; };
-		FF51547BE58BE52DD15C136E6A3D02F6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FF51547BE58BE52DD15C136E6A3D02F6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +225,7 @@
 				03D06EBA2345A6667DC182D41C44EEF4 /* UIViewController+PulleyViewController.swift */,
 				F84380651CF0933644FA8DD6ECEF44AC /* Support Files */,
 			);
+			name = Pulley;
 			path = Pulley;
 			sourceTree = "<group>";
 		};
@@ -461,18 +462,12 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					FDFBB6677FF11273953A3294FBA7E475 = {
-						LastSwiftMigration = 1020;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -727,6 +722,42 @@
 			};
 			name = Debug;
 		};
+		83FEF7387B85EB2D985447118A8A36AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E783FA0A5ECD75F4CCB409742843EE83 /* Pulley.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Pulley/Pulley-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pulley/Pulley-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Pulley/Pulley.modulemap";
+				PRODUCT_MODULE_NAME = Pulley;
+				PRODUCT_NAME = Pulley;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8C77A2DA9D5B99DF22248A764E64AE5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D16A694BCF7FC332A295302F7366EA92 /* OpenrouteService.xcconfig */;
@@ -894,41 +925,6 @@
 			};
 			name = Debug;
 		};
-		C243289CF5CEFD3532ECAB2353EC2F4C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E783FA0A5ECD75F4CCB409742843EE83 /* Pulley.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Pulley/Pulley-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pulley/Pulley-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Pulley/Pulley.modulemap";
-				PRODUCT_MODULE_NAME = Pulley;
-				PRODUCT_NAME = Pulley;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		C6320662B9CBD5591DC8494D89F5AEDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB78A67894CE20AC1C73B946109CE5FF /* Pods-Abstrampeln.release.xcconfig */;
@@ -968,7 +964,7 @@
 			};
 			name = Release;
 		};
-		E0612C7AD99081454FAA1A2EC6F2B775 /* Release */ = {
+		E1E7547EC233D2725ED3C007AEDB22A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E783FA0A5ECD75F4CCB409742843EE83 /* Pulley.xcconfig */;
 			buildSettings = {
@@ -996,13 +992,12 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1037,8 +1032,8 @@
 		7DAF38497735C4C927EEB0175374F63A /* Build configuration list for PBXNativeTarget "Pulley" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C243289CF5CEFD3532ECAB2353EC2F4C /* Debug */,
-				E0612C7AD99081454FAA1A2EC6F2B775 /* Release */,
+				E1E7547EC233D2725ED3C007AEDB22A3 /* Debug */,
+				83FEF7387B85EB2D985447118A8A36AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
