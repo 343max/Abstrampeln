@@ -3,6 +3,14 @@
 import Foundation
 import CoreLocation
 
+public extension JSONDecoder {
+    static let openroute: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return decoder
+    }()
+}
+
 public class OpenrouteClient {
   let client: NetworkingClient
 

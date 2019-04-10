@@ -24,7 +24,7 @@ extension NetworkingClient {
                 callback(response, .failure(error))
             case .success(let data):
                 do {
-                    let payload = try JSONDecoder().decode(type, from: data)
+                    let payload = try JSONDecoder.openroute.decode(type, from: data)
                     callback(response, .success(payload))
                 } catch {
                     callback(response, .failure(error))

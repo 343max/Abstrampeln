@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		008B8ECF25485EB6D39DF2689F61B8A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		1EC53759137B0F89DD54C8D05E765D0C /* Pods-OpenrouteService_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 320FC7FF5C7130E3211C8A6B6320099C /* Pods-OpenrouteService_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EBCDAD3CC40E76D6CA16260D723948F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		5011F4312222A4EE0033113F /* CoreLocationHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5011F4302222A4EE0033113F /* CoreLocationHelpers.swift */; };
-		50161DE422233023006EBDE9 /* MapKitHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50161DE322233023006EBDE9 /* MapKitHelpers.swift */; };
-		505084392221E792000662B8 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505084382221E792000662B8 /* Helpers.swift */; };
-		5050843B2221E8C2000662B8 /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050843A2221E8C2000662B8 /* Directions.swift */; };
-		55E5E329F04B07D396AA04FDD9B10957 /* Pods-OpenrouteService_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D10127929022A342FF25BB3D52975856 /* Pods-OpenrouteService_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5686C2F150490D6C0BDFF0239DB72541 /* OpenrouteService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2242DCEF24C05AC0E842CBCDBC6DDFA9 /* OpenrouteService-dummy.m */; };
-		A271AD2632FD6110BA95806616B51C12 /* Pods-OpenrouteService_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 072ADDBD38C84A7EA5D167BE53547E60 /* Pods-OpenrouteService_Tests-dummy.m */; };
-		BCEB4DBC233A9370547A91675721BCAB /* Pods-OpenrouteService_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6042167E99B3D558F4356AC861B830A8 /* Pods-OpenrouteService_Example-dummy.m */; };
-		CF47D06D2226DE8100083728 /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47D06C2226DE8100083728 /* NetworkingClient.swift */; };
-		CF47D06F2226DEBC00083728 /* OpenrouteNetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47D06E2226DEBC00083728 /* OpenrouteNetworkingClient.swift */; };
-		CF47D0732226E1D200083728 /* OpenrouteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47D0722226E1D200083728 /* OpenrouteClient.swift */; };
-		CFE6CDEC2226C0E00065EA1D /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6CDEB2226C0E00065EA1D /* Geocode.swift */; };
+		1EC53759137B0F89DD54C8D05E765D0C /* Pods-OpenrouteService_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FB5D052630CBD9E66DF98B288767498 /* Pods-OpenrouteService_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3285490305EE29CC032A827C51F93CAA /* OpenrouteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B096880F872DAFD3EC6A794CB0595 /* OpenrouteClient.swift */; };
+		41B05D9CDC80DE32ACEA2067210F9496 /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C78EE6AD38BB9FE6C3B1E49099E590 /* NetworkingClient.swift */; };
+		55E5E329F04B07D396AA04FDD9B10957 /* Pods-OpenrouteService_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8149129092406410F29CED4CAEFBD77 /* Pods-OpenrouteService_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60E2D43F4FE020C98F92C091FF3726FB /* CoreLocationHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F05FE211BF59BD1CEDD7040110495 /* CoreLocationHelpers.swift */; };
+		8251BBD7A54C40F2251317A604B9BB04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		A271AD2632FD6110BA95806616B51C12 /* Pods-OpenrouteService_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1A2717287ED2B8B2CA77C4F709A960 /* Pods-OpenrouteService_Tests-dummy.m */; };
+		A7BAE4AE8642A48BB7880EF1A2ED05E3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344775735537FA60E614E6C9D881023A /* Helpers.swift */; };
+		A8AAFFED9DAE8C580AEA07AD1037DA7E /* MapKitHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A31A756DB8FF52899BD702952489A7A /* MapKitHelpers.swift */; };
+		B9344A78C48E2A0903C3935B72F9B046 /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CB9B1573CE0EE5FF5C11BD7EE2E392 /* Geocode.swift */; };
+		BCEB4DBC233A9370547A91675721BCAB /* Pods-OpenrouteService_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D88D273564C00B899C2BE2858C4FBE6 /* Pods-OpenrouteService_Example-dummy.m */; };
+		C13E4ADC2B7DD7A819235334A6483CCF /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD263DB1672E32EE7518F51AF8D47B9 /* Directions.swift */; };
 		CFEA5F2D5D7FA0296BF69ECDEFB758F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		FE1CABD42B41E41F234A234BE806CF75 /* OpenrouteService-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF9AC89FAA363240C917C26550ACCE39 /* OpenrouteService-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD1EAADE59F77E51783E6205D58EB637 /* OpenrouteService-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2ECBAE401A37EAD4BD517A0BFBDEA32 /* OpenrouteService-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0F4D1B2024EF153861E591F643A7D74 /* OpenrouteNetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9BBA738AC3BEA7F005CB3AD048D43 /* OpenrouteNetworkingClient.swift */; };
+		EAE87B39ECB93093A8AD6546CF933174 /* OpenrouteService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0FDE9D94A7D6137E34BD535CBAACB3 /* OpenrouteService-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,58 +31,58 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B11AB039E3B299C28A47D9F36C107C65;
+			remoteGlobalIDString = DC8D870AFEB67EA6EAFE1267233918E8;
 			remoteInfo = "Pods-OpenrouteService_Example";
 		};
 		20A721A2276996EB41E44C14923C10DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 165CF68518919020718117B97AA7DD6D;
+			remoteGlobalIDString = A14C83D18F4EFCEAD53DCDA2F063D4CA;
 			remoteInfo = OpenrouteService;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02C121D401DC2022BD6917CAD4696975 /* Pods-OpenrouteService_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OpenrouteService_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		072ADDBD38C84A7EA5D167BE53547E60 /* Pods-OpenrouteService_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OpenrouteService_Tests-dummy.m"; sourceTree = "<group>"; };
-		142966B582B3C07664A2AE2372879DBD /* Pods-OpenrouteService_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OpenrouteService_Tests-Info.plist"; sourceTree = "<group>"; };
-		2242DCEF24C05AC0E842CBCDBC6DDFA9 /* OpenrouteService-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OpenrouteService-dummy.m"; sourceTree = "<group>"; };
-		320FC7FF5C7130E3211C8A6B6320099C /* Pods-OpenrouteService_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OpenrouteService_Tests-umbrella.h"; sourceTree = "<group>"; };
-		4A47590BABAF2E0B5F5ED195B6E49669 /* OpenrouteService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OpenrouteService-Info.plist"; sourceTree = "<group>"; };
-		4A59834D8241041E5313D264A69C658C /* Pods-OpenrouteService_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OpenrouteService_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		5011F4302222A4EE0033113F /* CoreLocationHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreLocationHelpers.swift; path = OpenrouteService/Classes/CoreLocationHelpers.swift; sourceTree = "<group>"; };
-		50161DE322233023006EBDE9 /* MapKitHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapKitHelpers.swift; path = OpenrouteService/Classes/MapKitHelpers.swift; sourceTree = "<group>"; };
-		505084382221E792000662B8 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = OpenrouteService/Classes/Helpers.swift; sourceTree = "<group>"; };
-		5050843A2221E8C2000662B8 /* Directions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Directions.swift; path = OpenrouteService/Classes/Directions.swift; sourceTree = "<group>"; };
-		561167FEA0A3C60BF177BFC647FDDD53 /* Pods-OpenrouteService_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OpenrouteService_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6042167E99B3D558F4356AC861B830A8 /* Pods-OpenrouteService_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OpenrouteService_Example-dummy.m"; sourceTree = "<group>"; };
+		0F72403732DE253F566A5578157102F8 /* Pods-OpenrouteService_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OpenrouteService_Example-Info.plist"; sourceTree = "<group>"; };
+		0FB5D052630CBD9E66DF98B288767498 /* Pods-OpenrouteService_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OpenrouteService_Tests-umbrella.h"; sourceTree = "<group>"; };
+		106014BA3C4F2EB3FC523A6613245217 /* Pods-OpenrouteService_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OpenrouteService_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		15BFAAC7FD64A36BDC10B396A93DBF2F /* Pods-OpenrouteService_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OpenrouteService_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		19611B916CCDC3AB5EBAF18D5AF81E26 /* Pods-OpenrouteService_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OpenrouteService_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A1534032468B8861107D9F51A9567BE /* Pods-OpenrouteService_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OpenrouteService_Tests-Info.plist"; sourceTree = "<group>"; };
+		224D8446A797CC6C046BD0BDE4B7A3D2 /* OpenrouteService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OpenrouteService-Info.plist"; sourceTree = "<group>"; };
+		22A6654DFB0708DD7672FF0F170CDF39 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		32AE04626B0E02B1D8D8C34BF01EC956 /* OpenrouteService.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenrouteService.xcconfig; sourceTree = "<group>"; };
+		344775735537FA60E614E6C9D881023A /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = OpenrouteService/Classes/Helpers.swift; sourceTree = "<group>"; };
+		49E3897768A32B92EFFA39E86AFEE888 /* Pods-OpenrouteService_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OpenrouteService_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		534B096880F872DAFD3EC6A794CB0595 /* OpenrouteClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 4; lastKnownFileType = sourcecode.swift; name = OpenrouteClient.swift; path = OpenrouteService/Classes/OpenrouteClient.swift; sourceTree = "<group>"; tabWidth = 4; };
+		58FA43B4497A752DECE5398C68F72412 /* Pods-OpenrouteService_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OpenrouteService_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		675DE735EBF89B3727C08397D32A0C33 /* Pods-OpenrouteService_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OpenrouteService_Example-frameworks.sh"; sourceTree = "<group>"; };
+		6A31A756DB8FF52899BD702952489A7A /* MapKitHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapKitHelpers.swift; path = OpenrouteService/Classes/MapKitHelpers.swift; sourceTree = "<group>"; };
 		785BE760DFEDA9F51EDFBDAC718B3EF9 /* OpenrouteService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenrouteService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BE8CF5EE682F206428CA0DD7F9BC7C6 /* Pods-OpenrouteService_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OpenrouteService_Example-Info.plist"; sourceTree = "<group>"; };
+		793CC19149CBFD8A4EAA526638387F5A /* Pods-OpenrouteService_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OpenrouteService_Example.modulemap"; sourceTree = "<group>"; };
+		7960E31C0FB1138C9EF371E04CE33A18 /* Pods-OpenrouteService_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OpenrouteService_Example.release.xcconfig"; sourceTree = "<group>"; };
+		7A3F05FE211BF59BD1CEDD7040110495 /* CoreLocationHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreLocationHelpers.swift; path = OpenrouteService/Classes/CoreLocationHelpers.swift; sourceTree = "<group>"; };
 		7E0237F3FE3D9F3E46462909FD72332F /* Pods_OpenrouteService_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenrouteService_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		828F8AF82027C2CAE4FDBB4BBBA6FCE9 /* Pods-OpenrouteService_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OpenrouteService_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		89086A73409FCC00E8F92C75441AB330 /* OpenrouteService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenrouteService-prefix.pch"; sourceTree = "<group>"; };
-		89C4E6820B7F92453367C7909EB9E82F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		8BEC2613EFE6D754BF9386DB6E892437 /* OpenrouteService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = OpenrouteService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		82B9BBA738AC3BEA7F005CB3AD048D43 /* OpenrouteNetworkingClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenrouteNetworkingClient.swift; path = OpenrouteService/Classes/OpenrouteNetworkingClient.swift; sourceTree = "<group>"; };
+		9D88D273564C00B899C2BE2858C4FBE6 /* Pods-OpenrouteService_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OpenrouteService_Example-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C0228467A40C40FD4892B35F8725BDA2 /* OpenrouteService.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenrouteService.xcconfig; sourceTree = "<group>"; };
-		C12C96D4B1ED82BF5CF51CBE3F94410B /* OpenrouteService.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OpenrouteService.modulemap; sourceTree = "<group>"; };
-		C3930AC282C928BE6E888001AA1EAFC4 /* Pods-OpenrouteService_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OpenrouteService_Tests.modulemap"; sourceTree = "<group>"; };
+		AEEACD7B5AA6FAB794E1719E8DB3A156 /* OpenrouteService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = OpenrouteService.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C8149129092406410F29CED4CAEFBD77 /* Pods-OpenrouteService_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OpenrouteService_Example-umbrella.h"; sourceTree = "<group>"; };
+		C8A14A31C0B813BB6CF614CD909530BA /* OpenrouteService.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OpenrouteService.modulemap; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CF47D06C2226DE8100083728 /* NetworkingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingClient.swift; path = OpenrouteService/Classes/NetworkingClient.swift; sourceTree = "<group>"; };
-		CF47D06E2226DEBC00083728 /* OpenrouteNetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OpenrouteNetworkingClient.swift; path = OpenrouteService/Classes/OpenrouteNetworkingClient.swift; sourceTree = "<group>"; };
-		CF47D0722226E1D200083728 /* OpenrouteClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OpenrouteClient.swift; path = OpenrouteService/Classes/OpenrouteClient.swift; sourceTree = "<group>"; };
-		CFE6CDEB2226C0E00065EA1D /* Geocode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Geocode.swift; path = OpenrouteService/Classes/Geocode.swift; sourceTree = "<group>"; };
-		D10127929022A342FF25BB3D52975856 /* Pods-OpenrouteService_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OpenrouteService_Example-umbrella.h"; sourceTree = "<group>"; };
-		D2DD66F497AC9B8CBDE6BA60E88DB33C /* Pods-OpenrouteService_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OpenrouteService_Example-frameworks.sh"; sourceTree = "<group>"; };
-		D311A06367FDD00D68ACFDC151968E28 /* Pods-OpenrouteService_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OpenrouteService_Example.modulemap"; sourceTree = "<group>"; };
-		D45C6F23391470156A2A99E1BC17F1FE /* Pods-OpenrouteService_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OpenrouteService_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DD2BB0E409A9E882B7A8A32D9306B224 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D0CB9B1573CE0EE5FF5C11BD7EE2E392 /* Geocode.swift */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = sourcecode.swift; name = Geocode.swift; path = OpenrouteService/Classes/Geocode.swift; sourceTree = "<group>"; tabWidth = 2; };
+		D1682528E31C9BD91AB5D13706D56143 /* OpenrouteService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenrouteService-prefix.pch"; sourceTree = "<group>"; };
+		D3C78EE6AD38BB9FE6C3B1E49099E590 /* NetworkingClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkingClient.swift; path = OpenrouteService/Classes/NetworkingClient.swift; sourceTree = "<group>"; };
+		D3DB0A88166D541E80149C7C0DFA2B67 /* Pods-OpenrouteService_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OpenrouteService_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		D7C03EABD5A3B49766D28AB225D17773 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E7AA377A136F59CCD303E5AD3425392F /* Pods_OpenrouteService_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenrouteService_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF73A6F042F88745A0D70E390014AFCD /* Pods-OpenrouteService_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OpenrouteService_Example.release.xcconfig"; sourceTree = "<group>"; };
-		EF9AC89FAA363240C917C26550ACCE39 /* OpenrouteService-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenrouteService-umbrella.h"; sourceTree = "<group>"; };
-		FB3BD8381028688CFA45A9DA589F4EE0 /* Pods-OpenrouteService_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OpenrouteService_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		FE3C8B8957480507FBDAECD80D30BEF9 /* Pods-OpenrouteService_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OpenrouteService_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		EED4577FC9AF26093C363D772B65B095 /* Pods-OpenrouteService_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OpenrouteService_Tests.modulemap"; sourceTree = "<group>"; };
+		EED6153CEC67DC8C018820F48D007514 /* Pods-OpenrouteService_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OpenrouteService_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F2ECBAE401A37EAD4BD517A0BFBDEA32 /* OpenrouteService-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenrouteService-umbrella.h"; sourceTree = "<group>"; };
+		FA1A2717287ED2B8B2CA77C4F709A960 /* Pods-OpenrouteService_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OpenrouteService_Tests-dummy.m"; sourceTree = "<group>"; };
+		FF0FDE9D94A7D6137E34BD535CBAACB3 /* OpenrouteService-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OpenrouteService-dummy.m"; sourceTree = "<group>"; };
+		FFD263DB1672E32EE7518F51AF8D47B9 /* Directions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Directions.swift; path = OpenrouteService/Classes/Directions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +94,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51A04D00A17DBBD755E09F388DD98C18 /* Frameworks */ = {
+		CDEF78CAA7708981C2240EA8659C053C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EBCDAD3CC40E76D6CA16260D723948F /* Foundation.framework in Frameworks */,
+				8251BBD7A54C40F2251317A604B9BB04 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,11 +113,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A8FCDEFA2ACDF5B718B82124F1A1EF9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8A14A31C0B813BB6CF614CD909530BA /* OpenrouteService.modulemap */,
+				32AE04626B0E02B1D8D8C34BF01EC956 /* OpenrouteService.xcconfig */,
+				FF0FDE9D94A7D6137E34BD535CBAACB3 /* OpenrouteService-dummy.m */,
+				224D8446A797CC6C046BD0BDE4B7A3D2 /* OpenrouteService-Info.plist */,
+				D1682528E31C9BD91AB5D13706D56143 /* OpenrouteService-prefix.pch */,
+				F2ECBAE401A37EAD4BD517A0BFBDEA32 /* OpenrouteService-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/OpenrouteService";
+			sourceTree = "<group>";
+		};
 		0B41385673D08FE664F31E3898214F0D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6022835A8F880EEA316622E4BEFCE3A7 /* Pods-OpenrouteService_Example */,
-				C82ACC9814FDB0F32374D54A7350EAB5 /* Pods-OpenrouteService_Tests */,
+				839DBCEED3DB483D2196384262F6BA3B /* Pods-OpenrouteService_Example */,
+				700729228405C096FEBA2AED2FF8BE5F /* Pods-OpenrouteService_Tests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -132,39 +146,45 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6022835A8F880EEA316622E4BEFCE3A7 /* Pods-OpenrouteService_Example */ = {
+		700729228405C096FEBA2AED2FF8BE5F /* Pods-OpenrouteService_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D311A06367FDD00D68ACFDC151968E28 /* Pods-OpenrouteService_Example.modulemap */,
-				561167FEA0A3C60BF177BFC647FDDD53 /* Pods-OpenrouteService_Example-acknowledgements.markdown */,
-				FB3BD8381028688CFA45A9DA589F4EE0 /* Pods-OpenrouteService_Example-acknowledgements.plist */,
-				6042167E99B3D558F4356AC861B830A8 /* Pods-OpenrouteService_Example-dummy.m */,
-				D2DD66F497AC9B8CBDE6BA60E88DB33C /* Pods-OpenrouteService_Example-frameworks.sh */,
-				7BE8CF5EE682F206428CA0DD7F9BC7C6 /* Pods-OpenrouteService_Example-Info.plist */,
-				D10127929022A342FF25BB3D52975856 /* Pods-OpenrouteService_Example-umbrella.h */,
-				D45C6F23391470156A2A99E1BC17F1FE /* Pods-OpenrouteService_Example.debug.xcconfig */,
-				EF73A6F042F88745A0D70E390014AFCD /* Pods-OpenrouteService_Example.release.xcconfig */,
+				EED4577FC9AF26093C363D772B65B095 /* Pods-OpenrouteService_Tests.modulemap */,
+				58FA43B4497A752DECE5398C68F72412 /* Pods-OpenrouteService_Tests-acknowledgements.markdown */,
+				49E3897768A32B92EFFA39E86AFEE888 /* Pods-OpenrouteService_Tests-acknowledgements.plist */,
+				FA1A2717287ED2B8B2CA77C4F709A960 /* Pods-OpenrouteService_Tests-dummy.m */,
+				1A1534032468B8861107D9F51A9567BE /* Pods-OpenrouteService_Tests-Info.plist */,
+				0FB5D052630CBD9E66DF98B288767498 /* Pods-OpenrouteService_Tests-umbrella.h */,
+				19611B916CCDC3AB5EBAF18D5AF81E26 /* Pods-OpenrouteService_Tests.debug.xcconfig */,
+				106014BA3C4F2EB3FC523A6613245217 /* Pods-OpenrouteService_Tests.release.xcconfig */,
+			);
+			name = "Pods-OpenrouteService_Tests";
+			path = "Target Support Files/Pods-OpenrouteService_Tests";
+			sourceTree = "<group>";
+		};
+		839DBCEED3DB483D2196384262F6BA3B /* Pods-OpenrouteService_Example */ = {
+			isa = PBXGroup;
+			children = (
+				793CC19149CBFD8A4EAA526638387F5A /* Pods-OpenrouteService_Example.modulemap */,
+				EED6153CEC67DC8C018820F48D007514 /* Pods-OpenrouteService_Example-acknowledgements.markdown */,
+				D3DB0A88166D541E80149C7C0DFA2B67 /* Pods-OpenrouteService_Example-acknowledgements.plist */,
+				9D88D273564C00B899C2BE2858C4FBE6 /* Pods-OpenrouteService_Example-dummy.m */,
+				675DE735EBF89B3727C08397D32A0C33 /* Pods-OpenrouteService_Example-frameworks.sh */,
+				0F72403732DE253F566A5578157102F8 /* Pods-OpenrouteService_Example-Info.plist */,
+				C8149129092406410F29CED4CAEFBD77 /* Pods-OpenrouteService_Example-umbrella.h */,
+				15BFAAC7FD64A36BDC10B396A93DBF2F /* Pods-OpenrouteService_Example.debug.xcconfig */,
+				7960E31C0FB1138C9EF371E04CE33A18 /* Pods-OpenrouteService_Example.release.xcconfig */,
 			);
 			name = "Pods-OpenrouteService_Example";
 			path = "Target Support Files/Pods-OpenrouteService_Example";
 			sourceTree = "<group>";
 		};
-		7164E57C3C28D3E43661854DE3180AA5 /* Development Pods */ = {
+		956B5370FADA25C5876F0DC164D9908E /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C38B32C998332F820B75632FF2A57DB1 /* OpenrouteService */,
+				BAD0F61FF83572D10BE96A5C6DCBF03F /* OpenrouteService */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		875635ABAC70047B7AE8954FB8B3821A /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				89C4E6820B7F92453367C7909EB9E82F /* LICENSE */,
-				8BEC2613EFE6D754BF9386DB6E892437 /* OpenrouteService.podspec */,
-				DD2BB0E409A9E882B7A8A32D9306B224 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
@@ -175,59 +195,39 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C38B32C998332F820B75632FF2A57DB1 /* OpenrouteService */ = {
+		B4E766A296C63C5DA50DE9E85E470BE6 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				505084382221E792000662B8 /* Helpers.swift */,
-				5050843A2221E8C2000662B8 /* Directions.swift */,
-				5011F4302222A4EE0033113F /* CoreLocationHelpers.swift */,
-				50161DE322233023006EBDE9 /* MapKitHelpers.swift */,
-				CF47D06C2226DE8100083728 /* NetworkingClient.swift */,
-				CFE6CDEB2226C0E00065EA1D /* Geocode.swift */,
-				CF47D06E2226DEBC00083728 /* OpenrouteNetworkingClient.swift */,
-				CF47D0722226E1D200083728 /* OpenrouteClient.swift */,
-				875635ABAC70047B7AE8954FB8B3821A /* Pod */,
-				CDCA14FD1D7DCAB450D0D7C7B82E6796 /* Support Files */,
+				D7C03EABD5A3B49766D28AB225D17773 /* LICENSE */,
+				AEEACD7B5AA6FAB794E1719E8DB3A156 /* OpenrouteService.podspec */,
+				22A6654DFB0708DD7672FF0F170CDF39 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		BAD0F61FF83572D10BE96A5C6DCBF03F /* OpenrouteService */ = {
+			isa = PBXGroup;
+			children = (
+				7A3F05FE211BF59BD1CEDD7040110495 /* CoreLocationHelpers.swift */,
+				FFD263DB1672E32EE7518F51AF8D47B9 /* Directions.swift */,
+				D0CB9B1573CE0EE5FF5C11BD7EE2E392 /* Geocode.swift */,
+				344775735537FA60E614E6C9D881023A /* Helpers.swift */,
+				6A31A756DB8FF52899BD702952489A7A /* MapKitHelpers.swift */,
+				D3C78EE6AD38BB9FE6C3B1E49099E590 /* NetworkingClient.swift */,
+				534B096880F872DAFD3EC6A794CB0595 /* OpenrouteClient.swift */,
+				82B9BBA738AC3BEA7F005CB3AD048D43 /* OpenrouteNetworkingClient.swift */,
+				B4E766A296C63C5DA50DE9E85E470BE6 /* Pod */,
+				0A8FCDEFA2ACDF5B718B82124F1A1EF9 /* Support Files */,
 			);
 			name = OpenrouteService;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		C82ACC9814FDB0F32374D54A7350EAB5 /* Pods-OpenrouteService_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				C3930AC282C928BE6E888001AA1EAFC4 /* Pods-OpenrouteService_Tests.modulemap */,
-				828F8AF82027C2CAE4FDBB4BBBA6FCE9 /* Pods-OpenrouteService_Tests-acknowledgements.markdown */,
-				4A59834D8241041E5313D264A69C658C /* Pods-OpenrouteService_Tests-acknowledgements.plist */,
-				072ADDBD38C84A7EA5D167BE53547E60 /* Pods-OpenrouteService_Tests-dummy.m */,
-				142966B582B3C07664A2AE2372879DBD /* Pods-OpenrouteService_Tests-Info.plist */,
-				320FC7FF5C7130E3211C8A6B6320099C /* Pods-OpenrouteService_Tests-umbrella.h */,
-				02C121D401DC2022BD6917CAD4696975 /* Pods-OpenrouteService_Tests.debug.xcconfig */,
-				FE3C8B8957480507FBDAECD80D30BEF9 /* Pods-OpenrouteService_Tests.release.xcconfig */,
-			);
-			name = "Pods-OpenrouteService_Tests";
-			path = "Target Support Files/Pods-OpenrouteService_Tests";
-			sourceTree = "<group>";
-		};
-		CDCA14FD1D7DCAB450D0D7C7B82E6796 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C12C96D4B1ED82BF5CF51CBE3F94410B /* OpenrouteService.modulemap */,
-				C0228467A40C40FD4892B35F8725BDA2 /* OpenrouteService.xcconfig */,
-				2242DCEF24C05AC0E842CBCDBC6DDFA9 /* OpenrouteService-dummy.m */,
-				4A47590BABAF2E0B5F5ED195B6E49669 /* OpenrouteService-Info.plist */,
-				89086A73409FCC00E8F92C75441AB330 /* OpenrouteService-prefix.pch */,
-				EF9AC89FAA363240C917C26550ACCE39 /* OpenrouteService-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/OpenrouteService";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				7164E57C3C28D3E43661854DE3180AA5 /* Development Pods */,
+				956B5370FADA25C5876F0DC164D9908E /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				0F9C5FF4E4EE836152887135FBACC3DB /* Products */,
 				0B41385673D08FE664F31E3898214F0D /* Targets Support Files */,
@@ -247,19 +247,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		9E6D11FC0017444E64B19A497DA461E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1EAADE59F77E51783E6205D58EB637 /* OpenrouteService-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B51DB0B2A8852680B3D11D9D7D9CC033 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				55E5E329F04B07D396AA04FDD9B10957 /* Pods-OpenrouteService_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D1E7FE623DA87C3B77F372E7BBCEBCBE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE1CABD42B41E41F234A234BE806CF75 /* OpenrouteService-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,25 +274,7 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		165CF68518919020718117B97AA7DD6D /* OpenrouteService */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9081752806735B5A6E380F0D982CD91F /* Build configuration list for PBXNativeTarget "OpenrouteService" */;
-			buildPhases = (
-				D1E7FE623DA87C3B77F372E7BBCEBCBE /* Headers */,
-				4D6B92FDF6F4C3B707664A657610A07E /* Sources */,
-				51A04D00A17DBBD755E09F388DD98C18 /* Frameworks */,
-				72FCD8D6B6E9155D08FE88A5AB70FC83 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = OpenrouteService;
-			productName = OpenrouteService;
-			productReference = 785BE760DFEDA9F51EDFBDAC718B3EF9 /* OpenrouteService.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		293CBAF9EF8A56BB00688460EC4D7CD9 /* Pods-OpenrouteService_Tests */ = {
+		2D9D088C75422CC7A78C5E60F4398FAC /* Pods-OpenrouteService_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 581B2A175AE215F5C4E491604B0F131C /* Build configuration list for PBXNativeTarget "Pods-OpenrouteService_Tests" */;
 			buildPhases = (
@@ -311,7 +293,25 @@
 			productReference = E7AA377A136F59CCD303E5AD3425392F /* Pods_OpenrouteService_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B11AB039E3B299C28A47D9F36C107C65 /* Pods-OpenrouteService_Example */ = {
+		A14C83D18F4EFCEAD53DCDA2F063D4CA /* OpenrouteService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00CF53DA72B4A3E73E0185DFF815493F /* Build configuration list for PBXNativeTarget "OpenrouteService" */;
+			buildPhases = (
+				9E6D11FC0017444E64B19A497DA461E7 /* Headers */,
+				8EF8148F6B9E13A78868CDEE67C17834 /* Sources */,
+				CDEF78CAA7708981C2240EA8659C053C /* Frameworks */,
+				75614EEF9A4C812CAD3548D557E5F4D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenrouteService;
+			productName = OpenrouteService;
+			productReference = 785BE760DFEDA9F51EDFBDAC718B3EF9 /* OpenrouteService.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DC8D870AFEB67EA6EAFE1267233918E8 /* Pods-OpenrouteService_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E2D0936D7035426B76708A550F74477 /* Build configuration list for PBXNativeTarget "Pods-OpenrouteService_Example" */;
 			buildPhases = (
@@ -338,11 +338,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					165CF68518919020718117B97AA7DD6D = {
-						LastSwiftMigration = 1020;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -357,9 +352,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				165CF68518919020718117B97AA7DD6D /* OpenrouteService */,
-				B11AB039E3B299C28A47D9F36C107C65 /* Pods-OpenrouteService_Example */,
-				293CBAF9EF8A56BB00688460EC4D7CD9 /* Pods-OpenrouteService_Tests */,
+				A14C83D18F4EFCEAD53DCDA2F063D4CA /* OpenrouteService */,
+				DC8D870AFEB67EA6EAFE1267233918E8 /* Pods-OpenrouteService_Example */,
+				2D9D088C75422CC7A78C5E60F4398FAC /* Pods-OpenrouteService_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -372,7 +367,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72FCD8D6B6E9155D08FE88A5AB70FC83 /* Resources */ = {
+		75614EEF9A4C812CAD3548D557E5F4D1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -397,19 +392,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D6B92FDF6F4C3B707664A657610A07E /* Sources */ = {
+		8EF8148F6B9E13A78868CDEE67C17834 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF47D06F2226DEBC00083728 /* OpenrouteNetworkingClient.swift in Sources */,
-				5686C2F150490D6C0BDFF0239DB72541 /* OpenrouteService-dummy.m in Sources */,
-				CF47D0732226E1D200083728 /* OpenrouteClient.swift in Sources */,
-				50161DE422233023006EBDE9 /* MapKitHelpers.swift in Sources */,
-				CF47D06D2226DE8100083728 /* NetworkingClient.swift in Sources */,
-				5011F4312222A4EE0033113F /* CoreLocationHelpers.swift in Sources */,
-				5050843B2221E8C2000662B8 /* Directions.swift in Sources */,
-				CFE6CDEC2226C0E00065EA1D /* Geocode.swift in Sources */,
-				505084392221E792000662B8 /* Helpers.swift in Sources */,
+				60E2D43F4FE020C98F92C091FF3726FB /* CoreLocationHelpers.swift in Sources */,
+				C13E4ADC2B7DD7A819235334A6483CCF /* Directions.swift in Sources */,
+				B9344A78C48E2A0903C3935B72F9B046 /* Geocode.swift in Sources */,
+				A7BAE4AE8642A48BB7880EF1A2ED05E3 /* Helpers.swift in Sources */,
+				A8AAFFED9DAE8C580AEA07AD1037DA7E /* MapKitHelpers.swift in Sources */,
+				41B05D9CDC80DE32ACEA2067210F9496 /* NetworkingClient.swift in Sources */,
+				3285490305EE29CC032A827C51F93CAA /* OpenrouteClient.swift in Sources */,
+				E0F4D1B2024EF153861E591F643A7D74 /* OpenrouteNetworkingClient.swift in Sources */,
+				EAE87B39ECB93093A8AD6546CF933174 /* OpenrouteService-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,53 +422,21 @@
 		CE8CC0F0262870951FA0040266F4E340 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-OpenrouteService_Example";
-			target = B11AB039E3B299C28A47D9F36C107C65 /* Pods-OpenrouteService_Example */;
+			target = DC8D870AFEB67EA6EAFE1267233918E8 /* Pods-OpenrouteService_Example */;
 			targetProxy = 14F7E258786EE12BD598CB0E9777D7EA /* PBXContainerItemProxy */;
 		};
 		DAE7AEDD3DC95924304F8B3E833A919C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OpenrouteService;
-			target = 165CF68518919020718117B97AA7DD6D /* OpenrouteService */;
+			target = A14C83D18F4EFCEAD53DCDA2F063D4CA /* OpenrouteService */;
 			targetProxy = 20A721A2276996EB41E44C14923C10DB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0B04CED8A82DAB94D39C392AFB2ABE17 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0228467A40C40FD4892B35F8725BDA2 /* OpenrouteService.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/OpenrouteService/OpenrouteService-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/OpenrouteService/OpenrouteService-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/OpenrouteService/OpenrouteService.modulemap";
-				PRODUCT_MODULE_NAME = OpenrouteService;
-				PRODUCT_NAME = OpenrouteService;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		5828AD032945B0C562DC6F09FA9BFB70 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D45C6F23391470156A2A99E1BC17F1FE /* Pods-OpenrouteService_Example.debug.xcconfig */;
+			baseConfigurationReference = 15BFAAC7FD64A36BDC10B396A93DBF2F /* Pods-OpenrouteService_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -504,9 +467,72 @@
 			};
 			name = Debug;
 		};
+		7F85E45AAC3DFD5F2D6E1A75CFD964DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32AE04626B0E02B1D8D8C34BF01EC956 /* OpenrouteService.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OpenrouteService/OpenrouteService-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OpenrouteService/OpenrouteService-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OpenrouteService/OpenrouteService.modulemap";
+				PRODUCT_MODULE_NAME = OpenrouteService;
+				PRODUCT_NAME = OpenrouteService;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8C77A2DA9D5B99DF22248A764E64AE5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32AE04626B0E02B1D8D8C34BF01EC956 /* OpenrouteService.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OpenrouteService/OpenrouteService-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OpenrouteService/OpenrouteService-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OpenrouteService/OpenrouteService.modulemap";
+				PRODUCT_MODULE_NAME = OpenrouteService;
+				PRODUCT_NAME = OpenrouteService;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8EA243865EFF506A48B2E34ACF825F5F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE3C8B8957480507FBDAECD80D30BEF9 /* Pods-OpenrouteService_Tests.release.xcconfig */;
+			baseConfigurationReference = 106014BA3C4F2EB3FC523A6613245217 /* Pods-OpenrouteService_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -540,7 +566,7 @@
 		};
 		991A6DB36B7D4390C3DF3860D17D2B16 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02C121D401DC2022BD6917CAD4696975 /* Pods-OpenrouteService_Tests.debug.xcconfig */;
+			baseConfigurationReference = 19611B916CCDC3AB5EBAF18D5AF81E26 /* Pods-OpenrouteService_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -637,7 +663,7 @@
 		};
 		C8E1F24CC6FBD0FA53BBC957E23FF93D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF73A6F042F88745A0D70E390014AFCD /* Pods-OpenrouteService_Example.release.xcconfig */;
+			baseConfigurationReference = 7960E31C0FB1138C9EF371E04CE33A18 /* Pods-OpenrouteService_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -668,37 +694,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		E48FCB3C0134AA7FEF627210F8B7955A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0228467A40C40FD4892B35F8725BDA2 /* OpenrouteService.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/OpenrouteService/OpenrouteService-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/OpenrouteService/OpenrouteService-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/OpenrouteService/OpenrouteService.modulemap";
-				PRODUCT_MODULE_NAME = OpenrouteService;
-				PRODUCT_NAME = OpenrouteService;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		F232B5ECA11A71BFA199A229B323F454 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -762,6 +757,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00CF53DA72B4A3E73E0185DFF815493F /* Build configuration list for PBXNativeTarget "OpenrouteService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F85E45AAC3DFD5F2D6E1A75CFD964DC /* Debug */,
+				8C77A2DA9D5B99DF22248A764E64AE5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2E2D0936D7035426B76708A550F74477 /* Build configuration list for PBXNativeTarget "Pods-OpenrouteService_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -785,15 +789,6 @@
 			buildConfigurations = (
 				991A6DB36B7D4390C3DF3860D17D2B16 /* Debug */,
 				8EA243865EFF506A48B2E34ACF825F5F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9081752806735B5A6E380F0D982CD91F /* Build configuration list for PBXNativeTarget "OpenrouteService" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E48FCB3C0134AA7FEF627210F8B7955A /* Debug */,
-				0B04CED8A82DAB94D39C392AFB2ABE17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

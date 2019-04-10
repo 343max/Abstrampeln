@@ -12,13 +12,13 @@ class GeocodeTests: XCTestCase {
 
   func testGeocodeAutcomplete() {
     let data = self.data(fileName: "Geocode_Autocomplete")
-    let geocode = try! JSONDecoder().decode(Geocode.self, from: data)
+    let geocode = try! JSONDecoder.openroute.decode(Geocode.self, from: data)
     XCTAssertEqual(geocode.features.count, 9)
   }
 
   func testGeocodeSearch() {
     let data = self.data(fileName: "Geocode_Search")
-    let geocode = try! JSONDecoder().decode(Geocode.self, from: data)
+    let geocode = try! JSONDecoder.openroute.decode(Geocode.self, from: data)
     XCTAssertEqual(geocode.features.count, 10)
   }
 
@@ -64,34 +64,34 @@ class GeocodeTests: XCTestCase {
   }
 }
 """.data(using: .utf8)!
-    let feature = try! JSONDecoder().decode(Geocode.Feature.self, from: data)
+    let feature = try! JSONDecoder.openroute.decode(Geocode.Feature.self, from: data)
     XCTAssertEqual(feature.type, .feature)
 
     XCTAssertEqual(feature.properties.id, "de/berlin:03dba121b3358265")
     XCTAssertEqual(feature.properties.gid, "openaddresses:address:de/berlin:03dba121b3358265")
     XCTAssertEqual(feature.properties.layer, "address")
     XCTAssertEqual(feature.properties.source, "openaddresses")
-    XCTAssertEqual(feature.properties.source_id, "de/berlin:03dba121b3358265")
+    XCTAssertEqual(feature.properties.sourceId, "de/berlin:03dba121b3358265")
     XCTAssertEqual(feature.properties.name, "Esmarchstraße 13")
     XCTAssertEqual(feature.properties.housenumber, "13")
     XCTAssertEqual(feature.properties.street, "Esmarchstraße")
     XCTAssertEqual(feature.properties.postalcode, "10407")
     XCTAssertEqual(feature.properties.distance, 2.713)
     XCTAssertEqual(feature.properties.country, "Germany")
-    XCTAssertEqual(feature.properties.country_gid, "whosonfirst:country:85633111")
-    XCTAssertEqual(feature.properties.country_a, "DEU")
+    XCTAssertEqual(feature.properties.countryGid, "whosonfirst:country:85633111")
+    XCTAssertEqual(feature.properties.countryA, "DEU")
     XCTAssertEqual(feature.properties.region, "Berlin")
-    XCTAssertEqual(feature.properties.region_gid, "whosonfirst:region:85682499")
+    XCTAssertEqual(feature.properties.regionGid, "whosonfirst:region:85682499")
     XCTAssertEqual(feature.properties.county, "Berlin ")
-    XCTAssertEqual(feature.properties.county_gid, "whosonfirst:county:102063945")
+    XCTAssertEqual(feature.properties.countyGid, "whosonfirst:county:102063945")
     XCTAssertEqual(feature.properties.locality, "Berlin")
-    XCTAssertEqual(feature.properties.locality_gid, "whosonfirst:locality:101748799")
+    XCTAssertEqual(feature.properties.localityGid, "whosonfirst:locality:101748799")
     XCTAssertEqual(feature.properties.borough, "Pankow")
-    XCTAssertEqual(feature.properties.borough_gid, "whosonfirst:borough:1108815549")
+    XCTAssertEqual(feature.properties.boroughGid, "whosonfirst:borough:1108815549")
     XCTAssertEqual(feature.properties.neighbourhood, "Prenzlauer Berg")
-    XCTAssertEqual(feature.properties.neighbourhood_gid, "whosonfirst:neighbourhood:420784283")
+    XCTAssertEqual(feature.properties.neighbourhoodGid, "whosonfirst:neighbourhood:420784283")
     XCTAssertEqual(feature.properties.continent, "Europe")
-    XCTAssertEqual(feature.properties.continent_gid, "whosonfirst:continent:102191581")
+    XCTAssertEqual(feature.properties.continentGid, "whosonfirst:continent:102191581")
     XCTAssertEqual(feature.properties.label, "Esmarchstraße 13, Berlin, Germany")
   }
 }

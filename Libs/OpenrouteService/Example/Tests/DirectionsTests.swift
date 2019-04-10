@@ -13,7 +13,7 @@ class DirectionsTests: XCTestCase {
 
   func testDirections() {
     let data = self.data(fileName: "Directions")
-    let _ = try! JSONDecoder().decode(Directions.self, from: data)
+    let _ = try! JSONDecoder.openroute.decode(Directions.self, from: data)
   }
 
   func testCoordinates() {
@@ -33,7 +33,7 @@ class DirectionsTests: XCTestCase {
   48.233047
 ]
 """.data(using: .utf8)!
-    let coordinate = try! JSONDecoder().decode(CLLocationCoordinate2D.self, from: data)
+    let coordinate = try! JSONDecoder.openroute.decode(CLLocationCoordinate2D.self, from: data)
     XCTAssertEqual(coordinate.longitude, 8.343853)
     XCTAssertEqual(coordinate.latitude, 48.233047)
   }
@@ -52,10 +52,10 @@ class DirectionsTests: XCTestCase {
 ]
 }
 """.data(using: .utf8)!
-    let segment = try! JSONDecoder().decode(Directions.Route.Segment.Step.self, from: data)
+    let segment = try! JSONDecoder.openroute.decode(Directions.Route.Segment.Step.self, from: data)
     XCTAssertEqual(segment.distance, 492.6)
     XCTAssertEqual(segment.duration, 98.5)
-    XCTAssertEqual(segment.type, .SlightLeft)
+    XCTAssertEqual(segment.type, .slightLeft)
     XCTAssertEqual(segment.instruction, "Biegen Sie leicht links auf Sulzbacher Straße, K 5528 ab")
     XCTAssertEqual(segment.name, "Sulzbacher Straße, K 5528")
     XCTAssertEqual(segment.wayPoints, [48, 63])
@@ -68,7 +68,7 @@ class DirectionsTests: XCTestCase {
 "duration": 1313.5
 }
 """.data(using: .utf8)!
-    let summary = try! JSONDecoder().decode(Directions.Route.Summary.self, from: data)
+    let summary = try! JSONDecoder.openroute.decode(Directions.Route.Summary.self, from: data)
     XCTAssertEqual(summary.distance, 5510.5)
     XCTAssertEqual(summary.duration, 1313.5)
 
@@ -94,7 +94,7 @@ class DirectionsTests: XCTestCase {
 ]
 }
 """.data(using: .utf8)!
-    let segment = try! JSONDecoder().decode(Directions.Route.Segment.self, from: data)
+    let segment = try! JSONDecoder.openroute.decode(Directions.Route.Segment.self, from: data)
     XCTAssertEqual(segment.distance, 5510.5)
     XCTAssertEqual(segment.duration, 1313.5)
     XCTAssertEqual(segment.steps.count, 1)
@@ -113,7 +113,7 @@ class DirectionsTests: XCTestCase {
   48.263552
 ]
 """.data(using: .utf8)!
-    let boundingBox = try! JSONDecoder().decode(BoundingBox.self, from: data)
+    let boundingBox = try! JSONDecoder.openroute.decode(BoundingBox.self, from: data)
 
     XCTAssertEqual(boundingBox.northEast.latitude, 48.231946)
     XCTAssertEqual(boundingBox.northEast.longitude, 8.327707)

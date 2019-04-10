@@ -50,15 +50,6 @@ extension Directions.Route.Segment {
     public let instruction: String
     public let name: String
     public let wayPoints: [Int]
-
-    public enum CodingKeys: String, CodingKey {
-      case distance = "distance"
-      case duration = "duration"
-      case type = "type"
-      case instruction = "instruction"
-      case name = "name"
-      case wayPoints = "way_points"
-    }
   }
 }
 
