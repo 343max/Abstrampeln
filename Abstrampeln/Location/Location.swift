@@ -9,7 +9,7 @@ struct Location {
   let coordinate: CLLocationCoordinate2D
   let gid: String
   let isTemporary: Bool
-  
+
   init(label: String, detail: String?, coordinate: CLLocationCoordinate2D, gid: String, isTemporary: Bool = false) {
     self.label = label
     self.detail = detail

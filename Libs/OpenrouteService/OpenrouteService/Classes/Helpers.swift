@@ -12,17 +12,17 @@ enum Units: String {
 public struct Geometry: Decodable {
   public let type: GeometryType
   public let coordinates: [CLLocationCoordinate2D]
-  
+
   public enum CodingKeys: String, CodingKey {
     case type = "type"
     case coordinates = "coordinates"
   }
-  
+
   public enum GeometryType: String, Decodable {
     case point = "Point"
     case lineString = "LineString"
   }
-  
+
   public init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     self.type = try container.decode(GeometryType.self, forKey: CodingKeys.type)
@@ -55,13 +55,13 @@ extension Directions {
     case footHiking = "foot-hiking"
     case wheelchair = "wheelchair"
   }
-  
+
   public enum Preferences: String {
     case recommended = "recommended"
     case fastest = "fastest"
     case shortest = "shortest"
   }
-  
+
   public enum Language: String {
     case simplifiedChinese = "zh-CN"
     case german = "de"

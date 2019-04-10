@@ -9,7 +9,7 @@ class GeocodeTests: XCTestCase {
     let url = bundle.url(forResource: fileName, withExtension: "json")!
     return try! Data(contentsOf: url)
   }
-  
+
   func testGeocodeAutcomplete() {
     let data = self.data(fileName: "Geocode_Autocomplete")
     let geocode = try! JSONDecoder().decode(Geocode.self, from: data)

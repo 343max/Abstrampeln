@@ -16,7 +16,7 @@ extension NetworkingClient {
     public func GET(_ path: String, _ parameter: ParameterDict, callback: @escaping (_ response: HTTPURLResponse, _ result: Result<Data, Error>) -> Void) {
         self.sendRequest(.GET, path, parameter, callback: callback)
     }
-  
+
     public func GET<T>(_ path: String, _ parameter: ParameterDict, type: T.Type, callback: @escaping (_ response: HTTPURLResponse, _ result: Result<T, Error>) -> Void) where T : Decodable {
         GET(path, parameter) { (response, result) in
             switch result {

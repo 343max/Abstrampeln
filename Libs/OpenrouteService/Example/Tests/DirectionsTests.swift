@@ -3,19 +3,19 @@ import XCTest
 import OpenrouteService
 
 class DirectionsTests: XCTestCase {
-  
+
   private func data(fileName: String) -> Data {
     let bundle = Bundle(for: type(of: self))
     let url = bundle.url(forResource: fileName, withExtension: "json")!
     return try! Data(contentsOf: url)
   }
 
-  
+
   func testDirections() {
     let data = self.data(fileName: "Directions")
     let _ = try! JSONDecoder().decode(Directions.self, from: data)
   }
-  
+
   func testCoordinates() {
     let array = [
       8.343853,
@@ -25,7 +25,7 @@ class DirectionsTests: XCTestCase {
     XCTAssertEqual(coordinate.longitude, 8.343853)
     XCTAssertEqual(coordinate.latitude, 48.233047)
   }
-  
+
   func testCoordinatesDecode() {
     let data = """
 [
@@ -37,7 +37,7 @@ class DirectionsTests: XCTestCase {
     XCTAssertEqual(coordinate.longitude, 8.343853)
     XCTAssertEqual(coordinate.latitude, 48.233047)
   }
-  
+
   func testSegmentStep() {
     let data = """
 {
@@ -60,7 +60,7 @@ class DirectionsTests: XCTestCase {
     XCTAssertEqual(segment.name, "Sulzbacher Straße, K 5528")
     XCTAssertEqual(segment.wayPoints, [48, 63])
   }
-  
+
   func testSummary() {
     let data = """
 {
@@ -73,7 +73,7 @@ class DirectionsTests: XCTestCase {
     XCTAssertEqual(summary.duration, 1313.5)
 
   }
-  
+
   func testSegment() {
     let data = """
 {
@@ -98,12 +98,12 @@ class DirectionsTests: XCTestCase {
     XCTAssertEqual(segment.distance, 5510.5)
     XCTAssertEqual(segment.duration, 1313.5)
     XCTAssertEqual(segment.steps.count, 1)
-    
+
     if let step = segment.steps.first {
       XCTAssertEqual(step.name, "Benatweg")
     }
   }
-  
+
   func testBoundingBox() {
     let data = """
 [
@@ -114,7 +114,7 @@ class DirectionsTests: XCTestCase {
 ]
 """.data(using: .utf8)!
     let boundingBox = try! JSONDecoder().decode(BoundingBox.self, from: data)
-    
+
     XCTAssertEqual(boundingBox.northEast.latitude, 48.231946)
     XCTAssertEqual(boundingBox.northEast.longitude, 8.327707)
     XCTAssertEqual(boundingBox.southWest.latitude, 48.263552)

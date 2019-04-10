@@ -9,7 +9,7 @@ class RecentSuggestionsSource {
       save()
     }
   }
-  
+
   init() {
     history = RecentSuggestionsSource.load()
   }
@@ -20,10 +20,10 @@ extension RecentSuggestionsSource: SearchResultsDataSource {
     if text.count == 0 {
       completion(text, history)
     }
-    
+
     return false
   }
-  
+
   func cancelSearchFor(text: String) {
     //
   }
@@ -33,14 +33,14 @@ extension RecentSuggestionsSource {
   enum UserDefaultsKeys: String {
     case RecentSuggestion = "RecentSuggestions"
   }
-  
+
   static func load() -> [Location] {
     let dicts = UserDefaults.standard.object(forKey: UserDefaultsKeys.RecentSuggestion.rawValue) as? [[String: Any?]] ?? []
     return dicts.map({ (dict) -> Location in
       return Location(dict: dict)
     })
   }
-  
+
   func save() {
     let defaults = UserDefaults.standard
     defaults.set(history.map { $0.dict }, forKey: UserDefaultsKeys.RecentSuggestion.rawValue)
@@ -50,11 +50,11 @@ extension RecentSuggestionsSource {
 
 extension RecentSuggestionsSource: DirectionsControllerDestinationListener {
   static let collector = RecentSuggestionsSource()
-  
+
   func register(dispatcher: SignalDispatcher) {
     dispatcher.register(listener: self)
   }
-  
+
   func destinationDidChange(_ destination: Location?) {
     guard let destination = destination, destination.isTemporary == false else { return }
 
@@ -79,7 +79,7 @@ extension Location {
     case Longitude = "Longitude"
     case Gid = "Gid"
   }
-  
+
   var dict: [String: Any] {
     get {
       var dict: [String: Any] = [
@@ -88,15 +88,15 @@ extension Location {
         DictKeys.Longitude.rawValue: coordinate.longitude,
         DictKeys.Gid.rawValue: gid
       ]
-      
+
       if let detail = detail {
         dict[DictKeys.Detail.rawValue] = detail
       }
-      
+
       return dict
     }
   }
-  
+
   init(dict: [String: Any?]) {
     self.label = dict[DictKeys.Label.rawValue] as! String
     self.detail = dict[DictKeys.Detail.rawValue] as? String

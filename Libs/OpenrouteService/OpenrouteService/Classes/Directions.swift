@@ -6,7 +6,7 @@ import CoreLocation
 public struct Directions: Decodable {
   public let routes: [Route]
   public let boundingBox: BoundingBox
-  
+
   public enum CodingKeys: String, CodingKey {
     case routes = "routes"
     case boundingBox = "bbox"
@@ -19,7 +19,7 @@ extension Directions {
     public let geometry: Geometry?
     public let segments: [Segment]
     public let boundingBox: BoundingBox
-    
+
     public enum CodingKeys: String, CodingKey {
       case summary = "summary"
       case geometry = "geometry"
@@ -34,7 +34,7 @@ extension Directions.Route {
     public let distance: Float
     public let duration: TimeInterval
   }
-  
+
   public struct Segment: Decodable {
     public let distance: Float
     public let duration: TimeInterval
@@ -50,7 +50,7 @@ extension Directions.Route.Segment {
     public let instruction: String
     public let name: String
     public let wayPoints: [Int]
-    
+
     public enum CodingKeys: String, CodingKey {
       case distance = "distance"
       case duration = "duration"
@@ -63,7 +63,7 @@ extension Directions.Route.Segment {
 }
 
 extension Directions.Route.Segment.Step {
-  
+
   // accroding to https://github.com/GIScience/openrouteservice-docs/blob/master/README.md#instruction-types
   public enum InstructionType: Int, Decodable {
     case Left = 0
@@ -86,7 +86,7 @@ extension Directions.Route.Segment.Step {
 public struct BoundingBox: Decodable {
   public let northEast: CLLocationCoordinate2D
   public let southWest: CLLocationCoordinate2D
-  
+
   public init(from decoder: Decoder) {
     let array = try! decoder.singleValueContainer().decode([Double].self)
     precondition(array.count == 4)

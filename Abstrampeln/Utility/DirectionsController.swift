@@ -21,13 +21,13 @@ class DirectionsController {
   let dispatcher: SignalDispatcher
   let locationController: LocationController
   let openrouteClient: OpenrouteClient
-  
+
   init(dispatcher: SignalDispatcher, locationController: LocationController, openrouteClient: OpenrouteClient) {
     self.dispatcher = dispatcher
     self.locationController = locationController
     self.openrouteClient = openrouteClient
   }
-  
+
   private(set) var destination: Location?
   private(set) var directions: Directions?
   private(set) var mappingMode = MappingMode.None
@@ -38,22 +38,22 @@ extension DirectionsController {
     if let currentLocation = locationController.latestLocations.first?.coordinate {
       openrouteClient.directions(start: currentLocation, finish: destination.coordinate).mainQueue.then { (directions) in
         self.directions = directions
-        
+
         self.dispatcher.each(DirectionsControllerDirectionsListener.self, {
           $0.directionsDidChange(directions, mode: self.mappingMode)
         })
       }
     }
   }
-  
+
   func set(destination: Location, mode: MappingMode) {
     let destinationChanged = destination != self.destination
     let modeChanged = mode != self.mappingMode
-    
+
     guard modeChanged || destinationChanged else {
       return
     }
-    
+
     if destinationChanged {
       self.destination = destination
       updateDirections(destination: destination)
@@ -61,7 +61,7 @@ extension DirectionsController {
         $0.destinationDidChange(destination)
       }
     }
-    
+
     if modeChanged {
       self.mappingMode = mode
     }

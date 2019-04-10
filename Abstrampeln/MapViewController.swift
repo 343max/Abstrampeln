@@ -29,14 +29,14 @@ class MapViewController: UIViewController {
         mapView.removeOverlay(overlay)
       }
     }
-    
+
     didSet {
       if let overlay = directionsOverlay {
         mapView.addOverlay(overlay)
       }
     }
   }
-  
+
   var latestLocation: CLLocation? {
     didSet {
       if let latestLocation = latestLocation {
@@ -44,32 +44,32 @@ class MapViewController: UIViewController {
       }
     }
   }
-  
+
   var destinationPin: MKPointAnnotation? {
     willSet {
       if let pin = destinationPin {
         mapView.removeAnnotation(pin)
       }
     }
-    
+
     didSet {
       if let pin = destinationPin {
         mapView.addAnnotation(pin)
       }
     }
   }
-  
+
   var destination: Location? {
     didSet {
       self.update(destination: destination?.coordinate)
     }
   }
-  
+
   var userInteracted = false
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     let mapView = MKMapView(frame: view.bounds)
     mapView.showsUserLocation = true
     mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -77,28 +77,28 @@ class MapViewController: UIViewController {
     mapView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:))))
     self.mapView = mapView
     view.addSubview(mapView)
-    
+
     let instructionsViewController = InstructionsViewController(nibName: nil, bundle: nil)
     instructionsViewController.view.frame = view.bounds
     instructionsViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     addChild(instructionsViewController)
     view.addSubview(instructionsViewController.view)
-    
+
     AppController.shared.locationController.locationPromise.then { [weak self] (locations) in
       guard let self = self else { return }
-      
+
       self.latestLocation = locations.first!
     }
-    
+
     AppController.shared.dispatcher.register(listener: self)
   }
-  
+
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
+
     AppController.shared.locationController.startUpdatingLocation()
   }
-  
+
   func update(location: CLLocation) {
     if userInteracted == false {
       let span = CLLocationDistance(1000)
@@ -106,24 +106,24 @@ class MapViewController: UIViewController {
       mapView.setRegion(region, animated: shouldAnimate)
     }
   }
-  
+
   func update(destination: CLLocationCoordinate2D?) {
     guard let destination = destination else {
       destinationPin = nil
       return
     }
-    
+
     let pin = MKPointAnnotation()
     pin.coordinate = destination
     destinationPin = pin
   }
-  
+
   func update(directions: Directions?) {
     guard let directions = directions else {
       directionsOverlay = nil
       return
     }
-    
+
     directionsOverlay = directions.routes.first!.geometry!.polyline
   }
 }
@@ -132,7 +132,7 @@ extension MapViewController: MKMapViewDelegate {
   func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
     userInteracted = true
   }
-  
+
   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
     if let polyline = overlay as? MKPolyline {
       let testlineRenderer = MKPolylineRenderer(polyline: polyline)
@@ -150,16 +150,16 @@ extension MapViewController {
     if gr.state != .began {
       return
     }
-    
+
     let location = gr.location(in: mapView)
     let destinationLocation = mapView.convert(location, toCoordinateFrom: mapView)
-    
+
     Location.reverseLookup(coordinate: destinationLocation).mainQueue.then { (location) in
       AppController.shared.directionsController.set(destination: location, mode: .None)
     }
-    
+
 //    let destination = Location.droppedPin(location: destinationLocation)
-//    
+//
 //    AppController.shared.directionsController.set(destination: destination, mode: .None)
   }
 }

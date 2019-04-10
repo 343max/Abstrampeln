@@ -24,7 +24,7 @@ extension UIView {
     if let view = self as? DarkMode {
       view.setDarkMode(on: on)
     }
-    
+
     subviews.forEach { $0.walkDarkMode(on: on) }
   }
 }

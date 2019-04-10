@@ -13,11 +13,11 @@ extension Geocode {
     public let type: FeatureType
     public let geometry: Geometry
     public let properties: Properties
-    
+
     public enum FeatureType: String, Decodable {
       case feature = "Feature"
     }
-    
+
     public struct Properties: Decodable {
       public let id: String
       public let gid: String
@@ -47,5 +47,5 @@ extension Geocode {
       public let label: String
     }
   }
-  
+
 }

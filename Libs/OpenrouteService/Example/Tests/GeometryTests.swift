@@ -33,7 +33,7 @@ class GeometryTests: XCTestCase {
       XCTAssertEqual(cooridinate.latitude, 48.233826)
     }
   }
-  
+
   func testPointGeometry() {
     let data = """
 {
@@ -52,5 +52,5 @@ class GeometryTests: XCTestCase {
       XCTAssertEqual(cooridinate.latitude, -20.458851)
     }
   }
-  
+
 }

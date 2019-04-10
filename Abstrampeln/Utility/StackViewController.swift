@@ -17,16 +17,16 @@ class StackViewController: UIViewController {
       return viewControllers.last!
     }
   }
-  
+
   init(viewController: UIViewController) {
     self.viewControllers = [viewController]
     super.init(nibName: nil, bundle: nil)
   }
-  
+
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
+
   override func loadView() {
     // this forces the child VCs safeAreaInset to be something a bit more sane
     view = UIView()
@@ -34,32 +34,32 @@ class StackViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     add(viewController: topViewController)
   }
-  
+
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     topViewController.view.frame = view.bounds
   }
-  
+
   private func add(viewController: UIViewController) {
     addChild(viewController)
     viewController.view.frame = view.bounds
     view.addSubview(viewController.view)
   }
-  
+
   private func remove(viewController: UIViewController) {
     viewController.view.removeFromSuperview()
     viewController.removeFromParent()
   }
-  
+
   func set(viewControllers: [UIViewController], animated: Bool) {
     let oldViewControllers = self.viewControllers
-    
+
     let oldTop = oldViewControllers.last!
     let newTop = viewControllers.last!
-    
+
     if oldTop == newTop {
       self.viewControllers = viewControllers
     } else if !animated {
@@ -69,14 +69,14 @@ class StackViewController: UIViewController {
     } else {
       // animated
       self.viewControllers = viewControllers
-      
+
       if oldViewControllers.contains(newTop) && !viewControllers.contains(oldTop) {
         // pop animation
-        
+
         add(viewController: newTop)
         view.addSubview(oldTop.view)
         oldTop.view.backgroundColor = .white
-        
+
         UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
           let bottom: CGFloat
           if let window = self.view.window {
@@ -90,7 +90,7 @@ class StackViewController: UIViewController {
         }
       } else {
         // push animation
-        
+
         add(viewController: newTop)
         let bottom: CGFloat
         if let window = view.window {
@@ -109,11 +109,11 @@ class StackViewController: UIViewController {
       }
     }
   }
-  
+
   func push(viewController: UIViewController, animated: Bool) {
     set(viewControllers: self.viewControllers + [viewController], animated: animated)
   }
-  
+
   func popTopViewController(animated: Bool) {
     var viewControllers = self.viewControllers
     viewControllers.removeLast()
