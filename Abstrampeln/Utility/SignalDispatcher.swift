@@ -32,7 +32,7 @@ class SignalDispatcher {
     }
   }
 
-  func each<T>(_ protocol: T.Type, _ handler: (_ listener: T) -> ()) {
+  func each<T>(_ protocol: T.Type, _ handler: (_ listener: T) -> Void) {
     self.all(T.self)().forEach { (listener) in
       handler(listener)
     }

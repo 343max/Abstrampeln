@@ -1,2 +1,13 @@
 excluded:
   - Pods
+
+disabled_rules:
+  - line_length
+
+force_try: warning
+force_cast: warning
+identifier_name:
+  excluded:
+    - i
+    - j
+    - x

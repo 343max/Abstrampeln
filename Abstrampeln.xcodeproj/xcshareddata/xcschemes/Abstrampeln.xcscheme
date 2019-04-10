@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3E207A0B7F3035DAE72CE2C357D61824"
+               BlueprintIdentifier = "528A6084D03673721AD73E878F6204D9"
                BuildableName = "Pods_Abstrampeln.framework"
                BlueprintName = "Pods-Abstrampeln"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">

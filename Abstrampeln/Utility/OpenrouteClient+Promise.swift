@@ -17,7 +17,10 @@ extension OpenrouteClient {
     })
   }
 
-  public func directions(start: CLLocationCoordinate2D, finish: CLLocationCoordinate2D, profile: Directions.Profile = .cyclingRegular, language: Directions.Language = .english) -> Promise<Directions> {
+  public func directions(start: CLLocationCoordinate2D,
+                         finish: CLLocationCoordinate2D,
+                         profile: Directions.Profile = .cyclingRegular,
+                         language: Directions.Language = .english) -> Promise<Directions> {
     return Promise<Directions>({ (completion, promise) in
       self.directions(start: start, finish: finish, profile: profile, language: language, callback: { (result) in
         switch result {

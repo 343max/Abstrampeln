@@ -81,28 +81,28 @@ extension Location {
   }
 
   var dict: [String: Any] {
-    get {
-      var dict: [String: Any] = [
-        DictKeys.label.rawValue: label,
-        DictKeys.latitude.rawValue: coordinate.latitude,
-        DictKeys.longitude.rawValue: coordinate.longitude,
-        DictKeys.gid.rawValue: gid
-      ]
+    var dict: [String: Any] = [
+      DictKeys.label.rawValue: label,
+      DictKeys.latitude.rawValue: coordinate.latitude,
+      DictKeys.longitude.rawValue: coordinate.longitude,
+      DictKeys.gid.rawValue: gid
+    ]
 
-      if let detail = detail {
-        dict[DictKeys.detail.rawValue] = detail
-      }
-
-      return dict
+    if let detail = detail {
+      dict[DictKeys.detail.rawValue] = detail
     }
+
+    return dict
   }
 
   init(dict: [String: Any?]) {
+    // swiftlint:disable force_cast
     self.label = dict[DictKeys.label.rawValue] as! String
     self.detail = dict[DictKeys.detail.rawValue] as? String
     self.gid = dict[DictKeys.gid.rawValue] as! String
     self.coordinate = CLLocationCoordinate2D(latitude: dict[DictKeys.latitude.rawValue] as! Double,
                                              longitude: dict[DictKeys.longitude.rawValue] as! Double)
     self.isTemporary = false
+    // swiftlint:enable force_cast
   }
 }
