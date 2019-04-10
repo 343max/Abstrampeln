@@ -161,7 +161,7 @@ extension SearchController: UICollectionViewDataSource {
 extension SearchController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let suggestion = sections[indexPath.section].results[indexPath.item]
-    AppController.shared.directionsController.set(destination: suggestion, mode: .None)
+    AppController.shared.directionsController.set(destination: suggestion, mode: .none)
   }
 }
 

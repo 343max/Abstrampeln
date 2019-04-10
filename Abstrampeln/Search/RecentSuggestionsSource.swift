@@ -31,11 +31,11 @@ extension RecentSuggestionsSource: SearchResultsDataSource {
 
 extension RecentSuggestionsSource {
   enum UserDefaultsKeys: String {
-    case RecentSuggestion = "RecentSuggestions"
+    case recentSuggestion = "RecentSuggestions"
   }
 
   static func load() -> [Location] {
-    let dicts = UserDefaults.standard.object(forKey: UserDefaultsKeys.RecentSuggestion.rawValue) as? [[String: Any?]] ?? []
+    let dicts = UserDefaults.standard.object(forKey: UserDefaultsKeys.recentSuggestion.rawValue) as? [[String: Any?]] ?? []
     return dicts.map({ (dict) -> Location in
       return Location(dict: dict)
     })
@@ -43,7 +43,7 @@ extension RecentSuggestionsSource {
 
   func save() {
     let defaults = UserDefaults.standard
-    defaults.set(history.map { $0.dict }, forKey: UserDefaultsKeys.RecentSuggestion.rawValue)
+    defaults.set(history.map { $0.dict }, forKey: UserDefaultsKeys.recentSuggestion.rawValue)
     defaults.synchronize()
   }
 }
@@ -73,24 +73,24 @@ extension Location: Equatable {
 
 extension Location {
   enum DictKeys: String {
-    case Label = "Label"
-    case Detail = "Detail"
-    case Latitude = "Latitude"
-    case Longitude = "Longitude"
-    case Gid = "Gid"
+    case label = "Label"
+    case detail = "Detail"
+    case latitude = "Latitude"
+    case longitude = "Longitude"
+    case gid = "Gid"
   }
 
   var dict: [String: Any] {
     get {
       var dict: [String: Any] = [
-        DictKeys.Label.rawValue: label,
-        DictKeys.Latitude.rawValue: coordinate.latitude,
-        DictKeys.Longitude.rawValue: coordinate.longitude,
-        DictKeys.Gid.rawValue: gid
+        DictKeys.label.rawValue: label,
+        DictKeys.latitude.rawValue: coordinate.latitude,
+        DictKeys.longitude.rawValue: coordinate.longitude,
+        DictKeys.gid.rawValue: gid
       ]
 
       if let detail = detail {
-        dict[DictKeys.Detail.rawValue] = detail
+        dict[DictKeys.detail.rawValue] = detail
       }
 
       return dict
@@ -98,11 +98,11 @@ extension Location {
   }
 
   init(dict: [String: Any?]) {
-    self.label = dict[DictKeys.Label.rawValue] as! String
-    self.detail = dict[DictKeys.Detail.rawValue] as? String
-    self.gid = dict[DictKeys.Gid.rawValue] as! String
-    self.coordinate = CLLocationCoordinate2D(latitude: dict[DictKeys.Latitude.rawValue] as! Double,
-                                             longitude: dict[DictKeys.Longitude.rawValue] as! Double)
+    self.label = dict[DictKeys.label.rawValue] as! String
+    self.detail = dict[DictKeys.detail.rawValue] as? String
+    self.gid = dict[DictKeys.gid.rawValue] as! String
+    self.coordinate = CLLocationCoordinate2D(latitude: dict[DictKeys.latitude.rawValue] as! Double,
+                                             longitude: dict[DictKeys.longitude.rawValue] as! Double)
     self.isTemporary = false
   }
 }

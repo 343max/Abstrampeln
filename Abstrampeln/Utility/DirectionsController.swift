@@ -4,9 +4,9 @@ import Foundation
 import OpenrouteService
 
 enum MappingMode {
-  case None
-  case Display
-  case StepByStep
+  case none
+  case display
+  case stepByStep
 }
 
 protocol DirectionsControllerDestinationListener {
@@ -30,7 +30,7 @@ class DirectionsController {
 
   private(set) var destination: Location?
   private(set) var directions: Directions?
-  private(set) var mappingMode = MappingMode.None
+  private(set) var mappingMode = MappingMode.none
 }
 
 extension DirectionsController {

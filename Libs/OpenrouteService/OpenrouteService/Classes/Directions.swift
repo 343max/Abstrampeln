@@ -66,20 +66,20 @@ extension Directions.Route.Segment.Step {
 
   // accroding to https://github.com/GIScience/openrouteservice-docs/blob/master/README.md#instruction-types
   public enum InstructionType: Int, Decodable {
-    case Left = 0
-    case Right = 1
-    case SharpLeft = 2
-    case SharpRight = 3
-    case SlightLeft = 4
-    case SlightRight = 5
-    case Straight = 6
-    case EnterRoundabout = 7
-    case ExitRoundabout = 8
-    case UTurn = 9
-    case Goal = 10
-    case Depart = 11
-    case KeepLeft = 12
-    case KeepRight = 13
+    case left = 0
+    case right = 1
+    case sharpLeft = 2
+    case sharpRight = 3
+    case slightLeft = 4
+    case slightRight = 5
+    case straight = 6
+    case enterRoundabout = 7
+    case exitRoundabout = 8
+    case uTurn = 9
+    case goal = 10
+    case depart = 11
+    case keepLeft = 12
+    case keepRight = 13
   }
 }
 

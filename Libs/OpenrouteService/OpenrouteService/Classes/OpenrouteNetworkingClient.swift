@@ -4,7 +4,7 @@ import Foundation
 
 public class OpenrouteNetworkingClient: NetworkingClient {
   enum ClientError: Error {
-    case NoErrorOrData
+    case noErrorOrData
   }
 
   private let apiKey: String
@@ -33,7 +33,7 @@ public class OpenrouteNetworkingClient: NetworkingClient {
       } else if let data = data {
         callback(httpResponse, .success(data))
       } else {
-        callback(httpResponse, .failure(ClientError.NoErrorOrData))
+        callback(httpResponse, .failure(ClientError.noErrorOrData))
       }
     }
 
