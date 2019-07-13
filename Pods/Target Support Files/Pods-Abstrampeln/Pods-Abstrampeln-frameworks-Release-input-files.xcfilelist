@@ -1,4 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/OpenrouteService/OpenrouteService.framework
-${BUILT_PRODUCTS_DIR}/Promise/Promise.framework
 ${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework
