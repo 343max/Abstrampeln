@@ -12,9 +12,9 @@
 		505084272221DB07000662B8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505084262221DB07000662B8 /* MapViewController.swift */; };
 		5050842C2221DB09000662B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5050842B2221DB09000662B8 /* Assets.xcassets */; };
 		5050842F2221DB09000662B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5050842D2221DB09000662B8 /* LaunchScreen.storyboard */; };
-		505E99A6225B58A5006C37E6 /* OpenrouteClient+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505E99A5225B58A5006C37E6 /* OpenrouteClient+Promise.swift */; };
 		50779BE9222C6E3000891EA7 /* SignalDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */; };
 		50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */; };
+		5083BD1122D9F9D90097479F /* OpenrouteClient+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5083BD1022D9F9D90097479F /* OpenrouteClient+Combine.swift */; };
 		508636B52231AC5100D977A7 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508636B32231AC5100D977A7 /* InstructionsViewController.swift */; };
 		508636B62231AC5100D977A7 /* InstructionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508636B42231AC5100D977A7 /* InstructionsViewController.xib */; };
 		50920CA0223E37E9008D812F /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50920C9F223E37E9008D812F /* Localization.swift */; };
@@ -46,9 +46,9 @@
 		5050842B2221DB09000662B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5050842E2221DB09000662B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		505084302221DB09000662B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		505E99A5225B58A5006C37E6 /* OpenrouteClient+Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenrouteClient+Promise.swift"; sourceTree = "<group>"; };
 		50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalDispatcher.swift; sourceTree = "<group>"; };
 		50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSuggestionsSource.swift; sourceTree = "<group>"; };
+		5083BD1022D9F9D90097479F /* OpenrouteClient+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenrouteClient+Combine.swift"; sourceTree = "<group>"; };
 		508636B32231AC5100D977A7 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		508636B42231AC5100D977A7 /* InstructionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionsViewController.xib; sourceTree = "<group>"; };
 		50920C9F223E37E9008D812F /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
@@ -159,14 +159,14 @@
 		508636AB22314A2700D977A7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				CF908370222DBBBB002CC71F /* DrawerViewController.swift */,
-				CF908372222DC1CC002CC71F /* StackViewController.swift */,
-				CFAAEC1F22284080009926A2 /* LocationController.swift */,
-				50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */,
 				502EB86A223533B500A22129 /* DirectionsController.swift */,
+				CF908370222DBBBB002CC71F /* DrawerViewController.swift */,
 				50920C9F223E37E9008D812F /* Localization.swift */,
-				505E99A5225B58A5006C37E6 /* OpenrouteClient+Promise.swift */,
+				CFAAEC1F22284080009926A2 /* LocationController.swift */,
+				5083BD1022D9F9D90097479F /* OpenrouteClient+Combine.swift */,
 				CF7F4CBA225E347100074094 /* OptionalError.swift */,
+				50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */,
+				CF908372222DC1CC002CC71F /* StackViewController.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -343,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5083BD1122D9F9D90097479F /* OpenrouteClient+Combine.swift in Sources */,
 				CF90836F222DB051002CC71F /* DarkMode.swift in Sources */,
 				CF7F4CBB225E347100074094 /* OptionalError.swift in Sources */,
 				50920CA0223E37E9008D812F /* Localization.swift in Sources */,
@@ -362,7 +363,6 @@
 				CFBEF120222EC9E40015DFAC /* RoundedButton.swift in Sources */,
 				502EB86B223533B500A22129 /* DirectionsController.swift in Sources */,
 				505084252221DB07000662B8 /* AppDelegate.swift in Sources */,
-				505E99A6225B58A5006C37E6 /* OpenrouteClient+Promise.swift in Sources */,
 				CFBEF11D222EC2DB0015DFAC /* RouteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

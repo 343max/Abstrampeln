@@ -1,11 +1,11 @@
 // Copyright Max von Webel. All Rights Reserved.
 
-import UIKit
+import Combine
 import CoreLocation
+import UIKit
 
 protocol SearchResultsDataSource {
-  func searchFor(text: String, completion: @escaping (_ text: String, _ results: [Location]) -> Void) -> Bool
-  func cancelSearchFor(text: String)
+  func searchFor(text: String) -> AnyPublisher<(String, [Location]), Error>
 }
 
 class SearchController: NSObject {
@@ -27,39 +27,25 @@ class SearchController: NSObject {
     self.sections = searchSources.map { Section(dataSource: $0) }
     super.init()
   }
+  
+  var searches: [AnyCancellable] = []
 
   func searchFor(text: String) {
     guard searchText != text else { return }
 
-    let oldSearchText = searchText
     searchText = text
+    
+    searches.forEach { $0.cancel() }
 
-    sections.enumerated().forEach { (index, section) in
-      if let oldSearchText = oldSearchText, section.searching {
-        section.dataSource.cancelSearchFor(text: oldSearchText)
-      }
-
-      section.searching = true
-      var completionWasCalled = false
-      let shouldWaitForResults = section.dataSource.searchFor(text: text, completion: { [weak self] (searchText, searchResults) in
-        guard let self = self, searchText == text else { return }
-
-        completionWasCalled = true
-
-        DispatchQueue.main.async {
-          section.searching = false
+    searches = sections.enumerated().map { (index, section) in
+      let cancelation = section.dataSource.searchFor(text: text)
+        .receive(on: RunLoop.main)
+        .sink { (_, searchResults) in
           section.results = searchResults
           self.collectionView?.reloadSections(IndexSet(arrayLiteral: index))
-        }
-      })
-
-      if !shouldWaitForResults {
-        section.searching = false
-        if !completionWasCalled {
-          section.results = []
-          self.collectionView?.reloadSections(IndexSet(arrayLiteral: index))
-        }
       }
+      
+      return AnyCancellable(cancelation)
     }
   }
 }
@@ -67,7 +53,6 @@ class SearchController: NSObject {
 extension SearchController {
   class Section {
     let dataSource: SearchResultsDataSource
-    var searching = false
     var results: [Location] = []
 
     init(dataSource: SearchResultsDataSource) {

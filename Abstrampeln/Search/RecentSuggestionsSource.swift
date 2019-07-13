@@ -1,5 +1,6 @@
 // Copyright Max von Webel. All Rights Reserved.
 
+import Combine
 import Foundation
 import CoreLocation
 
@@ -20,16 +21,10 @@ class RecentSuggestionsSource {
 }
 
 extension RecentSuggestionsSource: SearchResultsDataSource {
-  func searchFor(text: String, completion: @escaping (String, [Location]) -> Void) -> Bool {
-    if text.count == 0 {
-      completion(text, history)
-    }
-
-    return false
-  }
-
-  func cancelSearchFor(text: String) {
-    //
+  func searchFor(text: String) -> AnyPublisher<(String, [Location]), Error> {
+    return Just<(String, [Location])>((text, []))
+            .setFailureType(to: Error.self)
+            .eraseToAnyPublisher()
   }
 }
 

@@ -8,3 +8,6 @@ disabled_rules:
 
 identifier_name:
   min_length: 1
+
+trailing_whitespace:
+  ignores_empty_lines: true

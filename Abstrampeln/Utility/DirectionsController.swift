@@ -36,13 +36,15 @@ class DirectionsController {
 extension DirectionsController {
   func updateDirections(destination: Location) {
     if let currentLocation = locationController.latestLocations.first?.coordinate {
-      openrouteClient.directions(start: currentLocation, finish: destination.coordinate).mainQueue.then { (directions) in
-        self.directions = directions
-
-        self.dispatcher.each(DirectionsControllerDirectionsListener.self, {
-          $0.directionsDidChange(directions, mode: self.mappingMode)
+      _ = openrouteClient.directions(start: currentLocation, finish: destination.coordinate)
+        .receive(on: RunLoop.main)
+        .sink(receiveValue: { (directions) in
+          self.directions = directions
+          
+          self.dispatcher.each(DirectionsControllerDirectionsListener.self, {
+            $0.directionsDidChange(directions, mode: self.mappingMode)
+          })
         })
-      }
     }
   }
 

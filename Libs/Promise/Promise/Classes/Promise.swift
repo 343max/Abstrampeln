@@ -11,7 +11,7 @@ public protocol UntypedPromise {
   func `throw`(error: Error)
 }
 
-public class Promise<T> : UntypedPromise {
+public class Promise<T>: UntypedPromise {
   public typealias ReturnType = T
   public typealias CompletionCallback = (_ result: T) -> Void
   public typealias ThenCall = (_ result: T) -> Void
