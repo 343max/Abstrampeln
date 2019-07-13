@@ -22,7 +22,6 @@
 		50C4F196223ED8990017E431 /* Location+Geocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C4F195223ED8990017E431 /* Location+Geocoding.swift */; };
 		CF47D07522271BF100083728 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF47D07422271BF100083728 /* MapKit.framework */; };
 		CF7F4CBB225E347100074094 /* OptionalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7F4CBA225E347100074094 /* OptionalError.swift */; };
-		CF90836F222DB051002CC71F /* DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90836E222DB051002CC71F /* DarkMode.swift */; };
 		CF908371222DBBBB002CC71F /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF908370222DBBBB002CC71F /* DrawerViewController.swift */; };
 		CF908373222DC1CC002CC71F /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF908372222DC1CC002CC71F /* StackViewController.swift */; };
 		CFAAEBD22227DF77009926A2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAEBD02227DF77009926A2 /* SearchViewController.swift */; };
@@ -57,9 +56,6 @@
 		57D7A809755AD63C28DAA67C /* Pods-Abstrampeln.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstrampeln.release.xcconfig"; path = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.release.xcconfig"; sourceTree = "<group>"; };
 		CF47D07422271BF100083728 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CF7F4CBA225E347100074094 /* OptionalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalError.swift; sourceTree = "<group>"; };
-		CF90836C222DAE91002CC71F /* MKMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKMapView.h; sourceTree = "<group>"; };
-		CF90836D222DAEB8002CC71F /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
-		CF90836E222DB051002CC71F /* DarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkMode.swift; sourceTree = "<group>"; };
 		CF908370222DBBBB002CC71F /* DrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		CF908372222DC1CC002CC71F /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		CFAAEBD02227DF77009926A2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +115,6 @@
 		505084232221DB07000662B8 /* Abstrampeln */ = {
 			isa = PBXGroup;
 			children = (
-				CF90836D222DAEB8002CC71F /* BridgingHeader.h */,
 				505084302221DB09000662B8 /* Info.plist */,
 				505084242221DB07000662B8 /* AppDelegate.swift */,
 				50C4F194223ED8890017E431 /* Location */,
@@ -127,7 +122,6 @@
 				CFAAEBD02227DF77009926A2 /* SearchViewController.swift */,
 				5050842B2221DB09000662B8 /* Assets.xcassets */,
 				CFAAEBD12227DF77009926A2 /* SearchViewController.xib */,
-				508636AC22314A4200D977A7 /* DarkMode */,
 				5050842D2221DB09000662B8 /* LaunchScreen.storyboard */,
 				508636A9223149C600D977A7 /* Navigation */,
 				508636AA22314A1500D977A7 /* RouteView */,
@@ -169,15 +163,6 @@
 				CF908372222DC1CC002CC71F /* StackViewController.swift */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		508636AC22314A4200D977A7 /* DarkMode */ = {
-			isa = PBXGroup;
-			children = (
-				CF90836C222DAE91002CC71F /* MKMapView.h */,
-				CF90836E222DB051002CC71F /* DarkMode.swift */,
-			);
-			path = DarkMode;
 			sourceTree = "<group>";
 		};
 		50C4F194223ED8890017E431 /* Location */ = {
@@ -333,7 +318,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5083BD1122D9F9D90097479F /* OpenrouteClient+Combine.swift in Sources */,
-				CF90836F222DB051002CC71F /* DarkMode.swift in Sources */,
 				CF7F4CBB225E347100074094 /* OptionalError.swift in Sources */,
 				50920CA0223E37E9008D812F /* Localization.swift in Sources */,
 				50779BE9222C6E3000891EA7 /* SignalDispatcher.swift in Sources */,
@@ -427,7 +411,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = Abstrampeln/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -482,7 +465,6 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = Abstrampeln/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};

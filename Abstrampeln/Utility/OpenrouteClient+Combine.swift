@@ -1,6 +1,7 @@
 // Copyright Max von Webel. All Rights Reserved.
 
 import Combine
+import CoreLocation
 import Foundation
 import OpenrouteService
 
