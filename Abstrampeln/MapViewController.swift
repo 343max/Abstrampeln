@@ -1,9 +1,10 @@
 // Copyright Max von Webel. All Rights Reserved.
 
-import UIKit
+import Combine
 import CoreLocation
 import MapKit
 import OpenrouteService
+import UIKit
 
 class MapViewController: UIViewController {
   weak var mapView: MKMapView!
@@ -37,14 +38,6 @@ class MapViewController: UIViewController {
     }
   }
 
-  var latestLocation: CLLocation? {
-    didSet {
-      if let latestLocation = latestLocation {
-        update(location: latestLocation)
-      }
-    }
-  }
-
   var destinationPin: MKPointAnnotation? {
     willSet {
       if let pin = destinationPin {
@@ -66,6 +59,8 @@ class MapViewController: UIViewController {
   }
 
   var userInteracted = false
+  
+  var locationCancellation: Cancellable?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -83,14 +78,19 @@ class MapViewController: UIViewController {
     instructionsViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     addChild(instructionsViewController)
     view.addSubview(instructionsViewController.view)
-
-    AppController.shared.locationController.locationPromise.then { [weak self] (locations) in
-      guard let self = self else { return }
-
-      self.latestLocation = locations.first!
-    }
+    
+    locationCancellation = AppController.shared.locationController.$latestLocations
+      .map { $0.first }
+      .compactMap { $0 }
+      .sink(receiveValue: { [unowned self] (location) in
+        self.update(location: location)
+      })
 
     AppController.shared.dispatcher.register(listener: self)
+  }
+  
+  deinit {
+    locationCancellation?.cancel()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -98,12 +98,16 @@ class MapViewController: UIViewController {
 
     AppController.shared.locationController.startUpdatingLocation()
   }
+  
+  var programaticLocationRegionChange = false
 
   func update(location: CLLocation) {
     if userInteracted == false {
       let span = CLLocationDistance(1000)
       let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: span, longitudinalMeters: span)
-      mapView.setRegion(region, animated: shouldAnimate)
+      programaticLocationRegionChange = true
+      mapView.setRegion(region, animated: true)
+      programaticLocationRegionChange = false
     }
   }
 
@@ -129,8 +133,10 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MKMapViewDelegate {
-  func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
-    userInteracted = true
+  func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+    if !programaticLocationRegionChange {
+      userInteracted = true
+    }
   }
 
   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {

@@ -1,14 +1,13 @@
 // Copyright Max von Webel. All Rights Reserved.
 
-import Foundation
+import Combine
 import CoreLocation
-import Promise
+import Foundation
 
 class LocationController: NSObject {
   private let locationManager = CLLocationManager()
 
-  private(set) lazy var locationPromise = Promise<[CLLocation]>(multiCall: true)
-  var latestLocations: [CLLocation] = []
+  @Published private(set) var latestLocations: [CLLocation] = []
 
   override init() {
     super.init()
@@ -34,6 +33,5 @@ extension LocationController: CLLocationManagerDelegate {
 
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     latestLocations = locations
-    locationPromise.fulfill(locations)
   }
 }
