@@ -316,20 +316,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/OpenrouteService/OpenrouteService.framework",
-				"${BUILT_PRODUCTS_DIR}/Promise/Promise.framework",
-				"${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework",
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenrouteService.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promise.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulley.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
