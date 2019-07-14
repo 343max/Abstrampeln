@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		508636B52231AC5100D977A7 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508636B32231AC5100D977A7 /* InstructionsViewController.swift */; };
 		508636B62231AC5100D977A7 /* InstructionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508636B42231AC5100D977A7 /* InstructionsViewController.xib */; };
 		50920CA0223E37E9008D812F /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50920C9F223E37E9008D812F /* Localization.swift */; };
+		509BC42622DB3C5F0065A8B1 /* OpenrouteService in Frameworks */ = {isa = PBXBuildFile; productRef = 509BC42522DB3C5F0065A8B1 /* OpenrouteService */; };
 		50AF081C223EC6060093858C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF081B223EC6060093858C /* Location.swift */; };
 		50C4F196223ED8990017E431 /* Location+Geocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C4F195223ED8990017E431 /* Location+Geocoding.swift */; };
 		CF47D07522271BF100083728 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF47D07422271BF100083728 /* MapKit.framework */; };
@@ -76,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF47D07522271BF100083728 /* MapKit.framework in Frameworks */,
+				509BC42622DB3C5F0065A8B1 /* OpenrouteService in Frameworks */,
 				F0410E06E9952E8A4CB433F9 /* Pods_Abstrampeln.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +214,9 @@
 			dependencies = (
 			);
 			name = Abstrampeln;
+			packageProductDependencies = (
+				509BC42522DB3C5F0065A8B1 /* OpenrouteService */,
+			);
 			productName = Abstrampeln;
 			productReference = 505084212221DB07000662B8 /* Abstrampeln.app */;
 			productType = "com.apple.product-type.application";
@@ -532,6 +537,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		509BC42522DB3C5F0065A8B1 /* OpenrouteService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OpenrouteService;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 505084192221DB07000662B8 /* Project object */;
 }
