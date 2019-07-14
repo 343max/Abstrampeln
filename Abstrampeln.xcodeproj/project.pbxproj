@@ -14,7 +14,6 @@
 		5050842F2221DB09000662B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5050842D2221DB09000662B8 /* LaunchScreen.storyboard */; };
 		50779BE9222C6E3000891EA7 /* SignalDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */; };
 		50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */; };
-		5083BD1122D9F9D90097479F /* OpenrouteClient+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5083BD1022D9F9D90097479F /* OpenrouteClient+Combine.swift */; };
 		508636B52231AC5100D977A7 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508636B32231AC5100D977A7 /* InstructionsViewController.swift */; };
 		508636B62231AC5100D977A7 /* InstructionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508636B42231AC5100D977A7 /* InstructionsViewController.xib */; };
 		50920CA0223E37E9008D812F /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50920C9F223E37E9008D812F /* Localization.swift */; };
@@ -48,7 +47,6 @@
 		505084302221DB09000662B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalDispatcher.swift; sourceTree = "<group>"; };
 		50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSuggestionsSource.swift; sourceTree = "<group>"; };
-		5083BD1022D9F9D90097479F /* OpenrouteClient+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenrouteClient+Combine.swift"; sourceTree = "<group>"; };
 		508636B32231AC5100D977A7 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		508636B42231AC5100D977A7 /* InstructionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionsViewController.xib; sourceTree = "<group>"; };
 		50920C9F223E37E9008D812F /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 				CF908370222DBBBB002CC71F /* DrawerViewController.swift */,
 				50920C9F223E37E9008D812F /* Localization.swift */,
 				CFAAEC1F22284080009926A2 /* LocationController.swift */,
-				5083BD1022D9F9D90097479F /* OpenrouteClient+Combine.swift */,
 				CF7F4CBA225E347100074094 /* OptionalError.swift */,
 				50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */,
 				CF908372222DC1CC002CC71F /* StackViewController.swift */,
@@ -322,7 +319,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5083BD1122D9F9D90097479F /* OpenrouteClient+Combine.swift in Sources */,
 				CF7F4CBB225E347100074094 /* OptionalError.swift in Sources */,
 				50920CA0223E37E9008D812F /* Localization.swift in Sources */,
 				50779BE9222C6E3000891EA7 /* SignalDispatcher.swift in Sources */,

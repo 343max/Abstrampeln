@@ -1,6 +1,7 @@
 // Copyright Max von Webel. All Rights Reserved.
 
 import Foundation
+import Combine
 import CoreLocation
 
 public extension JSONDecoder {
@@ -21,17 +22,15 @@ public class OpenrouteClient {
     // search:
     // https://api.openrouteservice.org/geocode/search?text=Brandenburger&boundary.circle.lon=13.449880&boundary.circle.lat=52.511180&boundary.circle.radius=200
     // https://api.openrouteservice.org/geocode/autocomplete?text=Toky&focus.point.lon=13.449880&focus.point.lat=52.511180
-    public func autocomplete(text: String, focusPoint: CLLocationCoordinate2D?,
-                             callback: @escaping (Result<Geocode, Error>) -> Void) {
+    
+    public func autocomplete(text: String, focusPoint: CLLocationCoordinate2D?) -> AnyPublisher<Geocode, Error> {
         var parameters: NetworkingClient.ParameterDict = ["text": text]
         if let focusPoint = focusPoint {
             parameters["focus.point.lon"] = "\(focusPoint.longitude)"
             parameters["focus.point.lat"] = "\(focusPoint.latitude)"
         }
         
-        client.GET("geocode/autocomplete", parameters, type: Geocode.self) { (_, result) in
-            callback(result)
-        }
+        return client.GET("geocode/autocomplete", parameters, type: Geocode.self)
     }
     
     // directions:
@@ -40,8 +39,8 @@ public class OpenrouteClient {
     public func directions(start: CLLocationCoordinate2D,
                            finish: CLLocationCoordinate2D,
                            profile: Directions.Profile = .cyclingRegular,
-                           language: Directions.Language = .english,
-                           callback: @escaping (Result<Directions, Error>) -> Void) {
+                           language: Directions.Language = .english
+        ) -> AnyPublisher<Directions, Error> {
         
         let parameters: NetworkingClient.ParameterDict = [
             "coordinates": [start, finish].map({ "\($0.longitude),\($0.latitude)" }).joined(separator: "|"),
@@ -55,8 +54,6 @@ public class OpenrouteClient {
             "language": language.rawValue
         ]
         
-        client.GET("/directions", parameters, type: Directions.self) { (_, result) in
-            callback(result)
-        }
+        return client.GET("/directions", parameters, type: Directions.self)
     }
 }
