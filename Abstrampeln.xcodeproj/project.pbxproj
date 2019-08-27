@@ -12,6 +12,7 @@
 		505084272221DB07000662B8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505084262221DB07000662B8 /* MapViewController.swift */; };
 		5050842C2221DB09000662B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5050842B2221DB09000662B8 /* Assets.xcassets */; };
 		5050842F2221DB09000662B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5050842D2221DB09000662B8 /* LaunchScreen.storyboard */; };
+		505758AE23154FB40009BDF5 /* PullingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505758AD23154FB40009BDF5 /* PullingViewController.swift */; };
 		50779BE9222C6E3000891EA7 /* SignalDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */; };
 		50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */; };
 		508636B52231AC5100D977A7 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508636B32231AC5100D977A7 /* InstructionsViewController.swift */; };
@@ -46,6 +47,7 @@
 		5050842E2221DB09000662B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		505084302221DB09000662B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		505758AC2315359F0009BDF5 /* Abstrampeln.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Abstrampeln.entitlements; sourceTree = "<group>"; };
+		505758AD23154FB40009BDF5 /* PullingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullingViewController.swift; sourceTree = "<group>"; };
 		50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalDispatcher.swift; sourceTree = "<group>"; };
 		50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSuggestionsSource.swift; sourceTree = "<group>"; };
 		508636B32231AC5100D977A7 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				508636AA22314A1500D977A7 /* RouteView */,
 				CFAAEBDA2227F6F4009926A2 /* Search */,
 				508636AB22314A2700D977A7 /* Utility */,
+				505758AD23154FB40009BDF5 /* PullingViewController.swift */,
 			);
 			path = Abstrampeln;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				CFAAEBDE22280868009926A2 /* DummySuggestionSource.swift in Sources */,
 				505084272221DB07000662B8 /* MapViewController.swift in Sources */,
 				CFAAEBDC2227F71D009926A2 /* OpenRouteSuggestionSource.swift in Sources */,
+				505758AE23154FB40009BDF5 /* PullingViewController.swift in Sources */,
 				508636B52231AC5100D977A7 /* InstructionsViewController.swift in Sources */,
 				CF908373222DC1CC002CC71F /* StackViewController.swift in Sources */,
 				CFAAEBD92227EF6A009926A2 /* SearchController.swift in Sources */,
