@@ -9,6 +9,13 @@ class DrawerViewController: UIViewController {
 
       layer.cornerRadius = min(bounds.width, bounds.height) / 2
     }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+      super.traitCollectionDidChange(previousTraitCollection)
+      
+      let white: CGFloat = traitCollection.userInterfaceStyle == .dark ? 1.0 : 0.0
+      backgroundColor = UIColor(white: white, alpha: 1.0 / 3.0)
+    }
   }
 
   class CloseButton: UIButton {
@@ -69,8 +76,6 @@ class DrawerViewController: UIViewController {
 
     pullPillView = PullPillView()
     pullPillView.translatesAutoresizingMaskIntoConstraints = false
-
-    pullPillView.backgroundColor = UIColor(white: 0, alpha: 1.0 / 3.0)
 
     view.addSubview(pullPillView)
 
