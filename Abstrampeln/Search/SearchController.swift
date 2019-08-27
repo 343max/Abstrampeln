@@ -76,10 +76,8 @@ extension SearchController: UICollectionViewDataSource {
     let stackView: UIStackView
     let label: UILabel
     let detailLabel: UILabel
-
-    static func sizeFor(width: CGFloat) -> CGSize {
-      return CGSize(width: width, height: 55)
-    }
+    
+    static let height = CGFloat(55)
 
     override init(frame: CGRect) {
       label = UILabel(frame: .zero)
@@ -134,10 +132,8 @@ extension SearchController: UICollectionViewDataSource {
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SuggestionCell.identifier, for: indexPath) as? SuggestionCell else {
-      fatalError()
-    }
-
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SuggestionCell.identifier, for: indexPath) as! SuggestionCell
+    
     cell.item = sections[indexPath.section].results[indexPath.item]
 
     return cell
@@ -148,11 +144,5 @@ extension SearchController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let suggestion = sections[indexPath.section].results[indexPath.item]
     AppController.shared.directionsController.set(destination: suggestion, mode: .none)
-  }
-}
-
-extension SearchController: UICollectionViewDelegateFlowLayout {
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return SuggestionCell.sizeFor(width: collectionView.bounds.width)
   }
 }

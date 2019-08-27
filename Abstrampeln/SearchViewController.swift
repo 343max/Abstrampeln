@@ -20,6 +20,9 @@ class SearchViewController: DrawerViewController {
 
     searchController.collectionView = suggestionsCollectionView
     searchController.searchFor(text: "")
+    
+    let layout = suggestionsCollectionView.collectionViewLayout as! ListCollectionViewLayout
+    layout.rowHeight = SearchController.SuggestionCell.height
 
     suggestionsCollectionView.backgroundColor = .clear
   }
