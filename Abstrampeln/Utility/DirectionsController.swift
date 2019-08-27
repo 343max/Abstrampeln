@@ -38,6 +38,7 @@ extension DirectionsController {
     if let currentLocation = locationController.latestLocations.first?.coordinate {
       _ = openrouteClient.directions(start: currentLocation, finish: destination.coordinate)
         .receive(on: RunLoop.main)
+        .assertNoFailure()
         .sink(receiveValue: { (directions) in
           self.directions = directions
           
