@@ -45,6 +45,7 @@
 		5050842B2221DB09000662B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5050842E2221DB09000662B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		505084302221DB09000662B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		505758AC2315359F0009BDF5 /* Abstrampeln.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Abstrampeln.entitlements; sourceTree = "<group>"; };
 		50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalDispatcher.swift; sourceTree = "<group>"; };
 		50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSuggestionsSource.swift; sourceTree = "<group>"; };
 		508636B32231AC5100D977A7 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 		505084232221DB07000662B8 /* Abstrampeln */ = {
 			isa = PBXGroup;
 			children = (
+				505758AC2315359F0009BDF5 /* Abstrampeln.entitlements */,
 				505084302221DB09000662B8 /* Info.plist */,
 				505084242221DB07000662B8 /* AppDelegate.swift */,
 				50C4F194223ED8890017E431 /* Location */,
@@ -476,7 +478,9 @@
 			baseConfigurationReference = F89CA79EC11B1ED0E43F2990 /* Pods-Abstrampeln.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Abstrampeln/Abstrampeln.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = ATMW4AU45H;
 				INFOPLIST_FILE = Abstrampeln/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -486,6 +490,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.343max.Abstrampeln;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -496,7 +501,9 @@
 			baseConfigurationReference = 57D7A809755AD63C28DAA67C /* Pods-Abstrampeln.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Abstrampeln/Abstrampeln.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = ATMW4AU45H;
 				INFOPLIST_FILE = Abstrampeln/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -506,6 +513,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.343max.Abstrampeln;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
