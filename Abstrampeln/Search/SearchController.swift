@@ -40,7 +40,9 @@ class SearchController: NSObject {
     searches = sections.enumerated().map { (index, section) in
       let cancelation = section.dataSource.searchFor(text: text)
         .receive(on: RunLoop.main)
-        .assertNoFailure()
+        .catch { (error) in
+          return Combine.Empty<(String, [Location]), Never>()
+        }
         .sink { (_, searchResults) in
           section.results = searchResults
           self.collectionView?.reloadSections(IndexSet(arrayLiteral: index))
