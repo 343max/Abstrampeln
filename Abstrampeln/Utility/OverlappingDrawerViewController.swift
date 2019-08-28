@@ -62,5 +62,7 @@ class OverlappingDrawerViewController: UIViewController {
     
     containerView.frame = drawerFrame
     drawerViewController.view.frame = drawerFrame
+    
+    contentViewController.additionalSafeAreaInsets.left = drawerWidth
   }
 }

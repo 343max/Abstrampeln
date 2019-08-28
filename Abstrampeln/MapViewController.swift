@@ -18,7 +18,7 @@ class MapViewController: UIViewController {
   var directions: Directions? {
     didSet {
       if let directions = directions {
-        let mapRect = directions.boundingBox.mapRect.insetBy(dx: -4000, dy: -4000).offsetBy(dx: 0, dy: 4000)
+        let mapRect = directions.boundingBox.mapRect.insetBy(dx: -4000, dy: -4000)
         mapView.setVisibleMapRect(mapRect, animated: shouldAnimate)
       }
       update(directions: directions)

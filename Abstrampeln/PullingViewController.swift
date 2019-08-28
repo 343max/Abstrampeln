@@ -14,6 +14,13 @@ class PullingViewController: PulleyViewController {
     backgroundEffect = traitCollection.userInterfaceStyle == .dark ? .dark : .extraLight
   }
   
+  override func viewSafeAreaInsetsDidChange() {
+    super.viewSafeAreaInsetsDidChange()
+
+    // private kPulleyDefaultPartialRevealHeight
+    primaryContentViewController.additionalSafeAreaInsets.bottom = 264 - view.safeAreaInsets.bottom
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
