@@ -87,8 +87,8 @@ class DrawerViewController: UIViewController {
     super.viewDidLoad()
   }
   
-  override func didMove(toParent parent: UIViewController?) {
-    if let viewControllers = stackViewController?.viewControllers {
+  override func willMove(toParent parent: UIViewController?) {
+    if let viewControllers = parent?.stackViewController?.viewControllers {
       showsCloseButton = (viewControllers.firstIndex(where: { $0 == self }) ?? -1) > 0
     } else {
       showsCloseButton = false
