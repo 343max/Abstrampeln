@@ -41,6 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     } else {
       let navigationController = UINavigationController(rootViewController: searchVC)
       navigationController.navigationBar.isTranslucent = true
+      navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+      navigationController.navigationBar.shadowImage = UIImage()
+      navigationController.delegate = self
       hierarchyContainingViewController = navigationController
       let splitVC = OverlappingDrawerViewController(contentViewController: mapVC,
                                                     drawerViewController: navigationController)
@@ -69,7 +72,12 @@ extension AppDelegate: DirectionsControllerDestinationListener {
     pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: true)
 
     let vc = RouteViewController(destination: destination)
-    vc.showsCloseButton = true
     hierarchyContainingViewController?.pushViewController(vc, animated: true)
+  }
+}
+
+extension AppDelegate: UINavigationControllerDelegate {
+  func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+    navigationController.setNavigationBarHidden(navigationController.viewControllers.count == 1, animated: animated)
   }
 }

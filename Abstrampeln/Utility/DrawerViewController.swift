@@ -57,7 +57,7 @@ class DrawerViewController: UIViewController {
   var pullPillView: PullPillView!
   var closeButton: CloseButton!
 
-  var showsCloseButton = false {
+  private var showsCloseButton = false {
     didSet {
       closeButton?.isHidden = !showsCloseButton
     }
@@ -85,6 +85,14 @@ class DrawerViewController: UIViewController {
     pullPillView.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor, constant: 0).isActive = true
 
     super.viewDidLoad()
+  }
+  
+  override func didMove(toParent parent: UIViewController?) {
+    if let viewControllers = stackViewController?.viewControllers {
+      showsCloseButton = (viewControllers.firstIndex(where: { $0 == self }) ?? -1) > 0
+    } else {
+      showsCloseButton = false
+    }
   }
 
   @objc func didTapCloseButton(_ sender: CloseButton) {
