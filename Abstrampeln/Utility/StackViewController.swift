@@ -106,13 +106,15 @@ class StackViewController: UIViewController {
     }
   }
 
-  func push(viewController: UIViewController, animated: Bool) {
+  func pushViewController(_ viewController: UIViewController, animated: Bool) {
     set(viewControllers: self.viewControllers + [viewController], animated: animated)
   }
 
-  func popTopViewController(animated: Bool) {
+  func popViewController(animated: Bool) -> UIViewController? {
     var viewControllers = self.viewControllers
+    let lastVC = viewControllers.last
     viewControllers.removeLast()
     set(viewControllers: viewControllers, animated: animated)
+    return lastVC
   }
 }

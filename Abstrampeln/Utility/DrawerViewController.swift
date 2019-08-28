@@ -88,6 +88,6 @@ class DrawerViewController: UIViewController {
   }
 
   @objc func didTapCloseButton(_ sender: CloseButton) {
-    stackViewController?.popTopViewController(animated: true)
+    _ = hierarchyContainingViewController?.popViewController(animated: true)
   }
 }

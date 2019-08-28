@@ -21,7 +21,7 @@ class AppController {
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-  weak var stackViewController: StackViewController?
+  weak var hierarchyContainingViewController: HierarchyContainingViewController?
   weak var pulleyViewController: PulleyViewController?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -29,19 +29,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let mapVC = MapViewController(nibName: nil, bundle: nil)
     let searchVC = SearchViewController(nibName: nil, bundle: nil)
-    let stackVC = StackViewController(viewController: searchVC)
+    
+    let hierarchyContainingViewController: HierarchyContainingViewController
 
-    let pulleyVC = PullingViewController(contentViewController: mapVC, drawerViewController: stackVC)
-
-    window.rootViewController = pulleyVC
+    if window.traitCollection.userInterfaceIdiom == .phone {
+      let stackVC = StackViewController(viewController: searchVC)
+      let pulleyVC = PullingViewController(contentViewController: mapVC, drawerViewController: stackVC)
+      hierarchyContainingViewController = stackVC
+      self.pulleyViewController = pulleyVC
+      window.rootViewController = pulleyVC
+    } else {
+      let navigationController = UINavigationController(rootViewController: searchVC)
+      navigationController.navigationBar.isTranslucent = true
+      hierarchyContainingViewController = navigationController
+      let splitVC = OverlappingDrawerViewController(contentViewController: mapVC,
+                                                    drawerViewController: navigationController)
+      window.rootViewController = splitVC
+    }
+    
+    self.hierarchyContainingViewController = hierarchyContainingViewController
 
     self.window = window
     window.makeKeyAndVisible()
-
-    pulleyVC.setDrawerPosition(position: .partiallyRevealed, animated: false)
-
-    self.stackViewController = stackVC
-    self.pulleyViewController = pulleyVC
+    self.pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: false)
 
     let dispatcher = AppController.shared.dispatcher
     RecentSuggestionsSource.collector.register(dispatcher: dispatcher)
@@ -60,6 +70,6 @@ extension AppDelegate: DirectionsControllerDestinationListener {
 
     let vc = RouteViewController(destination: destination)
     vc.showsCloseButton = true
-    stackViewController?.push(viewController: vc, animated: true)
+    hierarchyContainingViewController?.pushViewController(vc, animated: true)
   }
 }

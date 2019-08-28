@@ -20,6 +20,7 @@ class RouteViewController: DrawerViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     destinationLabel.text = "→ \(destination.label)"
+    view.backgroundColor = .clear
   }
 
   @IBAction func tappedPreviewRoute(_ sender: Any) {

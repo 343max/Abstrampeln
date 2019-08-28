@@ -18,8 +18,10 @@
 		50779BFE222C80CE00891EA7 /* RecentSuggestionsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */; };
 		508636B52231AC5100D977A7 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508636B32231AC5100D977A7 /* InstructionsViewController.swift */; };
 		508636B62231AC5100D977A7 /* InstructionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508636B42231AC5100D977A7 /* InstructionsViewController.xib */; };
+		50888D4523166AF30045CCB0 /* OverlappingDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50888D4423166AF30045CCB0 /* OverlappingDrawerViewController.swift */; };
 		50920CA0223E37E9008D812F /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50920C9F223E37E9008D812F /* Localization.swift */; };
 		509BC42622DB3C5F0065A8B1 /* OpenrouteService in Frameworks */ = {isa = PBXBuildFile; productRef = 509BC42522DB3C5F0065A8B1 /* OpenrouteService */; };
+		50A449EB231674710025D775 /* HierarchyContainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A449EA231674710025D775 /* HierarchyContainingViewController.swift */; };
 		50AF081C223EC6060093858C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF081B223EC6060093858C /* Location.swift */; };
 		50C4F196223ED8990017E431 /* Location+Geocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C4F195223ED8990017E431 /* Location+Geocoding.swift */; };
 		CF47D07522271BF100083728 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF47D07422271BF100083728 /* MapKit.framework */; };
@@ -54,7 +56,9 @@
 		50779BFD222C80CE00891EA7 /* RecentSuggestionsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSuggestionsSource.swift; sourceTree = "<group>"; };
 		508636B32231AC5100D977A7 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		508636B42231AC5100D977A7 /* InstructionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionsViewController.xib; sourceTree = "<group>"; };
+		50888D4423166AF30045CCB0 /* OverlappingDrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlappingDrawerViewController.swift; sourceTree = "<group>"; };
 		50920C9F223E37E9008D812F /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		50A449EA231674710025D775 /* HierarchyContainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchyContainingViewController.swift; sourceTree = "<group>"; };
 		50AF081B223EC6060093858C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		50C4F195223ED8990017E431 /* Location+Geocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+Geocoding.swift"; sourceTree = "<group>"; };
 		57D7A809755AD63C28DAA67C /* Pods-Abstrampeln.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstrampeln.release.xcconfig"; path = "Target Support Files/Pods-Abstrampeln/Pods-Abstrampeln.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 		508636AB22314A2700D977A7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				50888D4423166AF30045CCB0 /* OverlappingDrawerViewController.swift */,
 				502EB86A223533B500A22129 /* DirectionsController.swift */,
 				CF908370222DBBBB002CC71F /* DrawerViewController.swift */,
 				50920C9F223E37E9008D812F /* Localization.swift */,
@@ -168,6 +173,7 @@
 				50779BE8222C6E3000891EA7 /* SignalDispatcher.swift */,
 				CF908372222DC1CC002CC71F /* StackViewController.swift */,
 				505758AF2315B9140009BDF5 /* ListCollectionViewLayout.swift */,
+				50A449EA231674710025D775 /* HierarchyContainingViewController.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -342,10 +348,12 @@
 				505758B02315B9140009BDF5 /* ListCollectionViewLayout.swift in Sources */,
 				505758AE23154FB40009BDF5 /* PullingViewController.swift in Sources */,
 				508636B52231AC5100D977A7 /* InstructionsViewController.swift in Sources */,
+				50888D4523166AF30045CCB0 /* OverlappingDrawerViewController.swift in Sources */,
 				CF908373222DC1CC002CC71F /* StackViewController.swift in Sources */,
 				CFAAEBD92227EF6A009926A2 /* SearchController.swift in Sources */,
 				CFBEF120222EC9E40015DFAC /* RoundedButton.swift in Sources */,
 				502EB86B223533B500A22129 /* DirectionsController.swift in Sources */,
+				50A449EB231674710025D775 /* HierarchyContainingViewController.swift in Sources */,
 				505084252221DB07000662B8 /* AppDelegate.swift in Sources */,
 				CFBEF11D222EC2DB0015DFAC /* RouteViewController.swift in Sources */,
 			);
