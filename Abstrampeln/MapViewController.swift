@@ -96,10 +96,18 @@ class MapViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 
+    programaticLocationRegionChange = true
+    
     AppController.shared.locationController.startUpdatingLocation()
   }
   
-  var programaticLocationRegionChange = false
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    programaticLocationRegionChange = false
+  }
+  
+  var programaticLocationRegionChange = true
 
   func update(location: CLLocation) {
     if userInteracted == false {
