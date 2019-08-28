@@ -34,4 +34,8 @@ extension LocationController: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     latestLocations = locations
   }
+  
+  func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    debugPrint(error)
+  }
 }
